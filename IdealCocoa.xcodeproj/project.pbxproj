@@ -1,0 +1,1183 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		38B78E661337455F00658C00 /* Copy Headers */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 38B78E671337455F00658C00 /* Build configuration list for PBXAggregateTarget "Copy Headers" */;
+			buildPhases = (
+				38B78E6B1337458F00658C00 /* CopyFiles */,
+				38B78E6C133745B600658C00 /* CopyFiles */,
+			);
+			dependencies = (
+			);
+			name = "Copy Headers";
+			productName = "Copy Headers";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		380ED29313B05A0E00986433 /* ICTableViewCellCopyable.h in Headers */ = {isa = PBXBuildFile; fileRef = 380ED29113B05A0E00986433 /* ICTableViewCellCopyable.h */; };
+		380ED29413B05A0E00986433 /* ICTableViewCellCopyable.m in Sources */ = {isa = PBXBuildFile; fileRef = 380ED29213B05A0E00986433 /* ICTableViewCellCopyable.m */; };
+		381DD53D1338C0E2008F28C6 /* IdealCocoaIconvTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DD53C1338C0E2008F28C6 /* IdealCocoaIconvTests.m */; };
+		381DD53E1338C0E2008F28C6 /* IdealCocoaIconvTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DD53C1338C0E2008F28C6 /* IdealCocoaIconvTests.m */; };
+		381DD5491338C22A008F28C6 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 381DD5481338C22A008F28C6 /* libiconv.dylib */; };
+		381DD54A1338C23B008F28C6 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 381DD5481338C22A008F28C6 /* libiconv.dylib */; };
+		3831DD3F13A86D1C004CA77F /* UIScrollViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3831DD3D13A86D1C004CA77F /* UIScrollViewAdditions.h */; };
+		3831DD4013A86D1C004CA77F /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3831DD3E13A86D1C004CA77F /* UIScrollViewAdditions.m */; };
+		3831DD4513A86DC3004CA77F /* UIScrollViewAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3831DD3D13A86D1C004CA77F /* UIScrollViewAdditions.h */; };
+		383764D813373154007072FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
+		383764E313373155007072FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E213373155007072FD /* UIKit.framework */; };
+		383764E413373155007072FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
+		383764E613373155007072FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E513373155007072FD /* CoreGraphics.framework */; };
+		383764F213373155007072FD /* IdealCocoaTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 383764F113373155007072FD /* IdealCocoaTests.h */; };
+		383764F413373155007072FD /* IdealCocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* IdealCocoaTests.m */; };
+		3837650C13373222007072FD /* IdealCocoa_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 3837650B13373222007072FD /* IdealCocoa_Prefix.pch */; };
+		3837653613373240007072FD /* ICCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837650D13373240007072FD /* ICCache.h */; settings = {ATTRIBUTES = (); }; };
+		3837653713373240007072FD /* ICCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837650E13373240007072FD /* ICCache.m */; };
+		3837653813373240007072FD /* ICCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837650F13373240007072FD /* ICCrypto.h */; settings = {ATTRIBUTES = (); }; };
+		3837653913373240007072FD /* ICCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651013373240007072FD /* ICCrypto.m */; };
+		3837653A13373240007072FD /* ICHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651113373240007072FD /* ICHTTPRequest.h */; settings = {ATTRIBUTES = (); }; };
+		3837653B13373240007072FD /* ICHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651213373240007072FD /* ICHTTPRequest.m */; };
+		3837653C13373240007072FD /* ICIconv.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651313373240007072FD /* ICIconv.h */; settings = {ATTRIBUTES = (); }; };
+		3837653D13373240007072FD /* ICIconv.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651413373240007072FD /* ICIconv.m */; };
+		3837653E13373240007072FD /* ICPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651513373240007072FD /* ICPreference.h */; settings = {ATTRIBUTES = (); }; };
+		3837653F13373240007072FD /* ICPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651613373240007072FD /* ICPreference.m */; };
+		3837654013373240007072FD /* ICSQL.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651713373240007072FD /* ICSQL.h */; settings = {ATTRIBUTES = (); }; };
+		3837654113373240007072FD /* ICSQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651813373240007072FD /* ICSQL.m */; };
+		3837654213373240007072FD /* ICSqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651913373240007072FD /* ICSqlite3.h */; settings = {ATTRIBUTES = (); }; };
+		3837654313373240007072FD /* ICSqlite3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651A13373240007072FD /* ICSqlite3.m */; };
+		3837654413373240007072FD /* ICUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651B13373240007072FD /* ICUtility.h */; settings = {ATTRIBUTES = (); }; };
+		3837654513373240007072FD /* ICUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651C13373240007072FD /* ICUtility.m */; };
+		3837654613373240007072FD /* ICXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651D13373240007072FD /* ICXML.h */; settings = {ATTRIBUTES = (); }; };
+		3837654713373240007072FD /* ICXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651E13373240007072FD /* ICXML.m */; };
+		3837654813373240007072FD /* IdealAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651F13373240007072FD /* IdealAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3837654913373240007072FD /* IdealCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652013373240007072FD /* IdealCocoa.h */; settings = {ATTRIBUTES = (); }; };
+		3837654A13373240007072FD /* NSArrayAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652113373240007072FD /* NSArrayAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3837654B13373240007072FD /* NSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837652213373240007072FD /* NSArrayAdditions.m */; };
+		3837654C13373240007072FD /* NSBundleAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652313373240007072FD /* NSBundleAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3837654D13373240007072FD /* NSBundleAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837652413373240007072FD /* NSBundleAdditions.m */; };
+		3837654E13373240007072FD /* NSDataAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652513373240007072FD /* NSDataAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3837654F13373240007072FD /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837652613373240007072FD /* NSDataAdditions.m */; };
+		3837655013373240007072FD /* NSDictionaryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652713373240007072FD /* NSDictionaryAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3837655113373240007072FD /* NSDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837652813373240007072FD /* NSDictionaryAdditions.m */; };
+		3837655213373240007072FD /* NSNumberFormatterAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652913373240007072FD /* NSNumberFormatterAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3837655313373240007072FD /* NSNumberFormatterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837652A13373240007072FD /* NSNumberFormatterAdditions.m */; };
+		3837655413373240007072FD /* NSPathUtilitiesAddtions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652B13373240007072FD /* NSPathUtilitiesAddtions.h */; settings = {ATTRIBUTES = (); }; };
+		3837655513373240007072FD /* NSPathUtilitiesAddtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837652C13373240007072FD /* NSPathUtilitiesAddtions.m */; };
+		3837655613373240007072FD /* NSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652D13373240007072FD /* NSStringAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3837655713373240007072FD /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837652E13373240007072FD /* NSStringAdditions.m */; };
+		3837655813373240007072FD /* NSStringEncodingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652F13373240007072FD /* NSStringEncodingAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3837655913373240007072FD /* NSTimerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837653013373240007072FD /* NSTimerAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3837655A13373240007072FD /* NSTimerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837653113373240007072FD /* NSTimerAdditions.m */; };
+		3837655B13373240007072FD /* NSURLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837653213373240007072FD /* NSURLAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3837655C13373240007072FD /* NSURLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837653313373240007072FD /* NSURLAdditions.m */; };
+		3837655D13373240007072FD /* NSURLRequestAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837653413373240007072FD /* NSURLRequestAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3837655E13373240007072FD /* NSURLRequestAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837653513373240007072FD /* NSURLRequestAdditions.m */; };
+		38730438133732DE004C8E89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
+		38730442133732DE004C8E89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E213373155007072FD /* UIKit.framework */; };
+		38730443133732DE004C8E89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
+		38730444133732DE004C8E89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E513373155007072FD /* CoreGraphics.framework */; };
+		38730447133732DE004C8E89 /* libIdealUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38730437133732DE004C8E89 /* libIdealUIKit.a */; };
+		38730450133732DE004C8E89 /* IdealUIKitTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 3873044F133732DE004C8E89 /* IdealUIKitTests.h */; };
+		38730452133732DE004C8E89 /* IdealUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38730451133732DE004C8E89 /* IdealUIKitTests.m */; };
+		3873045A133732FE004C8E89 /* ICCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837650D13373240007072FD /* ICCache.h */; settings = {ATTRIBUTES = (); }; };
+		3873045B133732FE004C8E89 /* ICCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837650E13373240007072FD /* ICCache.m */; };
+		3873045C133732FE004C8E89 /* ICCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837650F13373240007072FD /* ICCrypto.h */; settings = {ATTRIBUTES = (); }; };
+		3873045D133732FE004C8E89 /* ICCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651013373240007072FD /* ICCrypto.m */; };
+		3873045E133732FE004C8E89 /* ICHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651113373240007072FD /* ICHTTPRequest.h */; settings = {ATTRIBUTES = (); }; };
+		3873045F133732FE004C8E89 /* ICHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651213373240007072FD /* ICHTTPRequest.m */; };
+		38730460133732FE004C8E89 /* ICIconv.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651313373240007072FD /* ICIconv.h */; settings = {ATTRIBUTES = (); }; };
+		38730461133732FE004C8E89 /* ICIconv.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651413373240007072FD /* ICIconv.m */; };
+		38730462133732FE004C8E89 /* ICPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651513373240007072FD /* ICPreference.h */; settings = {ATTRIBUTES = (); }; };
+		38730463133732FE004C8E89 /* ICPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651613373240007072FD /* ICPreference.m */; };
+		38730464133732FE004C8E89 /* ICSQL.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651713373240007072FD /* ICSQL.h */; settings = {ATTRIBUTES = (); }; };
+		38730465133732FE004C8E89 /* ICSQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651813373240007072FD /* ICSQL.m */; };
+		38730466133732FE004C8E89 /* ICSqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651913373240007072FD /* ICSqlite3.h */; settings = {ATTRIBUTES = (); }; };
+		38730467133732FE004C8E89 /* ICSqlite3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651A13373240007072FD /* ICSqlite3.m */; };
+		38730468133732FE004C8E89 /* ICUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651B13373240007072FD /* ICUtility.h */; settings = {ATTRIBUTES = (); }; };
+		38730469133732FE004C8E89 /* ICUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651C13373240007072FD /* ICUtility.m */; };
+		3873046A133732FE004C8E89 /* ICXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651D13373240007072FD /* ICXML.h */; settings = {ATTRIBUTES = (); }; };
+		3873046B133732FE004C8E89 /* ICXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651E13373240007072FD /* ICXML.m */; };
+		3873046C133732FE004C8E89 /* IdealAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651F13373240007072FD /* IdealAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3873046D133732FE004C8E89 /* IdealCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652013373240007072FD /* IdealCocoa.h */; settings = {ATTRIBUTES = (); }; };
+		3873046E133732FE004C8E89 /* NSArrayAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652113373240007072FD /* NSArrayAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3873046F133732FE004C8E89 /* NSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837652213373240007072FD /* NSArrayAdditions.m */; };
+		38730470133732FE004C8E89 /* NSBundleAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652313373240007072FD /* NSBundleAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		38730471133732FE004C8E89 /* NSBundleAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837652413373240007072FD /* NSBundleAdditions.m */; };
+		38730472133732FE004C8E89 /* NSDataAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652513373240007072FD /* NSDataAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		38730473133732FE004C8E89 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837652613373240007072FD /* NSDataAdditions.m */; };
+		38730474133732FE004C8E89 /* NSDictionaryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652713373240007072FD /* NSDictionaryAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		38730475133732FE004C8E89 /* NSDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837652813373240007072FD /* NSDictionaryAdditions.m */; };
+		38730476133732FE004C8E89 /* NSNumberFormatterAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652913373240007072FD /* NSNumberFormatterAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		38730477133732FE004C8E89 /* NSNumberFormatterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837652A13373240007072FD /* NSNumberFormatterAdditions.m */; };
+		38730478133732FE004C8E89 /* NSPathUtilitiesAddtions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652B13373240007072FD /* NSPathUtilitiesAddtions.h */; settings = {ATTRIBUTES = (); }; };
+		38730479133732FE004C8E89 /* NSPathUtilitiesAddtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837652C13373240007072FD /* NSPathUtilitiesAddtions.m */; };
+		3873047A133732FE004C8E89 /* NSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652D13373240007072FD /* NSStringAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3873047B133732FE004C8E89 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837652E13373240007072FD /* NSStringAdditions.m */; };
+		3873047C133732FE004C8E89 /* NSStringEncodingAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837652F13373240007072FD /* NSStringEncodingAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3873047D133732FE004C8E89 /* NSTimerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837653013373240007072FD /* NSTimerAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		3873047E133732FE004C8E89 /* NSTimerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837653113373240007072FD /* NSTimerAdditions.m */; };
+		3873047F133732FE004C8E89 /* NSURLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837653213373240007072FD /* NSURLAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		38730480133732FE004C8E89 /* NSURLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837653313373240007072FD /* NSURLAdditions.m */; };
+		38730481133732FE004C8E89 /* NSURLRequestAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837653413373240007072FD /* NSURLRequestAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		38730482133732FE004C8E89 /* NSURLRequestAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837653513373240007072FD /* NSURLRequestAdditions.m */; };
+		389D2C721338C3D10090EE2C /* libIdealCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D413373154007072FD /* libIdealCocoa.a */; };
+		38B78E6D133745F400658C00 /* IdealCocoa.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837652013373240007072FD /* IdealCocoa.h */; };
+		38B78E6E133745F400658C00 /* ICCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837650D13373240007072FD /* ICCache.h */; };
+		38B78E6F133745F400658C00 /* ICCrypto.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837650F13373240007072FD /* ICCrypto.h */; };
+		38B78E70133745F400658C00 /* ICHTTPRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651113373240007072FD /* ICHTTPRequest.h */; };
+		38B78E71133745F400658C00 /* ICIconv.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651313373240007072FD /* ICIconv.h */; };
+		38B78E72133745F400658C00 /* ICPreference.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651513373240007072FD /* ICPreference.h */; };
+		38B78E73133745F400658C00 /* ICSQL.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651713373240007072FD /* ICSQL.h */; };
+		38B78E74133745F400658C00 /* ICSqlite3.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651913373240007072FD /* ICSqlite3.h */; };
+		38B78E75133745F400658C00 /* ICUtility.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651B13373240007072FD /* ICUtility.h */; };
+		38B78E76133745F400658C00 /* ICXML.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651D13373240007072FD /* ICXML.h */; };
+		38B78E77133745F400658C00 /* IdealAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651F13373240007072FD /* IdealAdditions.h */; };
+		38B78E78133745F400658C00 /* NSArrayAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837652113373240007072FD /* NSArrayAdditions.h */; };
+		38B78E79133745F400658C00 /* NSBundleAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837652313373240007072FD /* NSBundleAdditions.h */; };
+		38B78E7A133745F400658C00 /* NSDataAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837652513373240007072FD /* NSDataAdditions.h */; };
+		38B78E7B133745F400658C00 /* NSDictionaryAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837652713373240007072FD /* NSDictionaryAdditions.h */; };
+		38B78E7C133745F400658C00 /* NSNumberFormatterAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837652913373240007072FD /* NSNumberFormatterAdditions.h */; };
+		38B78E7D133745F400658C00 /* NSPathUtilitiesAddtions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837652B13373240007072FD /* NSPathUtilitiesAddtions.h */; };
+		38B78E7E133745F400658C00 /* NSStringAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837652D13373240007072FD /* NSStringAdditions.h */; };
+		38B78E7F133745F400658C00 /* NSStringEncodingAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837652F13373240007072FD /* NSStringEncodingAdditions.h */; };
+		38B78E80133745F400658C00 /* NSTimerAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837653013373240007072FD /* NSTimerAdditions.h */; };
+		38B78E81133745F400658C00 /* NSURLAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837653213373240007072FD /* NSURLAdditions.h */; };
+		38B78E82133745F400658C00 /* NSURLRequestAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837653413373240007072FD /* NSURLRequestAdditions.h */; };
+		38B78E831337460F00658C00 /* ICCoverFlowView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38F2CF531337381E004FB9C2 /* ICCoverFlowView.h */; };
+		38B78E841337460F00658C00 /* ICImageCachedControls.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38F2CF551337381E004FB9C2 /* ICImageCachedControls.h */; };
+		38B78E851337460F00658C00 /* IdealUIKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38F2CF571337381E004FB9C2 /* IdealUIKit.h */; };
+		38B78E861337460F00658C00 /* UIAlertViewAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38F2CF581337381E004FB9C2 /* UIAlertViewAdditions.h */; };
+		38B78E871337460F00658C00 /* UIApplicationAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38F2CF5A1337381E004FB9C2 /* UIApplicationAdditions.h */; };
+		38B78E881337460F00658C00 /* UIColorAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38F2CF5C1337381E004FB9C2 /* UIColorAdditions.h */; };
+		38B78E891337460F00658C00 /* UIControlAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38F2CF5E1337381E004FB9C2 /* UIControlAdditions.h */; };
+		38B78E8A1337460F00658C00 /* UIDeviceAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38F2CF601337381F004FB9C2 /* UIDeviceAdditions.h */; };
+		38B78E8B1337460F00658C00 /* UIEventScrollView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38F2CF621337381F004FB9C2 /* UIEventScrollView.h */; };
+		38B78E8C1337460F00658C00 /* UIImageAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38F2CF641337381F004FB9C2 /* UIImageAdditions.h */; };
+		38B78E8D1337460F00658C00 /* UIWebViewAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38F2CF661337381F004FB9C2 /* UIWebViewAdditions.h */; };
+		38B9454C13DFDF6C00882F36 /* NSDateAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B9454A13DFDF6C00882F36 /* NSDateAdditions.h */; };
+		38B9454D13DFDF6C00882F36 /* NSDateAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B9454A13DFDF6C00882F36 /* NSDateAdditions.h */; };
+		38B9454E13DFDF6C00882F36 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B9454B13DFDF6C00882F36 /* NSDateAdditions.m */; };
+		38B9454F13DFDF6C00882F36 /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B9454B13DFDF6C00882F36 /* NSDateAdditions.m */; };
+		38D7F41D13B0760F00DA793E /* ICTableViewCellCopyable.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 380ED29113B05A0E00986433 /* ICTableViewCellCopyable.h */; };
+		38F2CF681337381F004FB9C2 /* ICCoverFlowView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F2CF531337381E004FB9C2 /* ICCoverFlowView.h */; settings = {ATTRIBUTES = (); }; };
+		38F2CF691337381F004FB9C2 /* ICCoverFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F2CF541337381E004FB9C2 /* ICCoverFlowView.m */; };
+		38F2CF6A1337381F004FB9C2 /* ICImageCachedControls.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F2CF551337381E004FB9C2 /* ICImageCachedControls.h */; settings = {ATTRIBUTES = (); }; };
+		38F2CF6B1337381F004FB9C2 /* ICImageCachedControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F2CF561337381E004FB9C2 /* ICImageCachedControls.m */; };
+		38F2CF6C1337381F004FB9C2 /* IdealUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F2CF571337381E004FB9C2 /* IdealUIKit.h */; settings = {ATTRIBUTES = (); }; };
+		38F2CF6D1337381F004FB9C2 /* UIAlertViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F2CF581337381E004FB9C2 /* UIAlertViewAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		38F2CF6E1337381F004FB9C2 /* UIAlertViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F2CF591337381E004FB9C2 /* UIAlertViewAdditions.m */; };
+		38F2CF6F1337381F004FB9C2 /* UIApplicationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F2CF5A1337381E004FB9C2 /* UIApplicationAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		38F2CF701337381F004FB9C2 /* UIApplicationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F2CF5B1337381E004FB9C2 /* UIApplicationAdditions.m */; };
+		38F2CF711337381F004FB9C2 /* UIColorAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F2CF5C1337381E004FB9C2 /* UIColorAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		38F2CF721337381F004FB9C2 /* UIColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F2CF5D1337381E004FB9C2 /* UIColorAdditions.m */; };
+		38F2CF731337381F004FB9C2 /* UIControlAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F2CF5E1337381E004FB9C2 /* UIControlAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		38F2CF741337381F004FB9C2 /* UIControlAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F2CF5F1337381F004FB9C2 /* UIControlAdditions.m */; };
+		38F2CF751337381F004FB9C2 /* UIDeviceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F2CF601337381F004FB9C2 /* UIDeviceAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		38F2CF761337381F004FB9C2 /* UIDeviceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F2CF611337381F004FB9C2 /* UIDeviceAdditions.m */; };
+		38F2CF771337381F004FB9C2 /* UIEventScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F2CF621337381F004FB9C2 /* UIEventScrollView.h */; settings = {ATTRIBUTES = (); }; };
+		38F2CF781337381F004FB9C2 /* UIEventScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F2CF631337381F004FB9C2 /* UIEventScrollView.m */; };
+		38F2CF791337381F004FB9C2 /* UIImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F2CF641337381F004FB9C2 /* UIImageAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		38F2CF7A1337381F004FB9C2 /* UIImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F2CF651337381F004FB9C2 /* UIImageAdditions.m */; };
+		38F2CF7B1337381F004FB9C2 /* UIWebViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F2CF661337381F004FB9C2 /* UIWebViewAdditions.h */; settings = {ATTRIBUTES = (); }; };
+		38F2CF7C1337381F004FB9C2 /* UIWebViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F2CF671337381F004FB9C2 /* UIWebViewAdditions.m */; };
+		38F76B2013B9CF00009D0B0A /* UIViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F76B1E13B9CF00009D0B0A /* UIViewAdditions.h */; };
+		38F76B2113B9CF00009D0B0A /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F76B1F13B9CF00009D0B0A /* UIViewAdditions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		383764E713373155007072FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383764CB13373154007072FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 383764D313373154007072FD;
+			remoteInfo = IdealCocoa;
+		};
+		38730445133732DE004C8E89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383764CB13373154007072FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38730436133732DE004C8E89;
+			remoteInfo = IdealUIKit;
+		};
+		38B78E8E1337462200658C00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383764CB13373154007072FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38B78E661337455F00658C00;
+			remoteInfo = "Copy Headers";
+		};
+		38B78E901337462600658C00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383764CB13373154007072FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38B78E661337455F00658C00;
+			remoteInfo = "Copy Headers";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		38B78E6B1337458F00658C00 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = ../../include/IdealCocoa;
+			dstSubfolderSpec = 16;
+			files = (
+				38B78E6D133745F400658C00 /* IdealCocoa.h in CopyFiles */,
+				38B78E6E133745F400658C00 /* ICCache.h in CopyFiles */,
+				38B78E6F133745F400658C00 /* ICCrypto.h in CopyFiles */,
+				38B78E70133745F400658C00 /* ICHTTPRequest.h in CopyFiles */,
+				38B78E71133745F400658C00 /* ICIconv.h in CopyFiles */,
+				38B78E72133745F400658C00 /* ICPreference.h in CopyFiles */,
+				38B78E73133745F400658C00 /* ICSQL.h in CopyFiles */,
+				38B78E74133745F400658C00 /* ICSqlite3.h in CopyFiles */,
+				38B78E75133745F400658C00 /* ICUtility.h in CopyFiles */,
+				38B78E76133745F400658C00 /* ICXML.h in CopyFiles */,
+				38B78E77133745F400658C00 /* IdealAdditions.h in CopyFiles */,
+				38B78E78133745F400658C00 /* NSArrayAdditions.h in CopyFiles */,
+				38B78E79133745F400658C00 /* NSBundleAdditions.h in CopyFiles */,
+				38B78E7A133745F400658C00 /* NSDataAdditions.h in CopyFiles */,
+				38B78E7B133745F400658C00 /* NSDictionaryAdditions.h in CopyFiles */,
+				38B78E7C133745F400658C00 /* NSNumberFormatterAdditions.h in CopyFiles */,
+				38B78E7D133745F400658C00 /* NSPathUtilitiesAddtions.h in CopyFiles */,
+				38B78E7E133745F400658C00 /* NSStringAdditions.h in CopyFiles */,
+				38B78E7F133745F400658C00 /* NSStringEncodingAdditions.h in CopyFiles */,
+				38B78E80133745F400658C00 /* NSTimerAdditions.h in CopyFiles */,
+				38B78E81133745F400658C00 /* NSURLAdditions.h in CopyFiles */,
+				38B78E82133745F400658C00 /* NSURLRequestAdditions.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38B78E6C133745B600658C00 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = ../../include/IdealUIKit;
+			dstSubfolderSpec = 16;
+			files = (
+				38D7F41D13B0760F00DA793E /* ICTableViewCellCopyable.h in CopyFiles */,
+				38B78E831337460F00658C00 /* ICCoverFlowView.h in CopyFiles */,
+				38B78E841337460F00658C00 /* ICImageCachedControls.h in CopyFiles */,
+				38B78E851337460F00658C00 /* IdealUIKit.h in CopyFiles */,
+				3831DD4513A86DC3004CA77F /* UIScrollViewAdditions.h in CopyFiles */,
+				38B78E861337460F00658C00 /* UIAlertViewAdditions.h in CopyFiles */,
+				38B78E871337460F00658C00 /* UIApplicationAdditions.h in CopyFiles */,
+				38B78E881337460F00658C00 /* UIColorAdditions.h in CopyFiles */,
+				38B78E891337460F00658C00 /* UIControlAdditions.h in CopyFiles */,
+				38B78E8A1337460F00658C00 /* UIDeviceAdditions.h in CopyFiles */,
+				38B78E8B1337460F00658C00 /* UIEventScrollView.h in CopyFiles */,
+				38B78E8C1337460F00658C00 /* UIImageAdditions.h in CopyFiles */,
+				38B78E8D1337460F00658C00 /* UIWebViewAdditions.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		380ED29113B05A0E00986433 /* ICTableViewCellCopyable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICTableViewCellCopyable.h; sourceTree = "<group>"; };
+		380ED29213B05A0E00986433 /* ICTableViewCellCopyable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICTableViewCellCopyable.m; sourceTree = "<group>"; };
+		381DD53C1338C0E2008F28C6 /* IdealCocoaIconvTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdealCocoaIconvTests.m; sourceTree = "<group>"; };
+		381DD5481338C22A008F28C6 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		3831DD3D13A86D1C004CA77F /* UIScrollViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewAdditions.h; sourceTree = "<group>"; };
+		3831DD3E13A86D1C004CA77F /* UIScrollViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewAdditions.m; sourceTree = "<group>"; };
+		383764D413373154007072FD /* libIdealCocoa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIdealCocoa.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		383764D713373154007072FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		383764E113373155007072FD /* IdealCocoaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdealCocoaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		383764E213373155007072FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		383764E513373155007072FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		383764EC13373155007072FD /* IdealCocoaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IdealCocoaTests-Info.plist"; sourceTree = "<group>"; };
+		383764F013373155007072FD /* IdealCocoaTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IdealCocoaTests-Prefix.pch"; sourceTree = "<group>"; };
+		383764F113373155007072FD /* IdealCocoaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdealCocoaTests.h; sourceTree = "<group>"; };
+		383764F313373155007072FD /* IdealCocoaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdealCocoaTests.m; sourceTree = "<group>"; };
+		3837650B13373222007072FD /* IdealCocoa_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdealCocoa_Prefix.pch; sourceTree = "<group>"; };
+		3837650D13373240007072FD /* ICCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICCache.h; sourceTree = "<group>"; };
+		3837650E13373240007072FD /* ICCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICCache.m; sourceTree = "<group>"; };
+		3837650F13373240007072FD /* ICCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICCrypto.h; sourceTree = "<group>"; };
+		3837651013373240007072FD /* ICCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICCrypto.m; sourceTree = "<group>"; };
+		3837651113373240007072FD /* ICHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICHTTPRequest.h; sourceTree = "<group>"; };
+		3837651213373240007072FD /* ICHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICHTTPRequest.m; sourceTree = "<group>"; };
+		3837651313373240007072FD /* ICIconv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICIconv.h; sourceTree = "<group>"; };
+		3837651413373240007072FD /* ICIconv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICIconv.m; sourceTree = "<group>"; };
+		3837651513373240007072FD /* ICPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICPreference.h; sourceTree = "<group>"; };
+		3837651613373240007072FD /* ICPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICPreference.m; sourceTree = "<group>"; };
+		3837651713373240007072FD /* ICSQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSQL.h; sourceTree = "<group>"; };
+		3837651813373240007072FD /* ICSQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSQL.m; sourceTree = "<group>"; };
+		3837651913373240007072FD /* ICSqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSqlite3.h; sourceTree = "<group>"; };
+		3837651A13373240007072FD /* ICSqlite3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSqlite3.m; sourceTree = "<group>"; };
+		3837651B13373240007072FD /* ICUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUtility.h; sourceTree = "<group>"; };
+		3837651C13373240007072FD /* ICUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICUtility.m; sourceTree = "<group>"; };
+		3837651D13373240007072FD /* ICXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICXML.h; sourceTree = "<group>"; };
+		3837651E13373240007072FD /* ICXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICXML.m; sourceTree = "<group>"; };
+		3837651F13373240007072FD /* IdealAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdealAdditions.h; sourceTree = "<group>"; };
+		3837652013373240007072FD /* IdealCocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdealCocoa.h; sourceTree = "<group>"; };
+		3837652113373240007072FD /* NSArrayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayAdditions.h; sourceTree = "<group>"; };
+		3837652213373240007072FD /* NSArrayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayAdditions.m; sourceTree = "<group>"; };
+		3837652313373240007072FD /* NSBundleAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBundleAdditions.h; sourceTree = "<group>"; };
+		3837652413373240007072FD /* NSBundleAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBundleAdditions.m; sourceTree = "<group>"; };
+		3837652513373240007072FD /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAdditions.h; sourceTree = "<group>"; };
+		3837652613373240007072FD /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
+		3837652713373240007072FD /* NSDictionaryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryAdditions.h; sourceTree = "<group>"; };
+		3837652813373240007072FD /* NSDictionaryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryAdditions.m; sourceTree = "<group>"; };
+		3837652913373240007072FD /* NSNumberFormatterAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberFormatterAdditions.h; sourceTree = "<group>"; };
+		3837652A13373240007072FD /* NSNumberFormatterAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumberFormatterAdditions.m; sourceTree = "<group>"; };
+		3837652B13373240007072FD /* NSPathUtilitiesAddtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPathUtilitiesAddtions.h; sourceTree = "<group>"; };
+		3837652C13373240007072FD /* NSPathUtilitiesAddtions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPathUtilitiesAddtions.m; sourceTree = "<group>"; };
+		3837652D13373240007072FD /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
+		3837652E13373240007072FD /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		3837652F13373240007072FD /* NSStringEncodingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringEncodingAdditions.h; sourceTree = "<group>"; };
+		3837653013373240007072FD /* NSTimerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTimerAdditions.h; sourceTree = "<group>"; };
+		3837653113373240007072FD /* NSTimerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTimerAdditions.m; sourceTree = "<group>"; };
+		3837653213373240007072FD /* NSURLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLAdditions.h; sourceTree = "<group>"; };
+		3837653313373240007072FD /* NSURLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLAdditions.m; sourceTree = "<group>"; };
+		3837653413373240007072FD /* NSURLRequestAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLRequestAdditions.h; sourceTree = "<group>"; };
+		3837653513373240007072FD /* NSURLRequestAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLRequestAdditions.m; sourceTree = "<group>"; };
+		3837658B13373280007072FD /* IdealUIKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdealUIKit_Prefix.pch; sourceTree = "<group>"; };
+		38730437133732DE004C8E89 /* libIdealUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIdealUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		38730441133732DE004C8E89 /* IdealUIKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdealUIKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3873044A133732DE004C8E89 /* IdealUIKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IdealUIKitTests-Info.plist"; sourceTree = "<group>"; };
+		3873044E133732DE004C8E89 /* IdealUIKitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IdealUIKitTests-Prefix.pch"; sourceTree = "<group>"; };
+		3873044F133732DE004C8E89 /* IdealUIKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdealUIKitTests.h; sourceTree = "<group>"; };
+		38730451133732DE004C8E89 /* IdealUIKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdealUIKitTests.m; sourceTree = "<group>"; };
+		38B9454A13DFDF6C00882F36 /* NSDateAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateAdditions.h; sourceTree = "<group>"; };
+		38B9454B13DFDF6C00882F36 /* NSDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateAdditions.m; sourceTree = "<group>"; };
+		38F2CF531337381E004FB9C2 /* ICCoverFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICCoverFlowView.h; sourceTree = "<group>"; };
+		38F2CF541337381E004FB9C2 /* ICCoverFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICCoverFlowView.m; sourceTree = "<group>"; };
+		38F2CF551337381E004FB9C2 /* ICImageCachedControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICImageCachedControls.h; sourceTree = "<group>"; };
+		38F2CF561337381E004FB9C2 /* ICImageCachedControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICImageCachedControls.m; sourceTree = "<group>"; };
+		38F2CF571337381E004FB9C2 /* IdealUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdealUIKit.h; sourceTree = "<group>"; };
+		38F2CF581337381E004FB9C2 /* UIAlertViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertViewAdditions.h; sourceTree = "<group>"; };
+		38F2CF591337381E004FB9C2 /* UIAlertViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewAdditions.m; sourceTree = "<group>"; };
+		38F2CF5A1337381E004FB9C2 /* UIApplicationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIApplicationAdditions.h; sourceTree = "<group>"; };
+		38F2CF5B1337381E004FB9C2 /* UIApplicationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplicationAdditions.m; sourceTree = "<group>"; };
+		38F2CF5C1337381E004FB9C2 /* UIColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorAdditions.h; sourceTree = "<group>"; };
+		38F2CF5D1337381E004FB9C2 /* UIColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorAdditions.m; sourceTree = "<group>"; };
+		38F2CF5E1337381E004FB9C2 /* UIControlAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIControlAdditions.h; sourceTree = "<group>"; };
+		38F2CF5F1337381F004FB9C2 /* UIControlAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIControlAdditions.m; sourceTree = "<group>"; };
+		38F2CF601337381F004FB9C2 /* UIDeviceAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeviceAdditions.h; sourceTree = "<group>"; };
+		38F2CF611337381F004FB9C2 /* UIDeviceAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDeviceAdditions.m; sourceTree = "<group>"; };
+		38F2CF621337381F004FB9C2 /* UIEventScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIEventScrollView.h; sourceTree = "<group>"; };
+		38F2CF631337381F004FB9C2 /* UIEventScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIEventScrollView.m; sourceTree = "<group>"; };
+		38F2CF641337381F004FB9C2 /* UIImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageAdditions.h; sourceTree = "<group>"; };
+		38F2CF651337381F004FB9C2 /* UIImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageAdditions.m; sourceTree = "<group>"; };
+		38F2CF661337381F004FB9C2 /* UIWebViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewAdditions.h; sourceTree = "<group>"; };
+		38F2CF671337381F004FB9C2 /* UIWebViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewAdditions.m; sourceTree = "<group>"; };
+		38F76B1E13B9CF00009D0B0A /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
+		38F76B1F13B9CF00009D0B0A /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		383764D113373154007072FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383764D813373154007072FD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383764DD13373155007072FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				389D2C721338C3D10090EE2C /* libIdealCocoa.a in Frameworks */,
+				381DD5491338C22A008F28C6 /* libiconv.dylib in Frameworks */,
+				383764E313373155007072FD /* UIKit.framework in Frameworks */,
+				383764E413373155007072FD /* Foundation.framework in Frameworks */,
+				383764E613373155007072FD /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38730434133732DE004C8E89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38730438133732DE004C8E89 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3873043D133732DE004C8E89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38730442133732DE004C8E89 /* UIKit.framework in Frameworks */,
+				38730443133732DE004C8E89 /* Foundation.framework in Frameworks */,
+				38730444133732DE004C8E89 /* CoreGraphics.framework in Frameworks */,
+				38730447133732DE004C8E89 /* libIdealUIKit.a in Frameworks */,
+				381DD54A1338C23B008F28C6 /* libiconv.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		383764C913373154007072FD = {
+			isa = PBXGroup;
+			children = (
+				383764D913373154007072FD /* IdealCocoa */,
+				3837655F1337324D007072FD /* IdealUIKit */,
+				383764EA13373155007072FD /* IdealCocoaTests */,
+				38730448133732DE004C8E89 /* IdealUIKitTests */,
+				383764D613373154007072FD /* Frameworks */,
+				383764D513373154007072FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		383764D513373154007072FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				383764D413373154007072FD /* libIdealCocoa.a */,
+				383764E113373155007072FD /* IdealCocoaTests.octest */,
+				38730437133732DE004C8E89 /* libIdealUIKit.a */,
+				38730441133732DE004C8E89 /* IdealUIKitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		383764D613373154007072FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				381DD5481338C22A008F28C6 /* libiconv.dylib */,
+				383764D713373154007072FD /* Foundation.framework */,
+				383764E213373155007072FD /* UIKit.framework */,
+				383764E513373155007072FD /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		383764D913373154007072FD /* IdealCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				383764DA13373155007072FD /* Supporting Files */,
+				3837652013373240007072FD /* IdealCocoa.h */,
+				3837650D13373240007072FD /* ICCache.h */,
+				3837650E13373240007072FD /* ICCache.m */,
+				3837650F13373240007072FD /* ICCrypto.h */,
+				3837651013373240007072FD /* ICCrypto.m */,
+				3837651113373240007072FD /* ICHTTPRequest.h */,
+				3837651213373240007072FD /* ICHTTPRequest.m */,
+				3837651313373240007072FD /* ICIconv.h */,
+				3837651413373240007072FD /* ICIconv.m */,
+				3837651513373240007072FD /* ICPreference.h */,
+				3837651613373240007072FD /* ICPreference.m */,
+				3837651713373240007072FD /* ICSQL.h */,
+				3837651813373240007072FD /* ICSQL.m */,
+				3837651913373240007072FD /* ICSqlite3.h */,
+				3837651A13373240007072FD /* ICSqlite3.m */,
+				3837651B13373240007072FD /* ICUtility.h */,
+				3837651C13373240007072FD /* ICUtility.m */,
+				3837651D13373240007072FD /* ICXML.h */,
+				3837651E13373240007072FD /* ICXML.m */,
+				3837651F13373240007072FD /* IdealAdditions.h */,
+				3837652113373240007072FD /* NSArrayAdditions.h */,
+				3837652213373240007072FD /* NSArrayAdditions.m */,
+				3837652313373240007072FD /* NSBundleAdditions.h */,
+				3837652413373240007072FD /* NSBundleAdditions.m */,
+				3837652513373240007072FD /* NSDataAdditions.h */,
+				3837652613373240007072FD /* NSDataAdditions.m */,
+				38B9454A13DFDF6C00882F36 /* NSDateAdditions.h */,
+				38B9454B13DFDF6C00882F36 /* NSDateAdditions.m */,
+				3837652713373240007072FD /* NSDictionaryAdditions.h */,
+				3837652813373240007072FD /* NSDictionaryAdditions.m */,
+				3837652913373240007072FD /* NSNumberFormatterAdditions.h */,
+				3837652A13373240007072FD /* NSNumberFormatterAdditions.m */,
+				3837652B13373240007072FD /* NSPathUtilitiesAddtions.h */,
+				3837652C13373240007072FD /* NSPathUtilitiesAddtions.m */,
+				3837652D13373240007072FD /* NSStringAdditions.h */,
+				3837652E13373240007072FD /* NSStringAdditions.m */,
+				3837652F13373240007072FD /* NSStringEncodingAdditions.h */,
+				3837653013373240007072FD /* NSTimerAdditions.h */,
+				3837653113373240007072FD /* NSTimerAdditions.m */,
+				3837653213373240007072FD /* NSURLAdditions.h */,
+				3837653313373240007072FD /* NSURLAdditions.m */,
+				3837653413373240007072FD /* NSURLRequestAdditions.h */,
+				3837653513373240007072FD /* NSURLRequestAdditions.m */,
+			);
+			path = IdealCocoa;
+			sourceTree = "<group>";
+		};
+		383764DA13373155007072FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3837650B13373222007072FD /* IdealCocoa_Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		383764EA13373155007072FD /* IdealCocoaTests */ = {
+			isa = PBXGroup;
+			children = (
+				383764F113373155007072FD /* IdealCocoaTests.h */,
+				383764F313373155007072FD /* IdealCocoaTests.m */,
+				381DD53C1338C0E2008F28C6 /* IdealCocoaIconvTests.m */,
+				383764EB13373155007072FD /* Supporting Files */,
+			);
+			path = IdealCocoaTests;
+			sourceTree = "<group>";
+		};
+		383764EB13373155007072FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				383764EC13373155007072FD /* IdealCocoaTests-Info.plist */,
+				383764F013373155007072FD /* IdealCocoaTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3837655F1337324D007072FD /* IdealUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				3837658A13373270007072FD /* Supporting Files */,
+				38F2CF571337381E004FB9C2 /* IdealUIKit.h */,
+				38F2CF531337381E004FB9C2 /* ICCoverFlowView.h */,
+				38F2CF541337381E004FB9C2 /* ICCoverFlowView.m */,
+				38F2CF551337381E004FB9C2 /* ICImageCachedControls.h */,
+				38F2CF561337381E004FB9C2 /* ICImageCachedControls.m */,
+				38F2CF581337381E004FB9C2 /* UIAlertViewAdditions.h */,
+				38F2CF591337381E004FB9C2 /* UIAlertViewAdditions.m */,
+				38F2CF5A1337381E004FB9C2 /* UIApplicationAdditions.h */,
+				38F2CF5B1337381E004FB9C2 /* UIApplicationAdditions.m */,
+				38F2CF5C1337381E004FB9C2 /* UIColorAdditions.h */,
+				38F2CF5D1337381E004FB9C2 /* UIColorAdditions.m */,
+				38F2CF5E1337381E004FB9C2 /* UIControlAdditions.h */,
+				38F2CF5F1337381F004FB9C2 /* UIControlAdditions.m */,
+				38F2CF601337381F004FB9C2 /* UIDeviceAdditions.h */,
+				38F2CF611337381F004FB9C2 /* UIDeviceAdditions.m */,
+				38F2CF621337381F004FB9C2 /* UIEventScrollView.h */,
+				38F2CF631337381F004FB9C2 /* UIEventScrollView.m */,
+				38F2CF641337381F004FB9C2 /* UIImageAdditions.h */,
+				38F2CF651337381F004FB9C2 /* UIImageAdditions.m */,
+				38F2CF661337381F004FB9C2 /* UIWebViewAdditions.h */,
+				38F2CF671337381F004FB9C2 /* UIWebViewAdditions.m */,
+				38F76B1E13B9CF00009D0B0A /* UIViewAdditions.h */,
+				38F76B1F13B9CF00009D0B0A /* UIViewAdditions.m */,
+				3831DD3D13A86D1C004CA77F /* UIScrollViewAdditions.h */,
+				3831DD3E13A86D1C004CA77F /* UIScrollViewAdditions.m */,
+				380ED29113B05A0E00986433 /* ICTableViewCellCopyable.h */,
+				380ED29213B05A0E00986433 /* ICTableViewCellCopyable.m */,
+			);
+			path = IdealUIKit;
+			sourceTree = "<group>";
+		};
+		3837658A13373270007072FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3837658B13373280007072FD /* IdealUIKit_Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38730448133732DE004C8E89 /* IdealUIKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				3873044F133732DE004C8E89 /* IdealUIKitTests.h */,
+				38730451133732DE004C8E89 /* IdealUIKitTests.m */,
+				38730449133732DE004C8E89 /* Supporting Files */,
+			);
+			path = IdealUIKitTests;
+			sourceTree = "<group>";
+		};
+		38730449133732DE004C8E89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3873044A133732DE004C8E89 /* IdealUIKitTests-Info.plist */,
+				3873044E133732DE004C8E89 /* IdealUIKitTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		383764D213373154007072FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3837650C13373222007072FD /* IdealCocoa_Prefix.pch in Headers */,
+				3837654913373240007072FD /* IdealCocoa.h in Headers */,
+				3837653613373240007072FD /* ICCache.h in Headers */,
+				3837653813373240007072FD /* ICCrypto.h in Headers */,
+				3837653A13373240007072FD /* ICHTTPRequest.h in Headers */,
+				3837653C13373240007072FD /* ICIconv.h in Headers */,
+				3837653E13373240007072FD /* ICPreference.h in Headers */,
+				3837654013373240007072FD /* ICSQL.h in Headers */,
+				3837654213373240007072FD /* ICSqlite3.h in Headers */,
+				3837654413373240007072FD /* ICUtility.h in Headers */,
+				3837654613373240007072FD /* ICXML.h in Headers */,
+				3837654813373240007072FD /* IdealAdditions.h in Headers */,
+				3837654A13373240007072FD /* NSArrayAdditions.h in Headers */,
+				3837654C13373240007072FD /* NSBundleAdditions.h in Headers */,
+				3837654E13373240007072FD /* NSDataAdditions.h in Headers */,
+				3837655013373240007072FD /* NSDictionaryAdditions.h in Headers */,
+				3837655213373240007072FD /* NSNumberFormatterAdditions.h in Headers */,
+				3837655413373240007072FD /* NSPathUtilitiesAddtions.h in Headers */,
+				3837655613373240007072FD /* NSStringAdditions.h in Headers */,
+				3837655813373240007072FD /* NSStringEncodingAdditions.h in Headers */,
+				3837655913373240007072FD /* NSTimerAdditions.h in Headers */,
+				3837655B13373240007072FD /* NSURLAdditions.h in Headers */,
+				3837655D13373240007072FD /* NSURLRequestAdditions.h in Headers */,
+				38B9454C13DFDF6C00882F36 /* NSDateAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38730435133732DE004C8E89 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3873046C133732FE004C8E89 /* IdealAdditions.h in Headers */,
+				3873046D133732FE004C8E89 /* IdealCocoa.h in Headers */,
+				3873045A133732FE004C8E89 /* ICCache.h in Headers */,
+				3873045C133732FE004C8E89 /* ICCrypto.h in Headers */,
+				3873045E133732FE004C8E89 /* ICHTTPRequest.h in Headers */,
+				38730460133732FE004C8E89 /* ICIconv.h in Headers */,
+				38730462133732FE004C8E89 /* ICPreference.h in Headers */,
+				38730464133732FE004C8E89 /* ICSQL.h in Headers */,
+				38730466133732FE004C8E89 /* ICSqlite3.h in Headers */,
+				38730468133732FE004C8E89 /* ICUtility.h in Headers */,
+				3873046A133732FE004C8E89 /* ICXML.h in Headers */,
+				3873046E133732FE004C8E89 /* NSArrayAdditions.h in Headers */,
+				38730470133732FE004C8E89 /* NSBundleAdditions.h in Headers */,
+				38730472133732FE004C8E89 /* NSDataAdditions.h in Headers */,
+				38730474133732FE004C8E89 /* NSDictionaryAdditions.h in Headers */,
+				38730476133732FE004C8E89 /* NSNumberFormatterAdditions.h in Headers */,
+				38730478133732FE004C8E89 /* NSPathUtilitiesAddtions.h in Headers */,
+				3873047A133732FE004C8E89 /* NSStringAdditions.h in Headers */,
+				3873047C133732FE004C8E89 /* NSStringEncodingAdditions.h in Headers */,
+				3873047D133732FE004C8E89 /* NSTimerAdditions.h in Headers */,
+				3873047F133732FE004C8E89 /* NSURLAdditions.h in Headers */,
+				38730481133732FE004C8E89 /* NSURLRequestAdditions.h in Headers */,
+				38F2CF681337381F004FB9C2 /* ICCoverFlowView.h in Headers */,
+				38F2CF6A1337381F004FB9C2 /* ICImageCachedControls.h in Headers */,
+				38F2CF6C1337381F004FB9C2 /* IdealUIKit.h in Headers */,
+				38F2CF6D1337381F004FB9C2 /* UIAlertViewAdditions.h in Headers */,
+				38F2CF6F1337381F004FB9C2 /* UIApplicationAdditions.h in Headers */,
+				38F2CF711337381F004FB9C2 /* UIColorAdditions.h in Headers */,
+				38F2CF731337381F004FB9C2 /* UIControlAdditions.h in Headers */,
+				38F2CF751337381F004FB9C2 /* UIDeviceAdditions.h in Headers */,
+				38F2CF771337381F004FB9C2 /* UIEventScrollView.h in Headers */,
+				38F2CF791337381F004FB9C2 /* UIImageAdditions.h in Headers */,
+				38F2CF7B1337381F004FB9C2 /* UIWebViewAdditions.h in Headers */,
+				3831DD3F13A86D1C004CA77F /* UIScrollViewAdditions.h in Headers */,
+				380ED29313B05A0E00986433 /* ICTableViewCellCopyable.h in Headers */,
+				38F76B2013B9CF00009D0B0A /* UIViewAdditions.h in Headers */,
+				38B9454D13DFDF6C00882F36 /* NSDateAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		383764D313373154007072FD /* IdealCocoa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 383764F713373155007072FD /* Build configuration list for PBXNativeTarget "IdealCocoa" */;
+			buildPhases = (
+				383764D013373154007072FD /* Sources */,
+				383764D113373154007072FD /* Frameworks */,
+				383764D213373154007072FD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38B78E8F1337462200658C00 /* PBXTargetDependency */,
+			);
+			name = IdealCocoa;
+			productName = IdealCocoa;
+			productReference = 383764D413373154007072FD /* libIdealCocoa.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		383764E013373155007072FD /* IdealCocoaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 383764FA13373155007072FD /* Build configuration list for PBXNativeTarget "IdealCocoaTests" */;
+			buildPhases = (
+				383764DC13373155007072FD /* Sources */,
+				383764DD13373155007072FD /* Frameworks */,
+				383764DE13373155007072FD /* Resources */,
+				383764DF13373155007072FD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				383764E813373155007072FD /* PBXTargetDependency */,
+			);
+			name = IdealCocoaTests;
+			productName = IdealCocoaTests;
+			productReference = 383764E113373155007072FD /* IdealCocoaTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		38730436133732DE004C8E89 /* IdealUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38730457133732DE004C8E89 /* Build configuration list for PBXNativeTarget "IdealUIKit" */;
+			buildPhases = (
+				38730433133732DE004C8E89 /* Sources */,
+				38730434133732DE004C8E89 /* Frameworks */,
+				38730435133732DE004C8E89 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38B78E911337462600658C00 /* PBXTargetDependency */,
+			);
+			name = IdealUIKit;
+			productName = IdealUIKit;
+			productReference = 38730437133732DE004C8E89 /* libIdealUIKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		38730440133732DE004C8E89 /* IdealUIKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38730458133732DE004C8E89 /* Build configuration list for PBXNativeTarget "IdealUIKitTests" */;
+			buildPhases = (
+				3873043C133732DE004C8E89 /* Sources */,
+				3873043D133732DE004C8E89 /* Frameworks */,
+				3873043E133732DE004C8E89 /* Resources */,
+				3873043F133732DE004C8E89 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38730446133732DE004C8E89 /* PBXTargetDependency */,
+			);
+			name = IdealUIKitTests;
+			productName = IdealUIKitTests;
+			productReference = 38730441133732DE004C8E89 /* IdealUIKitTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		383764CB13373154007072FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = 3rddev.org;
+			};
+			buildConfigurationList = 383764CE13373154007072FD /* Build configuration list for PBXProject "IdealCocoa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 383764C913373154007072FD;
+			productRefGroup = 383764D513373154007072FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				383764D313373154007072FD /* IdealCocoa */,
+				383764E013373155007072FD /* IdealCocoaTests */,
+				38730436133732DE004C8E89 /* IdealUIKit */,
+				38730440133732DE004C8E89 /* IdealUIKitTests */,
+				38B78E661337455F00658C00 /* Copy Headers */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		383764DE13373155007072FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383764F213373155007072FD /* IdealCocoaTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3873043E133732DE004C8E89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38730450133732DE004C8E89 /* IdealUIKitTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		383764DF13373155007072FD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		3873043F133732DE004C8E89 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		383764D013373154007072FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3837653713373240007072FD /* ICCache.m in Sources */,
+				3837653913373240007072FD /* ICCrypto.m in Sources */,
+				3837653B13373240007072FD /* ICHTTPRequest.m in Sources */,
+				3837653D13373240007072FD /* ICIconv.m in Sources */,
+				3837653F13373240007072FD /* ICPreference.m in Sources */,
+				3837654113373240007072FD /* ICSQL.m in Sources */,
+				3837654313373240007072FD /* ICSqlite3.m in Sources */,
+				3837654513373240007072FD /* ICUtility.m in Sources */,
+				3837654713373240007072FD /* ICXML.m in Sources */,
+				3837654B13373240007072FD /* NSArrayAdditions.m in Sources */,
+				3837654D13373240007072FD /* NSBundleAdditions.m in Sources */,
+				3837654F13373240007072FD /* NSDataAdditions.m in Sources */,
+				3837655113373240007072FD /* NSDictionaryAdditions.m in Sources */,
+				3837655313373240007072FD /* NSNumberFormatterAdditions.m in Sources */,
+				3837655513373240007072FD /* NSPathUtilitiesAddtions.m in Sources */,
+				3837655713373240007072FD /* NSStringAdditions.m in Sources */,
+				3837655A13373240007072FD /* NSTimerAdditions.m in Sources */,
+				3837655C13373240007072FD /* NSURLAdditions.m in Sources */,
+				3837655E13373240007072FD /* NSURLRequestAdditions.m in Sources */,
+				38B9454E13DFDF6C00882F36 /* NSDateAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383764DC13373155007072FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383764F413373155007072FD /* IdealCocoaTests.m in Sources */,
+				381DD53D1338C0E2008F28C6 /* IdealCocoaIconvTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38730433133732DE004C8E89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3873045B133732FE004C8E89 /* ICCache.m in Sources */,
+				3873045D133732FE004C8E89 /* ICCrypto.m in Sources */,
+				3873045F133732FE004C8E89 /* ICHTTPRequest.m in Sources */,
+				38730461133732FE004C8E89 /* ICIconv.m in Sources */,
+				38730463133732FE004C8E89 /* ICPreference.m in Sources */,
+				38730465133732FE004C8E89 /* ICSQL.m in Sources */,
+				38730467133732FE004C8E89 /* ICSqlite3.m in Sources */,
+				38730469133732FE004C8E89 /* ICUtility.m in Sources */,
+				3873046B133732FE004C8E89 /* ICXML.m in Sources */,
+				3873046F133732FE004C8E89 /* NSArrayAdditions.m in Sources */,
+				38730471133732FE004C8E89 /* NSBundleAdditions.m in Sources */,
+				38730473133732FE004C8E89 /* NSDataAdditions.m in Sources */,
+				38730475133732FE004C8E89 /* NSDictionaryAdditions.m in Sources */,
+				38730477133732FE004C8E89 /* NSNumberFormatterAdditions.m in Sources */,
+				38730479133732FE004C8E89 /* NSPathUtilitiesAddtions.m in Sources */,
+				3873047B133732FE004C8E89 /* NSStringAdditions.m in Sources */,
+				3873047E133732FE004C8E89 /* NSTimerAdditions.m in Sources */,
+				38730480133732FE004C8E89 /* NSURLAdditions.m in Sources */,
+				38730482133732FE004C8E89 /* NSURLRequestAdditions.m in Sources */,
+				38F2CF691337381F004FB9C2 /* ICCoverFlowView.m in Sources */,
+				38F2CF6B1337381F004FB9C2 /* ICImageCachedControls.m in Sources */,
+				38F2CF6E1337381F004FB9C2 /* UIAlertViewAdditions.m in Sources */,
+				38F2CF701337381F004FB9C2 /* UIApplicationAdditions.m in Sources */,
+				38F2CF721337381F004FB9C2 /* UIColorAdditions.m in Sources */,
+				38F2CF741337381F004FB9C2 /* UIControlAdditions.m in Sources */,
+				38F2CF761337381F004FB9C2 /* UIDeviceAdditions.m in Sources */,
+				38F2CF781337381F004FB9C2 /* UIEventScrollView.m in Sources */,
+				38F2CF7A1337381F004FB9C2 /* UIImageAdditions.m in Sources */,
+				38F2CF7C1337381F004FB9C2 /* UIWebViewAdditions.m in Sources */,
+				3831DD4013A86D1C004CA77F /* UIScrollViewAdditions.m in Sources */,
+				380ED29413B05A0E00986433 /* ICTableViewCellCopyable.m in Sources */,
+				38F76B2113B9CF00009D0B0A /* UIViewAdditions.m in Sources */,
+				38B9454F13DFDF6C00882F36 /* NSDateAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3873043C133732DE004C8E89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38730452133732DE004C8E89 /* IdealUIKitTests.m in Sources */,
+				381DD53E1338C0E2008F28C6 /* IdealCocoaIconvTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		383764E813373155007072FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 383764D313373154007072FD /* IdealCocoa */;
+			targetProxy = 383764E713373155007072FD /* PBXContainerItemProxy */;
+		};
+		38730446133732DE004C8E89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38730436133732DE004C8E89 /* IdealUIKit */;
+			targetProxy = 38730445133732DE004C8E89 /* PBXContainerItemProxy */;
+		};
+		38B78E8F1337462200658C00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38B78E661337455F00658C00 /* Copy Headers */;
+			targetProxy = 38B78E8E1337462200658C00 /* PBXContainerItemProxy */;
+		};
+		38B78E911337462600658C00 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38B78E661337455F00658C00 /* Copy Headers */;
+			targetProxy = 38B78E901337462600658C00 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		383764F513373155007072FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"${inherited}",
+					.,
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		383764F613373155007072FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"${inherited}",
+					.,
+				);
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		383764F813373155007072FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DSTROOT = /tmp/IdealCocoa.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = IdealCocoa/IdealCocoa_Prefix.pch;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		383764F913373155007072FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DSTROOT = /tmp/IdealCocoa.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = IdealCocoa/IdealCocoa_Prefix.pch;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		383764FB13373155007072FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IdealCocoaTests/IdealCocoaTests-Prefix.pch";
+				INFOPLIST_FILE = "IdealCocoaTests/IdealCocoaTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		383764FC13373155007072FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IdealCocoaTests/IdealCocoaTests-Prefix.pch";
+				INFOPLIST_FILE = "IdealCocoaTests/IdealCocoaTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		38730453133732DE004C8E89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/IdealUIKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = IdealUIKit/IdealUIKit_Prefix.pch;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv6 armv7 i386";
+			};
+			name = Debug;
+		};
+		38730454133732DE004C8E89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/IdealUIKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = IdealUIKit/IdealUIKit_Prefix.pch;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "armv6 armv7 i386";
+			};
+			name = Release;
+		};
+		38730455133732DE004C8E89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IdealUIKitTests/IdealUIKitTests-Prefix.pch";
+				INFOPLIST_FILE = "IdealUIKitTests/IdealUIKitTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		38730456133732DE004C8E89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IdealUIKitTests/IdealUIKitTests-Prefix.pch";
+				INFOPLIST_FILE = "IdealUIKitTests/IdealUIKitTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		38B78E681337455F00658C00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "Copy Headers";
+			};
+			name = Debug;
+		};
+		38B78E691337455F00658C00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "Copy Headers";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		383764CE13373154007072FD /* Build configuration list for PBXProject "IdealCocoa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				383764F513373155007072FD /* Debug */,
+				383764F613373155007072FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		383764F713373155007072FD /* Build configuration list for PBXNativeTarget "IdealCocoa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				383764F813373155007072FD /* Debug */,
+				383764F913373155007072FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		383764FA13373155007072FD /* Build configuration list for PBXNativeTarget "IdealCocoaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				383764FB13373155007072FD /* Debug */,
+				383764FC13373155007072FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38730457133732DE004C8E89 /* Build configuration list for PBXNativeTarget "IdealUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38730453133732DE004C8E89 /* Debug */,
+				38730454133732DE004C8E89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38730458133732DE004C8E89 /* Build configuration list for PBXNativeTarget "IdealUIKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38730455133732DE004C8E89 /* Debug */,
+				38730456133732DE004C8E89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38B78E671337455F00658C00 /* Build configuration list for PBXAggregateTarget "Copy Headers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38B78E681337455F00658C00 /* Debug */,
+				38B78E691337455F00658C00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 383764CB13373154007072FD /* Project object */;
+}
