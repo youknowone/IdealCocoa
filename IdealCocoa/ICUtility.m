@@ -19,8 +19,6 @@
 //	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#import "NSURLAdditions.h"
-
 #import "ICUtility.h"
 
 void __ICLog(NSString *log, char *filename, int line) {

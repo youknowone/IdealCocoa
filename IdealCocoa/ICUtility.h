@@ -23,11 +23,11 @@
  *
  *	To take benefit of this feature, do one of below:
  *	1. define IC_DEBUG
- *	2. define CONFIG_Debug or CONFIG_Deployment to define IC_DEBUG
+ *	2. define DEBUG (xcode4 default) or CONFIG_Debug or CONFIG_Deployment to define IC_DEBUG
  */
 
 #ifndef IC_DEBUG
-	#if defined(CONFIG_Debug) || defined(CONFIG_Deployment)
+	#if defined(DEBUG) || defined(CONFIG_Debug) || defined(CONFIG_Development)
 		#define IC_DEBUG 1
 	#else
 		#define IC_DEBUG 0
@@ -51,9 +51,9 @@
 #endif
 
 #if defined(__cplusplus)
-	#define IPHARY_EXTERN extern "C"
+	#define ICEXTERN extern "C"
 #else
-	#define IPHARY_EXTERN extern
+	#define ICEXTERN extern
 #endif
 
 //	__ICUNSTABLE marked features can be removed without notice
@@ -65,4 +65,4 @@
 
 //	DO NOT CALL THIS DIRECTLY!
 //	See 'ICLog' to use this feature
-IPHARY_EXTERN void __ICLog(NSString *log, char *filename, int line);
+ICEXTERN void __ICLog(NSString *log, char *filename, int line);

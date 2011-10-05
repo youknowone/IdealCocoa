@@ -19,8 +19,8 @@
 //	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-IPHARY_EXTERN NSString *NSResourceDirectory(void);
-IPHARY_EXTERN NSString *NSPathForResourceFile(NSString *filename);
+ICEXTERN NSString *NSResourceDirectory(void);
+ICEXTERN NSString *NSPathForResourceFile(NSString *filename);
 
 @interface NSBundle (IdealCocoa)
 
