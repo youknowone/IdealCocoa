@@ -49,6 +49,7 @@
 	if (translit) [attributedToCode appendString:@"//TRANSLIT"];
 	if (ignore) [attributedToCode appendString:@"//IGNORE"];
 	[self openWithToCode:attributedToCode fromCode:fromCode];
+    [attributedToCode release];
 }
 
 - (void) freeOutbuf {

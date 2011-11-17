@@ -55,7 +55,9 @@ ICPreference *mainPreference;
 
 + (void)initialize {
 	if ( self == [ICPreference class] ) {
-		[self setMainPreference:[[ICPreference alloc] initWithContentsOfFile:NSPathForUserConfigurationFile(@"ICMainPreference.plist")]];
+        ICPreference *preference = [[ICPreference alloc] initWithContentsOfFile:NSPathForUserConfigurationFile(@"ICMainPreference.plist")];
+		[self setMainPreference:preference];
+        [preference release];
 	}
 }
 
@@ -63,7 +65,7 @@ ICPreference *mainPreference;
 	[self setMainPreference:nil];
 }
 
-+ (void)setMainPreference:(NSMutableDictionary *)preference {
++ (void)setMainPreference:(ICPreference *)preference {
 	[mainPreference writeToFile];
 	[mainPreference release];
 	mainPreference = [preference retain];

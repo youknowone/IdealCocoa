@@ -126,7 +126,9 @@
 		[indent appendString:@"\t"];
 	}
 	if ( name == nil ) {
-		return [NSString stringWithFormat:@"%@%@", indent, self.text];
+		NSString *desc = [NSString stringWithFormat:@"%@%@", indent, self.text];
+        [indent release];
+        return desc;
 	}
 	NSMutableString *attrs = [[NSMutableString alloc] init];
 	for ( NSString *key in [attributes keyEnumerator] ) {

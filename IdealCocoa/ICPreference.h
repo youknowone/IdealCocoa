@@ -31,7 +31,7 @@
 - (id)initWithContentsOfFile:(NSString *)path;
 - (void)writeToFile;
 
-+ (void)setMainPreference:(NSMutableDictionary *)preference;
++ (void)setMainPreference:(ICPreference *)preference;
 + (ICPreference *)mainPreference;
 + (NSMutableDictionary *)mainDictionary;
 
