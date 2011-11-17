@@ -60,18 +60,35 @@
 
 - (void)collectItems {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    NSMutableDictionary *invalidItems = [[NSMutableDictionary alloc] init];
 	while ( TRUE ) {
 		while ( [queue count] > 0 ) {
 			id item = [queue objectAtIndex:0];
 			ICLog(CACHE_DEBUG, @"trying to collect one: %@", item);
 			if ( ![self collectItem:item] ) {
-				[queue addObject:item];
+   				[queue addObject:item];
+                if ([[invalidItems allKeys] indexOfObject:item] != NSNotFound) {
+                    [invalidItems setObject:[NSNumber numberWithInteger:0] forKey:item];
+                } else {
+                    NSNumber *number = [invalidItems objectForKey:item];
+                    if ([number integerValue] > 3) {
+                        [queue removeLastObject];
+                        [invalidItems removeObjectForKey:item];
+                    } else {
+                        [invalidItems setObject:[NSNumber numberWithInteger:[number integerValue] + 1] forKey:item];
+                    }
+                }
 				ICLog(CACHE_DEBUG, @"but failed");
 			}
 			[queue removeObjectAtIndex:0];
+            if ([invalidItems objectForKey:item] != nil) {
+                [invalidItems removeObjectForKey:item];
+            }
+       		usleep(200000);
 		}
-		sleep(1);
+		usleep(300000);
 	}
+    [invalidItems release];
 	[pool release];
 }
 
