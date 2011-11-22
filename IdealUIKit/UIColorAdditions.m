@@ -57,7 +57,7 @@ NSDictionary *IdealCocoaUIColorNameTable = nil;
 - (UIColor *)initWithHTMLExpression:(NSString *)code {
     if (![code hasPrefix:@"#"]) {
         [self release];
-        return [[self class] colorWithHTMLColorName:code];
+        return [[[self class] colorWithHTMLColorName:code] retain];
     }
     switch (code.length) {
         case 4: return [self initWithHTMLHexExpression16:code];
