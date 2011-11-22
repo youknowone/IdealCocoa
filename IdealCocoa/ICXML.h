@@ -5,27 +5,27 @@
 //  Created by youknowone on 10. 1. 31..
 //  Copyright 2010 3rddev.org. All rights reserved.
 //
-//	This program is free software: you can redistribute it and/or modify
-//	it under the terms of the GNU General Public License as published by
-//	the Free Software Foundation, either version 3 of the License, or
-//	(at your option) any later version.
-//	
-//	This program is distributed in the hope that it will be useful,
-//	but WITHOUT ANY WARRANTY; without even the implied warranty of
-//	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//	GNU General Public License for more details.
-//	
-//	You should have received a copy of the GNU General Public License
-//	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//  
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//  
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
 @interface ICXMLElement : NSObject<NSCopying>
 {
-	NSString *space; // not used yet
-	NSString *name;
-	NSMutableArray *elements;
-	NSDictionary *attributes;
-	ICXMLElement *parent;	
+    NSString *space; // not used yet
+    NSString *name;
+    NSMutableArray *elements;
+    NSDictionary *attributes;
+    ICXMLElement *parent;    
 }
 
 @property(copy) NSString *space, *name;
@@ -40,7 +40,7 @@
 + (ICXMLElement *)elementWithTextElement:(NSString*)xmlText fromParent:(ICXMLElement *)parent;
 
 - (void)addElement:(ICXMLElement *)element;
-- (BOOL)isRootElement;
+- (BOOL)isRootElement __deprecated;
 
 @end
 
@@ -62,10 +62,10 @@
 <NSXMLParserDelegate>
 #endif
 {
-	id errorDelegate;
+    id errorDelegate;
   @protected
-	ICXMLElement* rootElement;
-	ICXMLElement* currentElement;
+    ICXMLElement* rootElement;
+    ICXMLElement* currentElement;
 }
 
 - (id)initWithContentsOfAbstractPath:(NSString *)path;
