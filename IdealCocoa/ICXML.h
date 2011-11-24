@@ -22,37 +22,31 @@
 @interface ICXMLElement : NSObject<NSCopying>
 {
     NSString *space; // not used yet
+    ICXMLElement *parent;
     NSString *name;
-    NSMutableArray *elements;
-    NSDictionary *attributes;
-    ICXMLElement *parent;    
+    id elements;
+    id attributes;
+    id elementsByNames;
 }
 
 @property(copy) NSString *space, *name;
-@property(retain) NSMutableArray *elements;
+@property(retain) NSArray *elements; // for legacy support! this will be immutable soon!
 @property(retain) NSDictionary *attributes;
 @property(assign) ICXMLElement *parent;
 @property(readonly) NSString *text;
+@property(readonly) BOOL hasPureText;
 
-- (id)initWithName:(NSString*)name fromParent:(ICXMLElement *)parent withAttributes:(NSDictionary *)attributes;
-
-- (id)initWithTextElement:(NSString *)xmlText fromParent:(ICXMLElement *)parent;
-+ (ICXMLElement *)elementWithTextElement:(NSString*)xmlText fromParent:(ICXMLElement *)parent;
-
-- (void)addElement:(ICXMLElement *)element;
-- (BOOL)isRootElement __deprecated;
+- (id)initWithName:(NSString*)name attributes:(NSDictionary *)attributes elements:(NSArray *)elements;
++ (id)elementWithName:(NSString*)name attributes:(NSDictionary *)attributes elements:(NSArray *)elements;
++ (id)textElementWithString:(NSString*)text;
 
 @end
 
 @interface ICXMLElement (creation)
 
-+ (ICXMLElement *)elementWithData:(NSData *)data;
-+ (ICXMLElement *)elementWithContentOfURL:(NSURL *)url;
-+ (ICXMLElement *)elementWithDataString:(NSString *)dataString;
-
-+ (ICXMLElement *)elementWithData:(NSData *)data fromParent:(ICXMLElement *)parent;
-+ (ICXMLElement *)elementWithContentOfURL:(NSURL *)url fromParent:(ICXMLElement *)parent;
-+ (ICXMLElement *)elementWithDataString:(NSString *)dataString fromParent:(ICXMLElement *)parent;
++ (id)elementWithData:(NSData *)data;
++ (id)elementWithContentOfURL:(NSURL *)url;
++ (id)elementWithString:(NSString *)dataString;
 
 @end
 

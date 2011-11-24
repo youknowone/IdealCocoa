@@ -36,31 +36,12 @@
 
 @synthesize space, name, elements, attributes, parent;
 
-- (id)init {
+- (id)initWithName:(NSString*)aName attributes:(NSDictionary*)attributeDict elements:(NSArray *)elementsArray {
     self = [super init];
     if (self != nil) {
-        self.elements = [NSMutableArray array];
-    }
-    return self;
-}
-
-- (id)initWithTextElement:(NSString *)text fromParent:(ICXMLElement *)theParent {
-    if ((self = [super init]) != nil) {
-        self.parent = theParent;
-        self.attributes = nil;
-        // tweak to reduce pointer
-        self.elements = (NSMutableArray *)[NSString stringWithString:text];
-    }
-    return self;
-}
-
-- (id)initWithName:(NSString*)aName fromParent:(ICXMLElement *)theParent withAttributes:(NSDictionary*)attributeDict {
-    if ((self = [super init]) != nil) {
-        self = [super init];
         self.name = aName;
-        self.parent = theParent;
         self.attributes = attributeDict;
-        self.elements = [NSMutableArray array];
+        self.elements = elementsArray ? [NSMutableArray arrayWithArray:elementsArray] : [NSMutableArray array]; // legacy support
     }
     return self;
 }
@@ -72,33 +53,38 @@
     [super dealloc];
 }
 
-- (void)addElement:(ICXMLElement *)element {
-    element.parent = self;
-    [self.elements addObject:element];
-}
-
-- (BOOL) isRootElement {
+- (BOOL) isRoot {
     return self.parent == nil;
 }
 
-+ (ICXMLElement *)elementWithTextElement:(NSString*)text fromParent:(ICXMLElement *)theParent{
-    return [[[ICXMLElement alloc] initWithTextElement:text fromParent:theParent] autorelease];
++ (id)elementWithName:(NSString *)name attributes:(NSDictionary *)attributes elements:(NSArray *)elements {
+    return [[[self alloc] initWithName:name attributes:attributes elements:elements] autorelease];
+}
+
++ (ICXMLElement *)textElementWithString:(NSString*)text {
+    ICXMLElement *elem = [[[self alloc] initWithName:nil attributes:nil elements:nil] autorelease];
+    elem.elements = (id)text;
+    return elem;
 }
 
 - (NSString *)text {
     if ( name != nil ) {
         NSMutableString *string = [NSMutableString string];
         for (ICXMLElement *elem in elements) {
-            if (elem.name != nil) {
-                return nil;
-            }
-            [string appendString:elem.text];
+            [string appendString:elem.description];
         }
-        if ([string isEqualToString:@""])
+        if ([string isEqualToString:@""]) {
             return nil;
+        }
         return string;
     }
-    return (NSString *)elements;
+    return (NSString *)self->elements;
+}
+
+- (BOOL)hasPureText {
+    if ([self.elements isKindOfClass:[NSString class]]) return YES;
+    if (self.elements.count != 1) return NO;
+    return [[[self.elements objectAtIndex:0] elements] isKindOfClass:[NSString class]];
 }
 
 - (NSString *)description {
@@ -108,11 +94,9 @@
 - (id) copyWithZone:(NSZone *)zone {
     ICXMLElement *copy;
     if ( self.name != nil ) {
-        copy = [[[self class] alloc] initWithName:self.name fromParent:self.parent withAttributes:nil];
-        [copy setAttributes:self.attributes];
-        [copy setElements:self.elements];
+        copy = [[[self class] alloc] initWithName:self.name attributes:self.attributes elements:self.elements];
     } else {
-        copy = [[[self class] alloc] initWithTextElement:self.text fromParent:self.parent];
+        copy = [[[self class] textElementWithString:self.text] retain];
     }
     return copy;
 }
@@ -164,26 +148,8 @@
     return parser.document;
 }
 
-+ (ICXMLElement *)elementWithDataString:(NSString *)dataString {
++ (ICXMLElement *)elementWithString:(NSString *)dataString {
     return [self elementWithData:[dataString dataUsingEncoding:NSUTF8StringEncoding]];
-}
-
-+ (ICXMLElement *)elementWithData:(NSData *)data fromParent:(ICXMLElement *)theParent {
-    ICXMLSimpleParser *parser = [[[ICXMLSimpleParser alloc] initWithData:data] autorelease];
-    if ( theParent != nil )
-        parser.document.parent = theParent;
-    return parser.document;
-}
-
-+ (ICXMLElement *)elementWithContentOfURL:(NSURL *)url fromParent:(ICXMLElement *)theParent {
-    ICXMLSimpleParser *parser = [[[ICXMLSimpleParser alloc] initWithContentsOfURL:url] autorelease];
-    if ( theParent != nil )
-        parser.document.parent = theParent;
-    return parser.document;
-}
-
-+ (ICXMLElement *)elementWithDataString:(NSString *)dataString fromParent:(ICXMLElement *)theParent {
-    return [self elementWithData:[dataString dataUsingEncoding:NSUTF8StringEncoding] fromParent:theParent];
 }
 
 @end
@@ -266,31 +232,45 @@ id ICXMLSharedErrorDelegate;
 - (void)parserDidStartDocument:(NSXMLParser *)parser {
     ICLog(ICXML_DEBUG, @"parsing started");
     [rootElement release];
-    rootElement = [[ICXMLElement alloc] init];
+    rootElement = [[ICXMLElement alloc] initWithName:nil attributes:nil elements:[NSMutableArray array]];
     currentElement = rootElement;
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict{
     ICLog(ICXML_DEBUG, @"<%@> start with attributes: %@", elementName, attributeDict);
-    ICXMLElement* childElement = [[ICXMLElement alloc] initWithName:elementName fromParent:currentElement withAttributes:attributeDict];
-    [currentElement.elements addObject:childElement];
+    ICXMLElement* childElement = [[ICXMLElement alloc] initWithName:elementName attributes:attributeDict elements:[NSMutableArray array]];
+    [(NSMutableArray *)currentElement.elements addObject:childElement];
+    childElement.parent = currentElement;
     [childElement release];
     currentElement = childElement;
 }
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
     ICLog(ICXML_DEBUG, @"</%@> end", elementName);
+    //currentElement.elements = [NSArray arrayWithArray:currentElement.elements];
+    
+    for (NSInteger i = currentElement.elements.count - 1; i >= 0; i--) {
+        ICXMLElement *elem = [currentElement.elements objectAtIndex:i];
+        if (elem.name == nil) {
+            NSString *text = [[NSString stringWithString:(id)elem.elements] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            if (text.length == 0) {
+                [(NSMutableArray *)currentElement.elements removeObjectAtIndex:i];
+                continue;
+            }
+            elem.elements = (id)text;
+        }
+    }
     currentElement = currentElement.parent;
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-    string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    if ( [string length] == 0 ) {
-        ICLog(ICXML_DEBUG, @"Characters found but white characters ignored");
-        return;
-    }
     ICLog(ICXML_DEBUG, @"characters found: %@", string);
-    [currentElement.elements addObject:[ICXMLElement elementWithTextElement:string fromParent:currentElement]];
+    if (currentElement.elements.count > 0 && [[currentElement.elements.lastObject elements] isKindOfClass:[NSMutableString class]]) {
+        ICXMLElement *elem = currentElement.elements.lastObject;
+        [(NSMutableString *)elem.elements appendString:string];
+    } else {
+        [(NSMutableArray *)currentElement.elements addObject:[ICXMLElement textElementWithString:[NSMutableString stringWithString:string]]];
+    }
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
