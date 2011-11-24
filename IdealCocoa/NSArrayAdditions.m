@@ -52,6 +52,18 @@
 	return [[[self allocWithZone:NULL] initWithData:data options:opt format:format error:error] autorelease];
 }
 
+- (id)initWithEnumerator:(NSEnumerator *)enumerator {
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (id e in enumerator) {
+        [array addObject:e];
+    }
+    return [self initWithArray:array];
+}
+
++ (id)arrayWithEnumerator:(NSEnumerator *)enumerator {
+    return [[[self alloc] initWithEnumerator:enumerator] autorelease];
+}
+
 - (id) initWithContentsOfURLRequest:(NSURLRequest *)request {
 	return [self initWithContentsOfURLRequest:request options:0 format:NULL error:NULL];
 }
