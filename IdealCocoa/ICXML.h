@@ -26,7 +26,7 @@
     NSString *name;
     id elements;
     id attributes;
-    id elementsByNames;
+    NSMutableDictionary *elementsByName;
 }
 
 @property(copy) NSString *space, *name;
@@ -39,6 +39,9 @@
 - (id)initWithName:(NSString*)name attributes:(NSDictionary *)attributes elements:(NSArray *)elements;
 + (id)elementWithName:(NSString*)name attributes:(NSDictionary *)attributes elements:(NSArray *)elements;
 + (id)textElementWithString:(NSString*)text;
+
+- (NSArray *)childrenNames;
+- (id)childrenByName:(NSString *)name;
 
 @end
 

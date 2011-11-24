@@ -27,6 +27,7 @@
 
 @interface ICXMLElement (private)
 
+- (void)generateChildNameTable;
 - (NSString *)_descriptionWithDepth:(NSInteger)depth;
 
 @end
@@ -47,6 +48,7 @@
 }
 
 - (void)dealloc {
+    [self->elementsByName release];
     self.name = nil;
     self.elements = nil;
     self.attributes = nil;
@@ -101,6 +103,16 @@
     return copy;
 }
 
+- (NSArray *)childrenNames {
+    [self generateChildNameTable];
+    return [NSArray arrayWithEnumerator:[self->elementsByName keyEnumerator]];
+}
+
+- (id)childrenByName:(NSString *)cname {
+    [self generateChildNameTable];
+    return [self->elementsByName objectForKey:cname];
+}
+
 @end
 
 @implementation ICXMLElement (private)
@@ -131,6 +143,20 @@
     [attrs release];
     [elems release];
     return desc;
+}
+
+- (void)generateChildNameTable {
+    if (self->elementsByName == nil) {
+        self->elementsByName = [[NSMutableDictionary alloc] init];
+        for (ICXMLElement *elem in self.elements) {
+            NSString *key = elem.name;
+            if ([self->elementsByName objectForKey:key] == nil) {
+                [self->elementsByName setObject:[NSMutableArray array] forKey:key];
+            }
+            NSMutableArray *elems = [self->elementsByName objectForKey:key];
+            [elems addObject:elem];
+        }
+    }
 }
 
 @end
