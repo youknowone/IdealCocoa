@@ -21,10 +21,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ICCachedControlDelegate
+
+- (void)cachedControl:(id)control setImage:(UIImage *)image;
+
+@end
+
 @class ICCachedControlProvider;
 
-#define ICCachedControlData		ICCachedControlProvider *cacheProvider;
+#define ICCachedControlData		ICCachedControlProvider *cacheProvider; id<ICCachedControlDelegate> delegate;
 #define ICCachedControlMethod	\
+    @property(nonatomic,assign) id<ICCachedControlDelegate> delegate; \
 	@property(nonatomic,retain) NSString *imagePath;		\
 	@property(readonly) ICCachedControlLoadState loadState;	\
 	- (void)startLoading; - (void)stopLoading; - (void)unload;

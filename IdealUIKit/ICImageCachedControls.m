@@ -145,7 +145,7 @@
 @end
 
 
-#define ICCachedControlProviderMethodSynthesize		@synthesize imagePath;
+#define ICCachedControlProviderMethodSynthesize		@synthesize imagePath, delegate;
 #define ICCachedControlProviderMethodInitWithCoder	- (id)initWithCoder:(NSCoder *)aDecoder {	if ((self = [super initWithCoder:aDecoder]) != nil) {	cacheProvider = [ICCachedControlProvider provider];	[self addSubview:cacheProvider];	}	return self;	}
 #define ICCachedControlProviderMethodInitWithFrame	- (id)initWithFrame:(CGRect)frame		{	if ((self = [super initWithFrame:frame]) != nil)	{	cacheProvider = [ICCachedControlProvider provider];	[self addSubview:cacheProvider];	}	return self;	}
 #define ICCachedControlProviderMethodSetFrame		- (void)setFrame:(CGRect)frame			{	[super setFrame:frame];		[cacheProvider resetActivityIndicator];		}
@@ -170,6 +170,7 @@ ICCachedControlProviderMethodsAll
 
 - (void) provider:(ICCachedControlProvider *)provider setImage:(UIImage *)image {
 	[self setImage:image forState:UIControlStateNormal];
+    [delegate cachedControl:self setImage:image];
 }
 
 @end
@@ -184,6 +185,7 @@ ICCachedControlProviderMethodsAll
 
 - (void) provider:(ICCachedControlProvider *)provider setImage:(UIImage *)image {
 	self.image = image;
+    [delegate cachedControl:self setImage:image];
 }
 
 @end
@@ -206,6 +208,7 @@ ICCachedControlProviderMethodsAll
 
 - (void) provider:(ICCachedControlProvider *)provider setImage:(UIImage *)image {
 	self.imageView.image = image;
+    [delegate cachedControl:self setImage:image];
 }
 
 - (CGPoint)centerPointOfActivityIndicatorInProvider:(ICCachedControlProvider *)provider {
