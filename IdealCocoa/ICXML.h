@@ -27,16 +27,18 @@
     id elements;
     id attributes;
     NSMutableDictionary *elementsByName;
+    id _root;
 }
 
-@property(copy) NSString *space, *name;
-@property(retain) NSArray *elements; // for legacy support! this will be immutable soon!
+@property(retain) NSString *space, *name;
+@property(retain) NSArray *elements;
 @property(retain) NSDictionary *attributes;
 @property(assign) ICXMLElement *parent;
+@property(readonly) ICXMLElement *root;
 @property(readonly) NSString *text;
 @property(readonly) BOOL hasPureText;
 
-- (id)initWithName:(NSString*)name attributes:(NSDictionary *)attributes elements:(NSArray *)elements;
+- (id)initWithName:(NSString *)name attributes:(NSDictionary *)attributes elements:(NSArray *)elements;
 + (id)elementWithName:(NSString*)name attributes:(NSDictionary *)attributes elements:(NSArray *)elements;
 + (id)textElementWithString:(NSString*)text;
 

@@ -23,6 +23,7 @@
 
 #import "NSDataAdditions.h"
 #import "NSURLAdditions.h"
+#import "NSArrayAdditions.h"
 #import "ICXML.h"
 
 @interface ICXMLElement (private)
@@ -37,7 +38,7 @@
 
 @synthesize space, name, elements, attributes, parent;
 
-- (id)initWithName:(NSString*)aName attributes:(NSDictionary*)attributeDict elements:(NSArray *)elementsArray {
+- (id)initWithName:(NSString *)aName attributes:(NSDictionary *)attributeDict elements:(NSArray *)elementsArray {
     self = [super init];
     if (self != nil) {
         self.name = aName;
@@ -49,6 +50,7 @@
 
 - (void)dealloc {
     [self->elementsByName release];
+    self.space = nil;
     self.name = nil;
     self.elements = nil;
     self.attributes = nil;
@@ -57,6 +59,17 @@
 
 - (BOOL) isRoot {
     return self.parent == nil;
+}
+
+- (ICXMLElement *)root {
+    if (_root == nil) {
+        if (self.parent == nil) {
+            _root = self;
+        } else {
+            _root = self.parent.root;
+        }
+    }
+    return _root;
 }
 
 + (id)elementWithName:(NSString *)name attributes:(NSDictionary *)attributes elements:(NSArray *)elements {
@@ -150,10 +163,12 @@
         self->elementsByName = [[NSMutableDictionary alloc] init];
         for (ICXMLElement *elem in self.elements) {
             NSString *key = elem.name;
-            if ([self->elementsByName objectForKey:key] == nil) {
-                [self->elementsByName setObject:[NSMutableArray array] forKey:key];
+            NSMutableArray *elems = [self->elementsByName objectForKey:key];            
+            if (elems == nil) {
+                elems = [[NSMutableArray alloc] init];
+                [self->elementsByName setObject:elems forKey:key];
+                [elems release];
             }
-            NSMutableArray *elems = [self->elementsByName objectForKey:key];
             [elems addObject:elem];
         }
     }
