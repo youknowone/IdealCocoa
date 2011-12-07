@@ -126,6 +126,10 @@
     return [self->elementsByName objectForKey:cname];
 }
 
+- (id)firstChildByName:(NSString *)cname {
+    return [[self childrenByName:cname] objectAtIndex:0];
+}
+
 @end
 
 @implementation ICXMLElement (private)

@@ -43,7 +43,8 @@
 + (id)textElementWithString:(NSString*)text;
 
 - (NSArray *)childrenNames;
-- (id)childrenByName:(NSString *)name;
+- (NSArray *)childrenByName:(NSString *)name;
+- (id)firstChildByName:(NSString *)name;
 
 @end
 
