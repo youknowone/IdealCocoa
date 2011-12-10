@@ -53,7 +53,7 @@
 }
 
 - (id)initWithEnumerator:(NSEnumerator *)enumerator {
-    NSMutableArray *array = [[NSMutableArray alloc] init];
+    NSMutableArray *array = [NSMutableArray array];
     for (id e in enumerator) {
         [array addObject:e];
     }
