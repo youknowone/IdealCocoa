@@ -167,6 +167,7 @@
         self->elementsByName = [[NSMutableDictionary alloc] init];
         for (ICXMLElement *elem in self.elements) {
             NSString *key = elem.name;
+            if (key == nil) continue;
             NSMutableArray *elems = [self->elementsByName objectForKey:key];            
             if (elems == nil) {
                 elems = [[NSMutableArray alloc] init];
