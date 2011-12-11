@@ -34,9 +34,9 @@ NSDictionary *IdealCocoaUIColorNameTable = nil;
 }
 
 - (UIColor *)initWithHTMLHexExpression32:(NSString *)code {
-    return [self initWithRed:[[code substringFromIndex:1 length:2] hexadecimalValue]/15.0f
-                       green:[[code substringFromIndex:3 length:2] hexadecimalValue]/15.0f
-                        blue:[[code substringFromIndex:5 length:2] hexadecimalValue]/15.0f
+    return [self initWithRed:[[code substringFromIndex:1 length:2] hexadecimalValue]/255.0f
+                       green:[[code substringFromIndex:3 length:2] hexadecimalValue]/255.0f
+                        blue:[[code substringFromIndex:5 length:2] hexadecimalValue]/255.0f
                        alpha:1.0f];
 }
 
@@ -48,10 +48,10 @@ NSDictionary *IdealCocoaUIColorNameTable = nil;
 }
 
 - (UIColor *)initWithHTMLHexExpression32a:(NSString *)code {
-    return [self initWithRed:[[code substringFromIndex:1 length:2] hexadecimalValue]/15.0f
-                       green:[[code substringFromIndex:3 length:2] hexadecimalValue]/15.0f
-                        blue:[[code substringFromIndex:5 length:2] hexadecimalValue]/15.0f
-                       alpha:[[code substringFromIndex:7 length:2] hexadecimalValue]/15.0f];
+    return [self initWithRed:[[code substringFromIndex:1 length:2] hexadecimalValue]/255.0f
+                       green:[[code substringFromIndex:3 length:2] hexadecimalValue]/255.0f
+                        blue:[[code substringFromIndex:5 length:2] hexadecimalValue]/255.0f
+                       alpha:[[code substringFromIndex:7 length:2] hexadecimalValue]/255.0f];
 }
 
 - (UIColor *)initWithHTMLExpression:(NSString *)code {
