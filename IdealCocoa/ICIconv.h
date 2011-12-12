@@ -32,7 +32,7 @@
 - (void)openWithToCode:(NSString *)toCode fromCode:(NSString *)fromCode;
 - (void)openWithToCode:(NSString *)toCode fromCode:(NSString *)fromCode translit:(BOOL)translit ignore:(BOOL)ignore;
 - (void)close;
-- (const char *)convertedCStringWithCString:(const char *)cString length:(int)length;
+- (const char *)convertedCStringWithCString:(const char *)cString length:(NSInteger)length;
 + (NSString *)convertedStringWithBytes:(const void *)bytes length:(NSUInteger)length fromCode:(NSString *)fromCode;
 
 @end

@@ -64,7 +64,7 @@
 	handle = NULL;
 }
 
-- (const char *) convertedCStringWithCString:(const char *)cString length:(int)length {
+- (const char *) convertedCStringWithCString:(const char *)cString length:(NSInteger)length {
 	[self freeOutbuf];
 	size_t inbufLength = length;
 	size_t outbufLength = 2*length;
