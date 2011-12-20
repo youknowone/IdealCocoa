@@ -22,10 +22,10 @@
 //
 //	In this file:
 //	Query is SQL statement as NSString type
-//	SQL is SQL statement as ICSQL type
+//	SQL is SQL statement as ICSQLWrapper type
 
 #import <sqlite3.h>
-#import <IdealCocoa/ICSQL.h>
+#import <IdealCocoa/ICSQLWrapper.h>
 
 @class ICSqlite3Cursur;
 @interface ICSqlite3 : NSObject {
@@ -47,10 +47,10 @@
 - (void)close;
 
 - (void)executeQuery:(NSString *)sql;
-- (void)executeSQL:(ICSQL *)sql;
+- (void)executeSQL:(ICSQLWrapper *)sql;
 - (ICSqlite3Cursur*)cursorWithQuery:(NSString *)sql;
 - (ICSqlite3Cursur*)cursorWithFormat:(NSString*)format, ... NS_FORMAT_FUNCTION(1,2);
-- (ICSqlite3Cursur*)cursorWithSQL:(ICSQL *)sql;
+- (ICSqlite3Cursur*)cursorWithSQL:(ICSQLWrapper *)sql;
 
 + (int)versionNumber;
 + (int)libraryVersionNumber;

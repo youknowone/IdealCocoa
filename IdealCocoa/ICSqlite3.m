@@ -164,7 +164,7 @@
 	resultCode = sqlite3_exec(database, [sql UTF8String], NULL, NULL, &errorMessage);
 }
 
-- (void)executeSQL:(ICSQL *)sql {
+- (void)executeSQL:(ICSQLWrapper *)sql {
 	[self executeQuery:[sql SQL]];
 }
 
@@ -187,7 +187,7 @@
 	return cursor;
 }
 
-- (ICSqlite3Cursur*)cursorWithSQL:(ICSQL *)sql {
+- (ICSqlite3Cursur*)cursorWithSQL:(ICSQLWrapper *)sql {
 	ICLog(SQLITE3_DEBUG, @"query: %@", [sql SQL]);
 	return [self cursorWithQuery:[sql SQL]];
 }
