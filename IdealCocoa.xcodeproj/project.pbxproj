@@ -46,8 +46,8 @@
 		38730461133732FE004C8E89 /* ICIconv.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651413373240007072FD /* ICIconv.m */; };
 		38730462133732FE004C8E89 /* ICPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651513373240007072FD /* ICPreference.h */; settings = {ATTRIBUTES = (); }; };
 		38730463133732FE004C8E89 /* ICPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651613373240007072FD /* ICPreference.m */; };
-		38730464133732FE004C8E89 /* ICSQL.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651713373240007072FD /* ICSQL.h */; settings = {ATTRIBUTES = (); }; };
-		38730465133732FE004C8E89 /* ICSQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651813373240007072FD /* ICSQL.m */; };
+		38730464133732FE004C8E89 /* ICSQLWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651713373240007072FD /* ICSQLWrapper.h */; settings = {ATTRIBUTES = (); }; };
+		38730465133732FE004C8E89 /* ICSQLWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651813373240007072FD /* ICSQLWrapper.m */; };
 		38730466133732FE004C8E89 /* ICSqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651913373240007072FD /* ICSqlite3.h */; settings = {ATTRIBUTES = (); }; };
 		38730467133732FE004C8E89 /* ICSqlite3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651A13373240007072FD /* ICSqlite3.m */; };
 		38730468133732FE004C8E89 /* ICUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651B13373240007072FD /* ICUtility.h */; settings = {ATTRIBUTES = (); }; };
@@ -83,7 +83,7 @@
 		38B78E70133745F400658C00 /* ICHTTPRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651113373240007072FD /* ICHTTPRequest.h */; };
 		38B78E71133745F400658C00 /* ICIconv.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651313373240007072FD /* ICIconv.h */; };
 		38B78E72133745F400658C00 /* ICPreference.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651513373240007072FD /* ICPreference.h */; };
-		38B78E73133745F400658C00 /* ICSQL.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651713373240007072FD /* ICSQL.h */; };
+		38B78E73133745F400658C00 /* ICSQLWrapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651713373240007072FD /* ICSQLWrapper.h */; };
 		38B78E74133745F400658C00 /* ICSqlite3.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651913373240007072FD /* ICSqlite3.h */; };
 		38B78E75133745F400658C00 /* ICUtility.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651B13373240007072FD /* ICUtility.h */; };
 		38B78E76133745F400658C00 /* ICXML.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837651D13373240007072FD /* ICXML.h */; };
@@ -127,8 +127,8 @@
 		38C7A9A914951C3300381910 /* ICIconv.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651413373240007072FD /* ICIconv.m */; };
 		38C7A9AA14951C3300381910 /* ICPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651513373240007072FD /* ICPreference.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38C7A9AB14951C3300381910 /* ICPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651613373240007072FD /* ICPreference.m */; };
-		38C7A9AC14951C3300381910 /* ICSQL.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651713373240007072FD /* ICSQL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38C7A9AD14951C3300381910 /* ICSQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651813373240007072FD /* ICSQL.m */; };
+		38C7A9AC14951C3300381910 /* ICSQLWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651713373240007072FD /* ICSQLWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38C7A9AD14951C3300381910 /* ICSQLWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651813373240007072FD /* ICSQLWrapper.m */; };
 		38C7A9AE14951C3300381910 /* ICSqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651913373240007072FD /* ICSqlite3.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38C7A9AF14951C3300381910 /* ICSqlite3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837651A13373240007072FD /* ICSqlite3.m */; };
 		38C7A9B014951C3300381910 /* ICUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837651B13373240007072FD /* ICUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -225,7 +225,7 @@
 				38B78E70133745F400658C00 /* ICHTTPRequest.h in CopyFiles */,
 				38B78E71133745F400658C00 /* ICIconv.h in CopyFiles */,
 				38B78E72133745F400658C00 /* ICPreference.h in CopyFiles */,
-				38B78E73133745F400658C00 /* ICSQL.h in CopyFiles */,
+				38B78E73133745F400658C00 /* ICSQLWrapper.h in CopyFiles */,
 				38B78E74133745F400658C00 /* ICSqlite3.h in CopyFiles */,
 				38B78E75133745F400658C00 /* ICUtility.h in CopyFiles */,
 				38B78E76133745F400658C00 /* ICXML.h in CopyFiles */,
@@ -293,8 +293,8 @@
 		3837651413373240007072FD /* ICIconv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICIconv.m; sourceTree = "<group>"; };
 		3837651513373240007072FD /* ICPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICPreference.h; sourceTree = "<group>"; };
 		3837651613373240007072FD /* ICPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICPreference.m; sourceTree = "<group>"; };
-		3837651713373240007072FD /* ICSQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSQL.h; sourceTree = "<group>"; };
-		3837651813373240007072FD /* ICSQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSQL.m; sourceTree = "<group>"; };
+		3837651713373240007072FD /* ICSQLWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSQLWrapper.h; sourceTree = "<group>"; };
+		3837651813373240007072FD /* ICSQLWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSQLWrapper.m; sourceTree = "<group>"; };
 		3837651913373240007072FD /* ICSqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSqlite3.h; sourceTree = "<group>"; };
 		3837651A13373240007072FD /* ICSqlite3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSqlite3.m; sourceTree = "<group>"; };
 		3837651B13373240007072FD /* ICUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICUtility.h; sourceTree = "<group>"; };
@@ -467,8 +467,8 @@
 				3837651413373240007072FD /* ICIconv.m */,
 				3837651513373240007072FD /* ICPreference.h */,
 				3837651613373240007072FD /* ICPreference.m */,
-				3837651713373240007072FD /* ICSQL.h */,
-				3837651813373240007072FD /* ICSQL.m */,
+				3837651713373240007072FD /* ICSQLWrapper.h */,
+				3837651813373240007072FD /* ICSQLWrapper.m */,
 				3837651913373240007072FD /* ICSqlite3.h */,
 				3837651A13373240007072FD /* ICSqlite3.m */,
 				3837651B13373240007072FD /* ICUtility.h */,
@@ -620,7 +620,7 @@
 				3873045E133732FE004C8E89 /* ICHTTPRequest.h in Headers */,
 				38730460133732FE004C8E89 /* ICIconv.h in Headers */,
 				38730462133732FE004C8E89 /* ICPreference.h in Headers */,
-				38730464133732FE004C8E89 /* ICSQL.h in Headers */,
+				38730464133732FE004C8E89 /* ICSQLWrapper.h in Headers */,
 				38730466133732FE004C8E89 /* ICSqlite3.h in Headers */,
 				38730468133732FE004C8E89 /* ICUtility.h in Headers */,
 				3873046A133732FE004C8E89 /* ICXML.h in Headers */,
@@ -663,7 +663,7 @@
 				38C7A9A614951C3300381910 /* ICHTTPRequest.h in Headers */,
 				38C7A9A814951C3300381910 /* ICIconv.h in Headers */,
 				38C7A9AA14951C3300381910 /* ICPreference.h in Headers */,
-				38C7A9AC14951C3300381910 /* ICSQL.h in Headers */,
+				38C7A9AC14951C3300381910 /* ICSQLWrapper.h in Headers */,
 				38C7A9AE14951C3300381910 /* ICSqlite3.h in Headers */,
 				38C7A9B014951C3300381910 /* ICUtility.h in Headers */,
 				38C7A9B214951C3300381910 /* ICXML.h in Headers */,
@@ -856,7 +856,7 @@
 				3873045F133732FE004C8E89 /* ICHTTPRequest.m in Sources */,
 				38730461133732FE004C8E89 /* ICIconv.m in Sources */,
 				38730463133732FE004C8E89 /* ICPreference.m in Sources */,
-				38730465133732FE004C8E89 /* ICSQL.m in Sources */,
+				38730465133732FE004C8E89 /* ICSQLWrapper.m in Sources */,
 				38730467133732FE004C8E89 /* ICSqlite3.m in Sources */,
 				38730469133732FE004C8E89 /* ICUtility.m in Sources */,
 				3873046B133732FE004C8E89 /* ICXML.m in Sources */,
@@ -905,7 +905,7 @@
 				38C7A9A714951C3300381910 /* ICHTTPRequest.m in Sources */,
 				38C7A9A914951C3300381910 /* ICIconv.m in Sources */,
 				38C7A9AB14951C3300381910 /* ICPreference.m in Sources */,
-				38C7A9AD14951C3300381910 /* ICSQL.m in Sources */,
+				38C7A9AD14951C3300381910 /* ICSQLWrapper.m in Sources */,
 				38C7A9AF14951C3300381910 /* ICSqlite3.m in Sources */,
 				38C7A9B114951C3300381910 /* ICUtility.m in Sources */,
 				38C7A9B314951C3300381910 /* ICXML.m in Sources */,

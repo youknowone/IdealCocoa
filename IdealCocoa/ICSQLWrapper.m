@@ -1,5 +1,5 @@
 //
-//  ICSQL.m
+//  ICSQLWrapper.m
 //  IdealCocoa
 //
 //  Created by youknowone on 10. 11. 1..
@@ -20,9 +20,9 @@
 //
 
 #import "NSStringAdditions.h"
-#import "ICSQL.h"
+#import "ICSQLWrapper.h"
 
-@implementation ICSQL
+@implementation ICSQLWrapper
 @synthesize SQL;
 
 - (id)init {
@@ -58,39 +58,39 @@
 	return SQL;
 }
 
-- (ICSQL *)groupBy:(NSString *)groups {
+- (ICSQLWrapper *)groupBy:(NSString *)groups {
 	[SQL appendString:@" GROUP BY "];
 	[SQL appendString:groups];
 	return self;
 }
 
-- (ICSQL *)groupBy:(NSString *)groups having:(NSString*)groupContidion {
+- (ICSQLWrapper *)groupBy:(NSString *)groups having:(NSString*)groupContidion {
 	[self groupBy:groups];
 	[SQL appendString:@" HAVING "];
 	[SQL appendString:groupContidion];
 	return self;
 }
 
-- (ICSQL *)orderBy:(NSString *)condition {
+- (ICSQLWrapper *)orderBy:(NSString *)condition {
 	[SQL appendFormat:@" ORDER BY %@", condition];
 	return self;
 }
 
-- (ICSQL *)limit:(NSUInteger)count {
+- (ICSQLWrapper *)limit:(NSUInteger)count {
 	[SQL appendFormat:@" LIMIT %d", count];
 	return self;
 }
 
-- (ICSQL *)limit:(NSUInteger)from count:(NSUInteger)count {
+- (ICSQLWrapper *)limit:(NSUInteger)from count:(NSUInteger)count {
 	[SQL appendFormat:@" LIMIT %d,%d", from, count];
 	return self;
 }
 
-+ (ICSQL *)SQLWithString:(NSString *)string {
-	return [[[ICSQL alloc] initWithString:string] autorelease];
++ (ICSQLWrapper *)SQLWithString:(NSString *)string {
+	return [[[ICSQLWrapper alloc] initWithString:string] autorelease];
 }
 
-+ (ICSQL *)SQLWithFormat:(NSString *)format, ... {
++ (ICSQLWrapper *)SQLWithFormat:(NSString *)format, ... {
 	va_list args;
 	va_start(args, format);
 	self = [[self alloc] initWithString:[NSString stringWithFormat:format arguments:args]];
@@ -205,23 +205,23 @@
 }
 
 
-+ (ICSQL *)SQLWithSelect:(NSString *)column from:(NSString *)table where:(NSString *)condition {
-	return [ICSQL SQLWithString:[NSString stringWithFormat:@"SELECT %@ FROM %@ WHERE %@", column, table, condition]];
++ (ICSQLWrapper *)SQLWithSelect:(NSString *)column from:(NSString *)table where:(NSString *)condition {
+	return [ICSQLWrapper SQLWithString:[NSString stringWithFormat:@"SELECT %@ FROM %@ WHERE %@", column, table, condition]];
 }
 
-+ (ICSQL *)SQLWithDeleteFrom:(NSString *)table where:(NSString*)condition {
-	return [[[ICSQL alloc] initWithFormat:@"DELETE FROM %@ WHERE %@", table, condition] autorelease];
++ (ICSQLWrapper *)SQLWithDeleteFrom:(NSString *)table where:(NSString*)condition {
+	return [[[ICSQLWrapper alloc] initWithFormat:@"DELETE FROM %@ WHERE %@", table, condition] autorelease];
 }
 
-+ (ICSQL *)SQLWithInsertInto:(NSString *)table values:(NSString*)values {
++ (ICSQLWrapper *)SQLWithInsertInto:(NSString *)table values:(NSString*)values {
 	return [NSString stringWithFormat:@"INSERT INTO `%@` VALUES (%@)", table, values];
 }
 
-+ (ICSQL *)SQLWithInsertInto:(NSString *)table columns:(NSString*)columns values:(NSString*)values {
++ (ICSQLWrapper *)SQLWithInsertInto:(NSString *)table columns:(NSString*)columns values:(NSString*)values {
 	return [NSString stringWithFormat:@"INSERT INTO `%@` (%@) VALUES (%@)", table, columns, values];	
 }
 
-+ (ICSQL *)SQLWithUpdate:(NSString *)table set:(NSString*)setStatements where:(NSString*)condition {
++ (ICSQLWrapper *)SQLWithUpdate:(NSString *)table set:(NSString*)setStatements where:(NSString*)condition {
 	return [NSString stringWithFormat:@"UPDATE `%@` SET %@ WHERE %@", table, setStatements, condition];
 }
 

@@ -165,6 +165,8 @@
 - (void)generateChildNameTable {
     if (self->elementsByName == nil) {
         self->elementsByName = [[NSMutableDictionary alloc] init];
+        NSLog(@"self.elem: %@, %@", self.elements.class, self.elements);
+        if ([self.elements isKindOfClass:[NSString class]]) return;
         for (ICXMLElement *elem in self.elements) {
             NSString *key = elem.name;
             if (key == nil) continue;

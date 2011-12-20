@@ -1,5 +1,5 @@
 //
-//  ICSQL.h
+//  ICSQLWrapper.h
 //  IdealCocoa
 //
 //  Created by youknowone on 10. 11. 1..
@@ -19,37 +19,37 @@
 //	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-@interface ICSQL : NSObject {
+@interface ICSQLWrapper : NSObject {
 	NSMutableString *SQL; 
 }
 
 @property(readonly) NSString *SQL;
 
-- (ICSQL *)groupBy:(NSString *)groups;
-- (ICSQL *)groupBy:(NSString *)groups having:(NSString*)groupContidion;
-- (ICSQL *)orderBy:(NSString *)condition;
-- (ICSQL *)limit:(NSUInteger)count;
-- (ICSQL *)limit:(NSUInteger)from count:(NSUInteger)count;
+- (ICSQLWrapper *)groupBy:(NSString *)groups;
+- (ICSQLWrapper *)groupBy:(NSString *)groups having:(NSString*)groupContidion;
+- (ICSQLWrapper *)orderBy:(NSString *)condition;
+- (ICSQLWrapper *)limit:(NSUInteger)count;
+- (ICSQLWrapper *)limit:(NSUInteger)from count:(NSUInteger)count;
 
 @end
 
-@interface ICSQL (ICSQLCreation)
+@interface ICSQLWrapper (ICSQLWrapperCreation)
 
 - (id)initWithString:(NSString *)string;
 + (id)initWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
-+ (ICSQL *)SQLWithString:(NSString *)string;
-+ (ICSQL *)SQLWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
++ (ICSQLWrapper *)SQLWithString:(NSString *)string;
++ (ICSQLWrapper *)SQLWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 
-+ (ICSQL *)SQLWithSelect:(NSString *)column from:(NSString *)table where:(NSString *)condition;
-+ (ICSQL *)SQLWithDeleteFrom:(NSString *)table where:(NSString*)condition;
-+ (ICSQL *)SQLWithInsertInto:(NSString *)table values:(NSString*)values;
-+ (ICSQL *)SQLWithInsertInto:(NSString *)table columns:(NSString*)columns values:(NSString*)values;
-+ (ICSQL *)SQLWithUpdate:(NSString *)table set:(NSString*)setStatements where:(NSString*)condition;
++ (ICSQLWrapper *)SQLWithSelect:(NSString *)column from:(NSString *)table where:(NSString *)condition;
++ (ICSQLWrapper *)SQLWithDeleteFrom:(NSString *)table where:(NSString*)condition;
++ (ICSQLWrapper *)SQLWithInsertInto:(NSString *)table values:(NSString*)values;
++ (ICSQLWrapper *)SQLWithInsertInto:(NSString *)table columns:(NSString*)columns values:(NSString*)values;
++ (ICSQLWrapper *)SQLWithUpdate:(NSString *)table set:(NSString*)setStatements where:(NSString*)condition;
 
 @end
 
 
-@interface ICSQL (ICSQLStringGenerators)
+@interface ICSQLWrapper (ICSQLWrapperStringGenerators)
 
 + (NSString *)alias:(NSString *)SQL as:(NSString *)alias;
 + (NSString *)customListSeparatedBy:(NSString *)separator withStrings:(NSString *)firstObj, ... NS_REQUIRES_NIL_TERMINATION;
