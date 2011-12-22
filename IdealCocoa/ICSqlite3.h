@@ -25,7 +25,6 @@
 //	SQL is SQL statement as ICSQLWrapper type
 
 #import <sqlite3.h>
-#import <IdealCocoa/ICSQLWrapper.h>
 
 @class ICSqlite3Cursur;
 @interface ICSqlite3 : NSObject {
@@ -47,10 +46,8 @@
 - (void)close;
 
 - (void)executeQuery:(NSString *)sql;
-- (void)executeSQL:(ICSQLWrapper *)sql;
-- (ICSqlite3Cursur*)cursorWithQuery:(NSString *)sql;
-- (ICSqlite3Cursur*)cursorWithFormat:(NSString*)format, ... NS_FORMAT_FUNCTION(1,2);
-- (ICSqlite3Cursur*)cursorWithSQL:(ICSQLWrapper *)sql;
+- (ICSqlite3Cursur*)cursorByQuery:(NSString *)sql;
+- (ICSqlite3Cursur*)cursorByFormat:(NSString*)format, ... NS_FORMAT_FUNCTION(1,2);
 
 + (int)versionNumber;
 + (int)libraryVersionNumber;
@@ -79,5 +76,20 @@
 - (NSString *)getColumnName:(NSInteger)column __deprecated;
 - (NSString *)getColumnAsString:(NSInteger)column __deprecated;
 - (NSUInteger)getColumnAsInteger:(NSInteger)column __deprecated;
+
+@end
+
+// temporary paste here for partial implementation
+
+@interface ICSQLInsertBuilder : NSObject
+
+@property(nonatomic, readonly) NSString *query;
+@property(nonatomic, copy) NSString *table;
+@property(nonatomic, readonly) NSMutableDictionary *data;
+
+- (id)initWithTable:(NSString *)table;
+- (id)initWithTable:(NSString *)table data:(NSDictionary *)data;
+
+- (void)setData:(id)data forKey:(id)key;
 
 @end

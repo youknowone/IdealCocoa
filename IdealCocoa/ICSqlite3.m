@@ -70,7 +70,9 @@
 }
 
 - (NSString *)stringValueAtColumnIndex:(NSInteger)index {
-	return [NSString stringWithUTF8String:(const char*)sqlite3_column_text(statement, (int)index)];
+    const char *text = (const char*)sqlite3_column_text(statement, (int)index);
+    if (text == NULL) return nil;
+	return [NSString stringWithUTF8String:text];
 }
 
 - (NSUInteger)integerValueAtColumnIndex:(NSInteger)index {
@@ -164,11 +166,7 @@
 	resultCode = sqlite3_exec(database, [sql UTF8String], NULL, NULL, &errorMessage);
 }
 
-- (void)executeSQL:(ICSQLWrapper *)sql {
-	[self executeQuery:[sql SQL]];
-}
-
-- (ICSqlite3Cursur*)cursorWithQuery:(NSString*)sql {
+- (ICSqlite3Cursur*)cursorByQuery:(NSString*)sql {
 	ICLog(SQLITE3_DEBUG, @"sql: %@", sql);
 	if ( errorMessage ) {
 		//sqlite3_free(errorMessage);
@@ -179,17 +177,12 @@
 	return [cursor autorelease];
 }
 
-- (ICSqlite3Cursur *)cursorWithFormat:(NSString *)format, ... {
+- (ICSqlite3Cursur *)cursorByFormat:(NSString *)format, ... {
 	va_list args;
 	va_start(args, format);
-	ICSqlite3Cursur *cursor = [self cursorWithQuery:[NSString stringWithFormat:format arguments:args]];
+	ICSqlite3Cursur *cursor = [self cursorByQuery:[NSString stringWithFormat:format arguments:args]];
 	va_end(args);
 	return cursor;
-}
-
-- (ICSqlite3Cursur*)cursorWithSQL:(ICSQLWrapper *)sql {
-	ICLog(SQLITE3_DEBUG, @"query: %@", [sql SQL]);
-	return [self cursorWithQuery:[sql SQL]];
 }
 
 #pragma mark -
@@ -204,3 +197,81 @@
 }
 
 @end
+
+
+
+@implementation ICSQLInsertBuilder
+@synthesize table=_table, data=_data;
+
+- (id)initWithTable:(NSString *)table {
+    self = [super init];
+    if (self != nil) {
+        self.table = table;
+        _data = [[NSMutableDictionary alloc] init];
+    }
+    return self;
+}
+
+- (id)initWithTable:(NSString *)table data:(NSDictionary *)data {
+    self = [super init];
+    if (self != nil) {
+        self.table = table;
+        _data = [[NSMutableDictionary alloc] initWithDictionary:data];
+    }
+    return self;
+}
+
+- (void)dealloc {
+    self.table = nil;
+    [_data release];
+    [super dealloc];
+}
+
+- (void)setData:(id)data forKey:(id)key {
+    [self.data setObject:data forKey:key];
+}
+
+#pragma mark -
+
+- (NSString *)query {
+    if (self.data.count == 0) return nil;
+    
+    // NOTE: fix to get key/value pair for faster iteration
+    NSArray *allKeys = self.data.allKeys;
+    NSMutableArray *allObjects = [NSMutableArray array];
+    for (id key in allKeys) {
+        [allObjects addObject:[self.data objectForKey:key]];
+    }
+    
+    NSMutableString *keyString = [NSMutableString stringWithString:@"`"];
+    [keyString appendString:[allKeys componentsJoinedByString:@"`,`"]];
+    [keyString appendString:@"`"];
+    
+    NSMutableString *valueString = [NSMutableString string];
+    BOOL firstObject = YES;
+    for (id value in allObjects) {
+        if (firstObject) {
+            firstObject = NO;
+        } else {
+            [valueString appendString:@","];
+        }
+        if ([value isKindOfClass:[NSNumber class]]) {
+            [valueString appendString:[value stringValue]];
+        } else {
+            [valueString appendFormat:@"'%@'", [value stringByReplacingOccurrencesOfString:@"'" withString:@"''"]];
+        }
+    }
+    
+    return [NSString stringWithFormat:@"INSERT INTO `%@` (%@) VALUES (%@)",
+            self.table,
+            keyString,
+            valueString];
+}
+
+- (NSString *)description {
+    return self.query;
+}
+
+@end
+
+

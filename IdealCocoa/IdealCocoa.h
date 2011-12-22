@@ -24,7 +24,7 @@
 #import <IdealCocoa/ICPreference.h>
 #import <IdealCocoa/ICXML.h>
 #import <IdealCocoa/ICHTTPRequest.h>
-#import <IdealCocoa/ICSQLWrapper.h>
 #import <IdealCocoa/ICCache.h>
 #import <IdealCocoa/ICSqlite3.h>
+#import <IdealCocoa/ICSQLWrapper.h>
 #import <IdealCocoa/ICIconv.h>

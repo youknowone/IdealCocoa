@@ -19,8 +19,18 @@
 //	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
+#import <IdealCocoa/ICSqlite3.h>
+
+@class ICSQLWrapper;
+@interface ICSqlite3 (ICSQLWrapper) 
+
+- (void)executeSQLWrapper:(ICSQLWrapper *)sql;
+- (ICSqlite3Cursur*)cursorBySQLWrapper:(ICSQLWrapper *)wrapper;
+
+@end
+
 @interface ICSQLWrapper : NSObject {
-	NSMutableString *SQL; 
+	NSMutableString *_SQL; 
 }
 
 @property(readonly) NSString *SQL;

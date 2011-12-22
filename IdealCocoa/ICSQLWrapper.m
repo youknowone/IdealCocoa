@@ -22,19 +22,31 @@
 #import "NSStringAdditions.h"
 #import "ICSQLWrapper.h"
 
+@implementation ICSqlite3 (ICSQLWrapper)
+
+- (ICSqlite3Cursur*)cursorBySQLWrapper:(ICSQLWrapper *)sql {
+	return [self cursorByQuery:sql.SQL];
+}
+
+- (void)executeSQLWrapper:(ICSQLWrapper *)sql {
+	[self executeQuery:sql.SQL];
+}
+
+@end
+
 @implementation ICSQLWrapper
-@synthesize SQL;
+@synthesize SQL=_SQL;
 
 - (id)init {
 	if ((self = [super init]) != nil) {
-		SQL = [[NSMutableString alloc] init];
+		_SQL = [[NSMutableString alloc] init];
 	}
 	return self;
 }
 
 - (id)initWithString:(NSString *)string {
 	if ((self = [self init]) != nil) {
-		[SQL appendString:string];
+		[_SQL appendString:string];
 	}
 	return self;
 }
@@ -43,46 +55,46 @@
 	if ((self = [self init]) != nil) {
 		va_list args;
 		va_start(args, format);
-		[SQL appendString:[NSString stringWithFormat:format arguments:args]];
+		[_SQL appendString:[NSString stringWithFormat:format arguments:args]];
 		va_end(args);
 	}
 	return self;	
 }
 
 - (void)dealloc {
-	[SQL release];
+	[_SQL release];
 	[super dealloc];
 }
 
 - (NSString *) description {
-	return SQL;
+	return _SQL;
 }
 
 - (ICSQLWrapper *)groupBy:(NSString *)groups {
-	[SQL appendString:@" GROUP BY "];
-	[SQL appendString:groups];
+	[_SQL appendString:@" GROUP BY "];
+	[_SQL appendString:groups];
 	return self;
 }
 
 - (ICSQLWrapper *)groupBy:(NSString *)groups having:(NSString*)groupContidion {
 	[self groupBy:groups];
-	[SQL appendString:@" HAVING "];
-	[SQL appendString:groupContidion];
+	[_SQL appendString:@" HAVING "];
+	[_SQL appendString:groupContidion];
 	return self;
 }
 
 - (ICSQLWrapper *)orderBy:(NSString *)condition {
-	[SQL appendFormat:@" ORDER BY %@", condition];
+	[_SQL appendFormat:@" ORDER BY %@", condition];
 	return self;
 }
 
 - (ICSQLWrapper *)limit:(NSUInteger)count {
-	[SQL appendFormat:@" LIMIT %d", count];
+	[_SQL appendFormat:@" LIMIT %d", count];
 	return self;
 }
 
 - (ICSQLWrapper *)limit:(NSUInteger)from count:(NSUInteger)count {
-	[SQL appendFormat:@" LIMIT %d,%d", from, count];
+	[_SQL appendFormat:@" LIMIT %d,%d", from, count];
 	return self;
 }
 
