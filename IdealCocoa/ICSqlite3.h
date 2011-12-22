@@ -35,7 +35,7 @@
 }
 
 @property(nonatomic, readonly) int resultCode;
-- (NSString *)errorMessage;
+@property(nonatomic, readonly) NSString *errorMessage;
 
 - (id)initWithMemory;
 - (id)initWithFile:(NSString*)filename;
@@ -60,22 +60,18 @@
 }
 
 @property(nonatomic, readonly) int resultCode;
+@property(nonatomic, readonly, getter = isEndOfCursor) BOOL endOfCursor;
+@property(nonatomic, readonly) NSInteger rowCount, columnCount;
 
 - (id)initWithSqlite3:(ICSqlite3 *)sqlite3 sql:(NSString *)sql errorMessage:(const char**)bufferOrNull;
 + (ICSqlite3Cursur *)cursorWithSqlite3:(ICSqlite3 *)sqlite3 sql:(NSString *)sql errorMessage:(const char**)bufferOrNull;
 
 - (void)reset;
 - (void)next;
-- (NSInteger)rowCount;
-- (NSInteger)columnCount;
-- (BOOL)endOfCursor;
+
 - (NSString *)nameAtColumnIndex:(NSInteger)index;
 - (NSString *)stringValueAtColumnIndex:(NSInteger)index;
 - (NSUInteger)integerValueAtColumnIndex:(NSInteger)index;
-
-- (NSString *)getColumnName:(NSInteger)column __deprecated;
-- (NSString *)getColumnAsString:(NSInteger)column __deprecated;
-- (NSUInteger)getColumnAsInteger:(NSInteger)column __deprecated;
 
 @end
 

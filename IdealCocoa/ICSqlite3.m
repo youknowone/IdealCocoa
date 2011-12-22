@@ -79,7 +79,7 @@
 	return sqlite3_column_int(statement, (int)index);
 }
 
-- (BOOL) endOfCursor {
+- (BOOL) isEndOfCursor {
 	return resultCode == SQLITE_DONE;
 }
 
