@@ -18,6 +18,7 @@
 
 + (UIImage *) cachedImageWithContentOfAbstractPath:(NSString *)path;
 + (UIImage *) cachedImageWithContentOfURLString:(NSString *)URLString cachePolicy:(ICCachePolicy)policy;
++ (UIImage *) cachedImageWithContentOfURL:(NSURL *)URL cachePolicy:(ICCachePolicy)policy;
 + (UIImage *) cachedThumbnailImageWithContentOfAbstractPath:(NSString *)path asSize:(CGSize)size;
 
 @end

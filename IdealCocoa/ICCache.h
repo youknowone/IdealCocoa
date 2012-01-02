@@ -35,6 +35,7 @@ typedef enum {
 + (BOOL)isExists:(NSString *)path __ICTESTING;
 + (void)addPathToAsyncronizedCollector:(NSString *)path __ICTESTING;
 
++ (NSData *)cachedDataWithContentOfURL:(NSURL *)URL cachePolicy:(ICCachePolicy)policy;
 + (NSData *)cachedDataWithContentOfURLString:(NSString *)path cachePolicy:(ICCachePolicy)policy;
 + (NSData *)cachedDataWithContentOfAbstractPath:(NSString *)path __ICTESTING;
 

@@ -131,18 +131,19 @@ NSThread *collectorThread;
 	[collector->queue addObject:path];
 }
 
-+ (NSData *)cachedDataWithContentOfURLString:(NSString *)path cachePolicy:(ICCachePolicy)policy {
++ (NSData *)cachedDataWithContentOfURL:(NSURL *)URL cachePolicy:(ICCachePolicy)policy {
 	assert( policy == ICCachePolicyPermanently );
-	NSString *hashkey = [path digestStringByMD5];
+    NSString *absolutePath = URL.absoluteString;
+	NSString *hashkey = absolutePath.digestStringByMD5;
 	NSString *hashPath = NSPathForUserConfigurationFile([hashkey stringByAppendingString:@".cache"]);
 	ICPreference *cache = permanentCache;
 	NSString *cachedPath = [cache.attributes objectForKey:hashkey];
-	if ( nil == cachedPath || ![cachedPath isEqualToString:path] ) {
+	if ( nil == cachedPath || ![cachedPath isEqualToString:absolutePath]) {
 		NSError *error = nil;
-		NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:path] options:0 error:&error];
+		NSData *data = [NSData dataWithContentsOfURL:URL options:0 error:&error];
 		if ( error == nil ) {
 			[data writeToFile:hashPath atomically:YES];
-			[cache.attributes setObject:path forKey:hashkey];
+			[cache.attributes setObject:absolutePath forKey:hashkey];
 			[cache writeToFile];
 		} else {
 			ICLog(CACHE_DEBUG, @"Cannot connect to service: %@", error);
@@ -152,11 +153,15 @@ NSThread *collectorThread;
 	return [NSData dataWithContentsOfFile:hashPath];	
 }
 
++ (NSData *)cachedDataWithContentOfURLString:(NSString *)path cachePolicy:(ICCachePolicy)policy {
+    return [self cachedDataWithContentOfURL:[NSURL URLWithString:path] cachePolicy:policy];
+}
+
 + (NSData *)cachedDataWithContentOfAbstractPath:(NSString *)path {
 	ICLog(CACHE_DEBUG, @"abstract data load: %@", path);
 	if ( [path hasURLPrefix] ) {
 		ICLog(CACHE_DEBUG, @"remote data");
-		return [self cachedDataWithContentOfURLString:path cachePolicy:ICCachePolicyPermanently];
+		return [self cachedDataWithContentOfURL:[NSURL URLWithString:path] cachePolicy:ICCachePolicyPermanently];
 	} else {
 		ICLog(CACHE_DEBUG, @"local data");
 		return [NSData dataWithContentsOfAbstractPath:path];

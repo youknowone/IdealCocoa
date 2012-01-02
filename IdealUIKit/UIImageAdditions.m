@@ -50,6 +50,10 @@
 	return [UIImage imageWithData:[ICCache cachedDataWithContentOfURLString:URLString cachePolicy:policy]];
 }
 
++ (UIImage *)cachedImageWithContentOfURL:(NSURL *)URL cachePolicy:(ICCachePolicy)policy {
+    return [UIImage imageWithData:[ICCache cachedDataWithContentOfURL:URL cachePolicy:policy]];
+}
+
 + (UIImage *)cachedThumbnailImageWithContentOfAbstractPath:(NSString *)path asSize:(CGSize)size {
 	NSString *hashKey = [[path digestStringByMD5] stringByAppendingFormat:@"_%.0fx%.0f", size.width, size.height];
 	NSString *hashPath = NSPathForUserConfigurationFile([hashKey stringByAppendingFormat:@"_%.0fx%.0f.cache", size.width, size.height]);
