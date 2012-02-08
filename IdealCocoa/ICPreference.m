@@ -47,7 +47,7 @@
 }
 
 - (void)writeToFile {
-	[attributes writeToFile:path atomically:YES];
+	[attributes writeToFile:path atomically:NO];
 }
 
 /// global
