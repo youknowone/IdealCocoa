@@ -19,7 +19,17 @@
 //	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
+#import <IdealCocoa/ICUtility.h>
+
+#if IC_DEBUG
+#define UILog(TAG, ...) { if ( TAG ) { __ICLog(__VA_ARGS__, __FILE__, __LINE__); [UIAlertView showLog:[NSString stringWithFormat:__VA_ARGS__] file:__FILE__ line:__LINE__]; } }
+#else
+#define UILog(TAG, ...)
+#endif
+
 @interface UIAlertView (IdealCocoa)
+
++ (UIAlertView *)showLog:(NSString *)log file:(char *)filename line:(int)line;
 
 - (id)initNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle;
 + (UIAlertView *)showNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle;
