@@ -36,4 +36,8 @@
 - (id)initWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)error;
 + (NSData *)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)error;
 
+- (NSString *)hexadecimalString;
+- (id)initWithHexadecimalString:(NSString *)hexadecimal;
++ (NSData *)dataWithHexadecimalString:(NSString *)hexadecimal;
+
 @end

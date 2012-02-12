@@ -69,4 +69,54 @@
 	return [[[self allocWithZone:NULL] initWithContentsOfURLRequest:request error:error] autorelease];
 }
 
+static const char NSDataAdditionsHexDigits[] = "0123456789abcdef";
+- (NSString *)hexadecimalString {
+    const unsigned char *bytes = self.bytes;
+    NSUInteger length = self.length;
+    char *buffer = (char *)malloc(length * 2 + 1);
+	char *pointer = buffer;
+    
+	for (NSInteger i = 0; i < length; i++) {
+		const unsigned char c = *bytes; bytes++;
+		*pointer = NSDataAdditionsHexDigits[(c >> 4) & 0xF]; pointer++;
+		*pointer = NSDataAdditionsHexDigits[c & 0xF]; pointer++;
+	}
+	*pointer = 0;
+	
+	return [[NSString alloc] initWithBytesNoCopy:buffer length:length * 2 encoding:NSASCIIStringEncoding freeWhenDone:YES];
+}
+
+static const char NSDataAdditionsHexBytes[0x100] = 
+//0           4           8          12          16
+{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,// 16
+ -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,// 32
+ -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,// 48
+  0, 1, 2, 3, 4, 5, 6, 7, 8, 9,-1,-1,-1,-1,-1,-1,// 64
+ -1,10,11,12,13,14,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,// 80
+ -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,// 96
+ -1,10,11,12,13,14,15,-1,-1,-1,-1,-1,-1,-1,-1,-1,//112
+ -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,//128
+};
+
+- (id)initWithHexadecimalString:(NSString *)hexadecimal {
+    NSData *hexData = [hexadecimal dataUsingEncoding:NSASCIIStringEncoding];
+    const unsigned char *bytes = hexData.bytes;
+    NSUInteger length = hexData.length;
+    char *buffer = (char *)malloc(length / 2 + 1);
+    char *pointer = buffer;
+    
+	for (NSInteger i = 0; i < length; i++) {
+        unsigned char c = NSDataAdditionsHexBytes[*bytes] << 4; bytes++;
+        c += NSDataAdditionsHexBytes[*bytes]; bytes++;
+		*pointer = c; pointer++;
+	}
+	*pointer = 0;
+	
+	return [[NSData alloc] initWithBytesNoCopy:buffer length:length / 2 freeWhenDone:YES];    
+}
+
++ (NSData *)dataWithHexadecimalString:(NSString *)hexadecimal {
+    return [[[self alloc] initWithHexadecimalString:hexadecimal] autorelease];
+}
+
 @end
