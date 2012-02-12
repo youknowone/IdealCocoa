@@ -77,7 +77,10 @@
 
 // temporary paste here for partial implementation
 
-@interface ICSQLInsertBuilder : NSObject
+@interface ICSQLInsertBuilder : NSObject {
+    NSString *_table;
+    NSMutableDictionary *_data;
+}
 
 @property(nonatomic, readonly) NSString *query;
 @property(nonatomic, copy) NSString *table;
