@@ -24,11 +24,32 @@
 /* Begin PBXBuildFile section */
 		380ED29313B05A0E00986433 /* ICTableViewCellCopyable.h in Headers */ = {isa = PBXBuildFile; fileRef = 380ED29113B05A0E00986433 /* ICTableViewCellCopyable.h */; };
 		380ED29413B05A0E00986433 /* ICTableViewCellCopyable.m in Sources */ = {isa = PBXBuildFile; fileRef = 380ED29213B05A0E00986433 /* ICTableViewCellCopyable.m */; };
-		381DD53E1338C0E2008F28C6 /* IdealCocoaIconvTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 381DD53C1338C0E2008F28C6 /* IdealCocoaIconvTests.m */; };
 		381DD54A1338C23B008F28C6 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 381DD5481338C22A008F28C6 /* libiconv.dylib */; };
+		382302BA14E671E700EA6EF2 /* ICCacheStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 382302B814E671E700EA6EF2 /* ICCacheStorage.h */; };
+		382302BB14E671E700EA6EF2 /* ICCacheStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 382302B814E671E700EA6EF2 /* ICCacheStorage.h */; };
+		382302BC14E671E700EA6EF2 /* ICCacheStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 382302B914E671E700EA6EF2 /* ICCacheStorage.m */; };
+		382302BE14E671E700EA6EF2 /* ICCacheStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 382302B914E671E700EA6EF2 /* ICCacheStorage.m */; };
+		382302C314E6AB4700EA6EF2 /* ICStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 382302C114E6AB4700EA6EF2 /* ICStorage.h */; };
+		382302C414E6AB4700EA6EF2 /* ICStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 382302C114E6AB4700EA6EF2 /* ICStorage.h */; };
+		382302C514E6AB4700EA6EF2 /* ICStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 382302C214E6AB4700EA6EF2 /* ICStorage.m */; };
+		382302C714E6AB4700EA6EF2 /* ICStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 382302C214E6AB4700EA6EF2 /* ICStorage.m */; };
+		382302CB14E8123200EA6EF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
+		382302D114E8125900EA6EF2 /* IdealCocoaStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 382302CD14E8125900EA6EF2 /* IdealCocoaStorageTests.m */; };
+		382302D314E8125900EA6EF2 /* IdealCocoaStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 382302CD14E8125900EA6EF2 /* IdealCocoaStorageTests.m */; };
+		382302D414E814B900EA6EF2 /* IdealCocoaCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3865F8A714E504FB008A6BA3 /* IdealCocoaCacheTests.m */; };
+		382302D514E822B800EA6EF2 /* IdealCocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* IdealCocoaTests.m */; };
+		382302D614E822B900EA6EF2 /* IdealCocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* IdealCocoaTests.m */; };
+		382302D914E869A600EA6EF2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 382302D814E869A600EA6EF2 /* libsqlite3.dylib */; };
+		382302DB14E869B100EA6EF2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382302DA14E869B100EA6EF2 /* OpenGLES.framework */; };
+		382302DD14E869C600EA6EF2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382302DC14E869C600EA6EF2 /* QuartzCore.framework */; };
 		3831DD3F13A86D1C004CA77F /* UIScrollViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3831DD3D13A86D1C004CA77F /* UIScrollViewAdditions.h */; };
 		3831DD4013A86D1C004CA77F /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3831DD3E13A86D1C004CA77F /* UIScrollViewAdditions.m */; };
 		3831DD4513A86DC3004CA77F /* UIScrollViewAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3831DD3D13A86D1C004CA77F /* UIScrollViewAdditions.h */; };
+		3865F8A814E504FB008A6BA3 /* IdealCocoaCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3865F8A714E504FB008A6BA3 /* IdealCocoaCacheTests.m */; };
+		3865F8AC14E509B3008A6BA3 /* ICCacheRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3865F8AA14E509B3008A6BA3 /* ICCacheRequest.h */; };
+		3865F8AD14E509B3008A6BA3 /* ICCacheRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3865F8AA14E509B3008A6BA3 /* ICCacheRequest.h */; };
+		3865F8AE14E509B3008A6BA3 /* ICCacheRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3865F8AB14E509B3008A6BA3 /* ICCacheRequest.m */; };
+		3865F8B014E509B3008A6BA3 /* ICCacheRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3865F8AB14E509B3008A6BA3 /* ICCacheRequest.m */; };
 		38730438133732DE004C8E89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
 		38730442133732DE004C8E89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E213373155007072FD /* UIKit.framework */; };
 		38730443133732DE004C8E89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
@@ -273,6 +294,15 @@
 		380ED29213B05A0E00986433 /* ICTableViewCellCopyable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICTableViewCellCopyable.m; sourceTree = "<group>"; };
 		381DD53C1338C0E2008F28C6 /* IdealCocoaIconvTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdealCocoaIconvTests.m; sourceTree = "<group>"; };
 		381DD5481338C22A008F28C6 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		382302B814E671E700EA6EF2 /* ICCacheStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICCacheStorage.h; sourceTree = "<group>"; };
+		382302B914E671E700EA6EF2 /* ICCacheStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICCacheStorage.m; sourceTree = "<group>"; };
+		382302C114E6AB4700EA6EF2 /* ICStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICStorage.h; sourceTree = "<group>"; };
+		382302C214E6AB4700EA6EF2 /* ICStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICStorage.m; sourceTree = "<group>"; };
+		382302CC14E8125900EA6EF2 /* IdealCocoaStorageTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdealCocoaStorageTests.h; sourceTree = "<group>"; };
+		382302CD14E8125900EA6EF2 /* IdealCocoaStorageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdealCocoaStorageTests.m; sourceTree = "<group>"; };
+		382302D814E869A600EA6EF2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
+		382302DA14E869B100EA6EF2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		382302DC14E869C600EA6EF2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		3831DD3D13A86D1C004CA77F /* UIScrollViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewAdditions.h; sourceTree = "<group>"; };
 		3831DD3E13A86D1C004CA77F /* UIScrollViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewAdditions.m; sourceTree = "<group>"; };
 		383764D713373154007072FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -325,6 +355,10 @@
 		3837653413373240007072FD /* NSURLRequestAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLRequestAdditions.h; sourceTree = "<group>"; };
 		3837653513373240007072FD /* NSURLRequestAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLRequestAdditions.m; sourceTree = "<group>"; };
 		3837658B13373280007072FD /* IdealUIKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdealUIKit_Prefix.pch; sourceTree = "<group>"; };
+		3865F8A614E504FB008A6BA3 /* IdealCocoaCacheTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdealCocoaCacheTests.h; sourceTree = "<group>"; };
+		3865F8A714E504FB008A6BA3 /* IdealCocoaCacheTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdealCocoaCacheTests.m; sourceTree = "<group>"; };
+		3865F8AA14E509B3008A6BA3 /* ICCacheRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICCacheRequest.h; sourceTree = "<group>"; };
+		3865F8AB14E509B3008A6BA3 /* ICCacheRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICCacheRequest.m; sourceTree = "<group>"; };
 		38730437133732DE004C8E89 /* libIdealUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIdealUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		38730441133732DE004C8E89 /* IdealUIKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdealUIKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3873044A133732DE004C8E89 /* IdealUIKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IdealUIKitTests-Info.plist"; sourceTree = "<group>"; };
@@ -383,6 +417,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				382302DD14E869C600EA6EF2 /* QuartzCore.framework in Frameworks */,
+				382302DB14E869B100EA6EF2 /* OpenGLES.framework in Frameworks */,
+				382302D914E869A600EA6EF2 /* libsqlite3.dylib in Frameworks */,
 				38730442133732DE004C8E89 /* UIKit.framework in Frameworks */,
 				38730443133732DE004C8E89 /* Foundation.framework in Frameworks */,
 				38730444133732DE004C8E89 /* CoreGraphics.framework in Frameworks */,
@@ -405,6 +442,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				382302CB14E8123200EA6EF2 /* Foundation.framework in Frameworks */,
 				38C7A98A1495181800381910 /* SenTestingKit.framework in Frameworks */,
 				38C7A98E1495181800381910 /* IdealCocoa.framework in Frameworks */,
 			);
@@ -416,6 +454,9 @@
 		383764C913373154007072FD = {
 			isa = PBXGroup;
 			children = (
+				382302DC14E869C600EA6EF2 /* QuartzCore.framework */,
+				382302DA14E869B100EA6EF2 /* OpenGLES.framework */,
+				382302D814E869A600EA6EF2 /* libsqlite3.dylib */,
 				383764D913373154007072FD /* IdealCocoa */,
 				3837655F1337324D007072FD /* IdealUIKit */,
 				383764EA13373155007072FD /* IdealCocoaTests */,
@@ -456,25 +497,6 @@
 			isa = PBXGroup;
 			children = (
 				383764DA13373155007072FD /* Supporting Files */,
-				3837652013373240007072FD /* IdealCocoa.h */,
-				3837651B13373240007072FD /* ICUtility.h */,
-				3837651C13373240007072FD /* ICUtility.m */,
-				3837650D13373240007072FD /* ICCache.h */,
-				3837650E13373240007072FD /* ICCache.m */,
-				3837650F13373240007072FD /* ICCrypto.h */,
-				3837651013373240007072FD /* ICCrypto.m */,
-				3837651113373240007072FD /* ICHTTPRequest.h */,
-				3837651213373240007072FD /* ICHTTPRequest.m */,
-				3837651313373240007072FD /* ICIconv.h */,
-				3837651413373240007072FD /* ICIconv.m */,
-				3837651513373240007072FD /* ICPreference.h */,
-				3837651613373240007072FD /* ICPreference.m */,
-				3837651713373240007072FD /* ICSQLWrapper.h */,
-				3837651813373240007072FD /* ICSQLWrapper.m */,
-				3837651913373240007072FD /* ICSqlite3.h */,
-				3837651A13373240007072FD /* ICSqlite3.m */,
-				3837651D13373240007072FD /* ICXML.h */,
-				3837651E13373240007072FD /* ICXML.m */,
 				3837651F13373240007072FD /* IdealAdditions.h */,
 				3837652113373240007072FD /* NSArrayAdditions.h */,
 				3837652213373240007072FD /* NSArrayAdditions.m */,
@@ -499,6 +521,31 @@
 				3837653313373240007072FD /* NSURLAdditions.m */,
 				3837653413373240007072FD /* NSURLRequestAdditions.h */,
 				3837653513373240007072FD /* NSURLRequestAdditions.m */,
+				3837652013373240007072FD /* IdealCocoa.h */,
+				3837651B13373240007072FD /* ICUtility.h */,
+				3837651C13373240007072FD /* ICUtility.m */,
+				382302C114E6AB4700EA6EF2 /* ICStorage.h */,
+				382302C214E6AB4700EA6EF2 /* ICStorage.m */,
+				382302B814E671E700EA6EF2 /* ICCacheStorage.h */,
+				382302B914E671E700EA6EF2 /* ICCacheStorage.m */,
+				3865F8AA14E509B3008A6BA3 /* ICCacheRequest.h */,
+				3865F8AB14E509B3008A6BA3 /* ICCacheRequest.m */,
+				3837650D13373240007072FD /* ICCache.h */,
+				3837650E13373240007072FD /* ICCache.m */,
+				3837650F13373240007072FD /* ICCrypto.h */,
+				3837651013373240007072FD /* ICCrypto.m */,
+				3837651113373240007072FD /* ICHTTPRequest.h */,
+				3837651213373240007072FD /* ICHTTPRequest.m */,
+				3837651313373240007072FD /* ICIconv.h */,
+				3837651413373240007072FD /* ICIconv.m */,
+				3837651513373240007072FD /* ICPreference.h */,
+				3837651613373240007072FD /* ICPreference.m */,
+				3837651713373240007072FD /* ICSQLWrapper.h */,
+				3837651813373240007072FD /* ICSQLWrapper.m */,
+				3837651913373240007072FD /* ICSqlite3.h */,
+				3837651A13373240007072FD /* ICSqlite3.m */,
+				3837651D13373240007072FD /* ICXML.h */,
+				3837651E13373240007072FD /* ICXML.m */,
 			);
 			path = IdealCocoa;
 			sourceTree = "<group>";
@@ -519,6 +566,10 @@
 				383764F113373155007072FD /* IdealCocoaTests.h */,
 				383764F313373155007072FD /* IdealCocoaTests.m */,
 				381DD53C1338C0E2008F28C6 /* IdealCocoaIconvTests.m */,
+				382302CC14E8125900EA6EF2 /* IdealCocoaStorageTests.h */,
+				382302CD14E8125900EA6EF2 /* IdealCocoaStorageTests.m */,
+				3865F8A614E504FB008A6BA3 /* IdealCocoaCacheTests.h */,
+				3865F8A714E504FB008A6BA3 /* IdealCocoaCacheTests.m */,
 				383764EB13373155007072FD /* Supporting Files */,
 			);
 			path = IdealCocoaTests;
@@ -650,6 +701,9 @@
 				380ED29313B05A0E00986433 /* ICTableViewCellCopyable.h in Headers */,
 				38F76B2013B9CF00009D0B0A /* UIViewAdditions.h in Headers */,
 				38B9454D13DFDF6C00882F36 /* NSDateAdditions.h in Headers */,
+				3865F8AD14E509B3008A6BA3 /* ICCacheRequest.h in Headers */,
+				382302BB14E671E700EA6EF2 /* ICCacheStorage.h in Headers */,
+				382302C414E6AB4700EA6EF2 /* ICStorage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +734,9 @@
 				38C7A9C614951C3300381910 /* NSTimerAdditions.h in Headers */,
 				38C7A9C814951C3300381910 /* NSURLAdditions.h in Headers */,
 				38C7A9CA14951C3300381910 /* NSURLRequestAdditions.h in Headers */,
+				3865F8AC14E509B3008A6BA3 /* ICCacheRequest.h in Headers */,
+				382302BA14E671E700EA6EF2 /* ICCacheStorage.h in Headers */,
+				382302C314E6AB4700EA6EF2 /* ICStorage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,7 +824,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
-				ORGANIZATIONNAME = 3rddev.org;
+				ORGANIZATIONNAME = youknowone.org;
 			};
 			buildConfigurationList = 383764CE13373154007072FD /* Build configuration list for PBXProject "IdealCocoa" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -884,6 +941,9 @@
 				380ED29413B05A0E00986433 /* ICTableViewCellCopyable.m in Sources */,
 				38F76B2113B9CF00009D0B0A /* UIViewAdditions.m in Sources */,
 				38B9454F13DFDF6C00882F36 /* NSDateAdditions.m in Sources */,
+				3865F8B014E509B3008A6BA3 /* ICCacheRequest.m in Sources */,
+				382302BE14E671E700EA6EF2 /* ICCacheStorage.m in Sources */,
+				382302C714E6AB4700EA6EF2 /* ICStorage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,7 +952,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				38730452133732DE004C8E89 /* IdealUIKitTests.m in Sources */,
-				381DD53E1338C0E2008F28C6 /* IdealCocoaIconvTests.m in Sources */,
+				382302D314E8125900EA6EF2 /* IdealCocoaStorageTests.m in Sources */,
+				382302D414E814B900EA6EF2 /* IdealCocoaCacheTests.m in Sources */,
+				382302D614E822B900EA6EF2 /* IdealCocoaTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,6 +982,9 @@
 				38C7A9C714951C3300381910 /* NSTimerAdditions.m in Sources */,
 				38C7A9C914951C3300381910 /* NSURLAdditions.m in Sources */,
 				38C7A9CB14951C3300381910 /* NSURLRequestAdditions.m in Sources */,
+				3865F8AE14E509B3008A6BA3 /* ICCacheRequest.m in Sources */,
+				382302BC14E671E700EA6EF2 /* ICCacheStorage.m in Sources */,
+				382302C514E6AB4700EA6EF2 /* ICStorage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -927,6 +992,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3865F8A814E504FB008A6BA3 /* IdealCocoaCacheTests.m in Sources */,
+				382302D114E8125900EA6EF2 /* IdealCocoaStorageTests.m in Sources */,
+				382302D514E822B800EA6EF2 /* IdealCocoaTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -980,10 +1048,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"${inherited}",
-					.,
-				);
+				HEADER_SEARCH_PATHS = .;
 			};
 			name = Debug;
 		};
@@ -994,10 +1059,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"${inherited}",
-					.,
-				);
+				HEADER_SEARCH_PATHS = .;
 			};
 			name = Release;
 		};
@@ -1048,13 +1110,15 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IdealUIKitTests/IdealUIKitTests-Prefix.pch";
+				GCC_PREFIX_HEADER = IdealUIKit/IdealUIKit_Prefix.pch;
 				INFOPLIST_FILE = "IdealUIKitTests/IdealUIKitTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
 					SenTestingKit,
+					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -1068,13 +1132,15 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IdealUIKitTests/IdealUIKitTests-Prefix.pch";
+				GCC_PREFIX_HEADER = IdealUIKit/IdealUIKit_Prefix.pch;
 				INFOPLIST_FILE = "IdealUIKitTests/IdealUIKitTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
 					SenTestingKit,
+					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -1148,13 +1214,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IdealCocoa/IdealCocoa-Prefix.pch";
+				GCC_PREFIX_HEADER = IdealCocoa/IdealCocoa_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1175,13 +1241,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IdealCocoa/IdealCocoa-Prefix.pch";
+				GCC_PREFIX_HEADER = IdealCocoa/IdealCocoa_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;

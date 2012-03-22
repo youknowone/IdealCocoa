@@ -19,7 +19,7 @@
 //	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-@interface NSArray (IdealCocoa)
+@interface NSArray (IdealCocoaCreation)
 
 - (id)initWithData:(NSData *)data;
 + (id)arrayWithData:(NSData *)data;
@@ -34,5 +34,19 @@
 
 - (id)initWithContentsOfURLRequest:(NSURLRequest *)request options:(NSPropertyListReadOptions)opt format:(NSPropertyListFormat *)format error:(NSError **)error;
 + (id)arrayWithContentsOfURLRequest:(NSURLRequest *)request options:(NSPropertyListReadOptions)opt format:(NSPropertyListFormat *)format error:(NSError **)error;
+
+@end
+
+@interface NSArray (IdealCocoaPremitive)
+
+- (NSInteger)integerAtIndex:(NSUInteger)index;
+- (NSUInteger)indexOfInteger:(NSInteger)value;
+
+@end
+
+@interface NSMutableArray (IdealCocoaPremitive)
+
+- (void)addInteger:(NSInteger)value;
+- (void)insertInteger:(NSInteger)value atIndex:(NSUInteger)index;
 
 @end

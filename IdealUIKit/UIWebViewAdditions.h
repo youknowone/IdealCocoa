@@ -9,7 +9,6 @@
 @interface UIWebView (IdealCocoa)
 
 - (void)loadRequestForURL:(NSURL *)URL;
-- (void)loadRequestForURLString:(NSString *)URLString;
 - (void)loadRequestForFilePath:(NSString *)filePath;
 
 @end

@@ -17,8 +17,8 @@
 @interface UIImage (IphacyCocoaICCache)
 
 + (UIImage *) cachedImageWithContentOfAbstractPath:(NSString *)path;
-+ (UIImage *) cachedImageWithContentOfURLString:(NSString *)URLString cachePolicy:(ICCachePolicy)policy;
-+ (UIImage *) cachedImageWithContentOfURL:(NSURL *)URL cachePolicy:(ICCachePolicy)policy;
++ (UIImage *) cachedImageWithContentOfURL:(NSURL *)URL options:(ICCacheOptions)options;
++ (UIImage *) cachedImageWithContentOfURL:(NSURL *)URL storage:(ICCacheStorage *)storage;
 + (UIImage *) cachedThumbnailImageWithContentOfAbstractPath:(NSString *)path asSize:(CGSize)size;
 
 @end

@@ -6,7 +6,8 @@
 //  Copyright 2011 3rddev.org. All rights reserved.
 //
 
-#import "ICIconv.h"
+#import <IdealCocoa/IdealAdditions.h>
+#import <IdealCocoa/IdealCocoa.h>
 #import "IdealCocoaTests.h"
 
 @implementation IdealCocoaTests (ICIconv)
@@ -15,7 +16,6 @@
 	NSString *solution = @"Hello, World!";
 	NSString *result = [ICIconv convertedStringWithBytes:[solution UTF8String] length:[solution length] fromCode:@"EUC-KR"];
 	STAssertNil([result isEqualToString:solution], @"result: |%@| expected: |%@|", result, solution);
-	
 }
 
 @end

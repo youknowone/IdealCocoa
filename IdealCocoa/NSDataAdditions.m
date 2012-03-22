@@ -83,7 +83,7 @@ static const char NSDataAdditionsHexDigits[] = "0123456789abcdef";
 	}
 	*pointer = 0;
 	
-	return [[NSString alloc] initWithBytesNoCopy:buffer length:length * 2 encoding:NSASCIIStringEncoding freeWhenDone:YES];
+	return [[[NSString alloc] initWithBytesNoCopy:buffer length:length * 2 encoding:NSASCIIStringEncoding freeWhenDone:YES] autorelease];
 }
 
 static const char NSDataAdditionsHexBytes[0x100] = 

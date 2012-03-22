@@ -86,3 +86,27 @@
 }
 
 @end
+
+@implementation NSArray (IdealCocoaPremitive)
+
+- (NSInteger)integerAtIndex:(NSUInteger)index {
+    return [[self objectAtIndex:index] integerValue];
+}
+
+- (NSUInteger)indexOfInteger:(NSInteger)value {
+    return [self indexOfObject:[NSNumber numberWithInteger:value]];
+}
+
+@end
+
+@implementation NSMutableArray (IdealCocoaPremitive)
+
+- (void)addInteger:(NSInteger)value {
+    [self addObject:[NSNumber numberWithInteger:value]];
+}
+
+- (void)insertInteger:(NSInteger)value atIndex:(NSUInteger)index {
+    [self insertObject:[NSNumber numberWithInteger:value] atIndex:index];
+}
+
+@end

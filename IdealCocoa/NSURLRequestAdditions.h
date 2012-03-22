@@ -38,14 +38,12 @@
 @property(readonly) BOOL HTTPShouldHandleCookies;
 @property(readonly) BOOL HTTPShouldUsePipelining;
 
-- (id)initWithURLString:(NSString *)URLString;
 - (id)initWithURLFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 - (id)initWithFilePath:(NSString *)filePath;
 - (id)initWithFilePathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 - (id)initWithAbstractPath:(NSString *)filePath;
 - (id)initWithAbstractPathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 
-+ (id)URLRequestWithURLString:(NSString *)URLString;
 + (id)URLRequestWithURLFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
 + (id)URLRequestWithFilePath:(NSString *)filepath;
 + (id)URLRequestWithFilePathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);

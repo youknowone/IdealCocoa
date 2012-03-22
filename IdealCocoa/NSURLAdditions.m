@@ -120,4 +120,12 @@
 	return [self substringFromIndex:0 length:delemeterRange.location];
 }
 
+- (NSURL *)URL {
+    return [NSURL URLWithString:self];
+}
+
+- (NSURL *)abstractURL {
+    return [NSURL URLWithAbstractPath:self];
+}
+
 @end

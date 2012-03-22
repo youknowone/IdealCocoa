@@ -8,6 +8,7 @@
 
 #import <IdealCocoa/ICCrypto.h>
 #import "NSPathUtilitiesAddtions.h"
+#import "NSURLAdditions.h"
 #import "UIImageAdditions.h"
 
 @implementation UIImage (IdealCocoa) 
@@ -43,31 +44,32 @@
 @implementation UIImage (IdealCocoaICCache)
 
 + (UIImage *)cachedImageWithContentOfAbstractPath:(NSString *)path {
-	return [UIImage imageWithData:[ICCache cachedDataWithContentOfAbstractPath:path]];
+	return [self imageWithData:[ICCache cachedDataWithContentOfAbstractPath:path]];
 }
 
-+ (UIImage *)cachedImageWithContentOfURLString:(NSString *)URLString cachePolicy:(ICCachePolicy)policy {
-	return [UIImage imageWithData:[ICCache cachedDataWithContentOfURLString:URLString cachePolicy:policy]];
++ (UIImage *)cachedImageWithContentOfURL:(NSURL *)URL options:(ICCacheOptions)options {
+    return [self imageWithData:[ICCache cachedDataWithContentOfURL:URL options:options]];
 }
 
-+ (UIImage *)cachedImageWithContentOfURL:(NSURL *)URL cachePolicy:(ICCachePolicy)policy {
-    return [UIImage imageWithData:[ICCache cachedDataWithContentOfURL:URL cachePolicy:policy]];
++ (UIImage *)cachedImageWithContentOfURL:(NSURL *)URL storage:(ICCacheStorage *)storage {
+    return [self imageWithData:[ICCache cachedDataWithContentOfURL:URL storage:storage]];
 }
 
 + (UIImage *)cachedThumbnailImageWithContentOfAbstractPath:(NSString *)path asSize:(CGSize)size {
-	NSString *hashKey = [[path digestStringByMD5] stringByAppendingFormat:@"_%.0fx%.0f", size.width, size.height];
-	NSString *hashPath = NSPathForUserConfigurationFile([hashKey stringByAppendingFormat:@"_%.0fx%.0f.cache", size.width, size.height]);
-	NSString *cachedPath = [[ICCache hashDictionary] objectForKey:hashKey];
-	if ( nil == cachedPath || ![cachedPath isEqualToString:path] ) {
-		UIImage *sourceImage = [UIImage cachedImageWithContentOfAbstractPath:path];
+    ICCacheStorage *cacheStorage = [ICCache defaultStorageForOptions:ICCacheOptionPermanent|ICCacheOptionDisk];
+    NSString *sizedPath = [path stringByAppendingFormat:@":#thumb%.0fx%.0f", size.width, size.height];
+    NSData *thumbnailData = [cacheStorage dataForKey:sizedPath];
+    if (thumbnailData == nil) {
+        NSData *sourceData = [cacheStorage dataForKey:path];
+        if (sourceData == nil) {
+            sourceData = [NSData dataWithContentsOfURL:path.abstractURL];
+        }
+        UIImage *sourceImage = [UIImage imageWithData:sourceData];
 		UIImage *image = [sourceImage imageByResizingToSize:size]; 
-		NSData *resizedImageData = UIImagePNGRepresentation(image);
-		[resizedImageData writeToFile:hashPath atomically:YES];
-		[[ICCache hashDictionary] setObject:path forKey:hashKey];
-		//[[ICCache hashPreference] writeToFile];
-		ICLog(TRUE, @"image at %@ cached", path);
+		NSData *thumbnailData = UIImagePNGRepresentation(image);
+        [cacheStorage setData:thumbnailData forKey:sizedPath];
 	}
-	return [UIImage imageWithContentsOfFile:hashPath];
+	return [self imageWithData:thumbnailData];
 }
 
 @end

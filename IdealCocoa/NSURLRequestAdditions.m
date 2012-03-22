@@ -38,10 +38,6 @@
 #endif
 @dynamic HTTPShouldHandleCookies, HTTPShouldUsePipelining;
 
-- (id)initWithURLString:(NSString *)URLString {
-    return [self initWithURL:[NSURL URLWithString:URLString]];
-}
-
 - (id)initWithURLFormat:(NSString *)format, ... {
     va_list args;
     va_start(args, format);
@@ -72,10 +68,6 @@
     self = [self initWithURL:[NSURL URLWithAbstractPath:[NSString stringWithFormat:format arguments:args]]];
     va_end(args);
     return self;
-}
-
-+ (id)URLRequestWithURLString:(NSString *)URLString {
-    return [self requestWithURL:[NSURL URLWithString:URLString]];
 }
 
 + (id)URLRequestWithURLFormat:(NSString *)format, ... {

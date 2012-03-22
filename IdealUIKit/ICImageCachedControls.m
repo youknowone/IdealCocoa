@@ -19,9 +19,10 @@
 //	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#import "NSTimerAdditions.h"
+#import "NSURLAdditions.h"
 #import "UIImageAdditions.h"
 #import "ICImageCachedControls.h"
+#import "ICCacheRequest.h"
 
 #define ICCachedControlCheckDelay 0.22
 
@@ -32,12 +33,15 @@
 - (void)provider:(ICCachedControlProvider *)provider setImage:(UIImage *)image;
 @end
 
-@interface ICCachedControlProvider : UIActivityIndicatorView {
-	NSString *imagePath;
-	NSTimer *cacheTimer;
+@interface ICCachedControlProvider : UIActivityIndicatorView<ICCacheRequestDelegate> {
+	NSString *_imagePath;
+    ICCacheStorage *_cacheStorage;
+    ICCacheRequest *_cacheRequest;
 }
 @property(nonatomic, retain) NSString *imagePath;
 @property(nonatomic, readonly) UIControl<ICCachedControlCommonInterface> *cachedControl;
+@property(nonatomic, assign) ICCacheStorage *cacheStorage;
+@property(nonatomic, retain) ICCacheRequest *cacheRequest;
 
 - (void)startLoading; - (void)stopLoading; - (void)unload;
 
@@ -47,16 +51,9 @@
 
 @end
 
-@interface ICCachedControlProvider (Private)
-
-- (void)reload;
-- (void)checkCache:(NSTimer *)timer;
-
-@end
-
-
 @implementation ICCachedControlProvider
-@synthesize imagePath;
+@synthesize cacheStorage=_cacheStorage, cacheRequest=_cacheRequest;
+@synthesize imagePath=_imagePath;
 
 + (ICCachedControlProvider *) provider {
 	return [[[self alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray] autorelease];
@@ -67,8 +64,8 @@
 }
 
 - (void) dealloc {
-	[cacheTimer invalidate];
-	[imagePath release];
+    self.imagePath = nil;
+    self.cacheRequest = nil;
 	[super dealloc];
 }
 
@@ -86,15 +83,14 @@
 }
 
 - (void)startLoading {
-	if ( [self.cachedControl currentImageForProvider:self] != nil || cacheTimer != nil ) return;
-	if ( imagePath == nil ) return;
-	[self reload];
+	if ([self.cachedControl currentImageForProvider:self] != nil) return;
+	if (self.imagePath == nil) return;
+    [self.cacheRequest requestInBackgroundCollector];
 }
 
 - (void)stopLoading {
-	[cacheTimer invalidate];
-	cacheTimer = nil;
-	[self stopAnimating];
+    self.cacheRequest = nil;
+    [self stopAnimating];
 }
 
 - (void)unload {
@@ -103,47 +99,51 @@
 }
 
 - (void)setImagePath:(NSString *)path {
-	if ( [imagePath isEqualToString:path] ) return;
+	if ([self->_imagePath isEqualToString:path]) return;
 	
-	[imagePath release];
-	imagePath = [path retain];	
+    [self->_imagePath autorelease];
+	self->_imagePath = [path retain];
+    
+    self.cacheStorage = [ICCache defaultStorageForOptions:ICCacheOptionDisk|ICCacheOptionPermanent]; // FIXME: temp
 
-	if ( cacheTimer == nil && [self.cachedControl currentImageForProvider:self] == nil ) return;	
-	
-	[self.cachedControl provider:self setImage:nil];
-	[self reload];
+    if (path == nil) {
+        self.cacheRequest = nil;
+        [self.cachedControl provider:self setImage:nil];
+        return;
+    }
+    
+    NSURL *URL = path.abstractURL;
+    if ([ICCache isCachedURL:URL storage:self.cacheStorage]) {
+        self.cacheRequest = nil;
+        [self.cachedControl provider:self setImage:[UIImage cachedImageWithContentOfURL:URL storage:self.cacheStorage]];
+    } else {
+        self.cacheRequest = [self.cacheStorage requestWithURL:URL];
+        self.cacheRequest.delegate = self;
+        [self.cachedControl provider:self setImage:nil];
+    }
 }
 
 - (ICCachedControlLoadState) loadState {
-	if ( cacheTimer != nil ) return ICCachedControlLoadStateLoading;
+	if (self.cacheRequest != nil) return ICCachedControlLoadStateLoading;
 	return [self.cachedControl currentImageForProvider:self] == nil ? ICCachedControlLoadStateUnload : ICCachedControlLoadStateLoaded;
 }
 
-@end
+#pragma mark -
 
-@implementation ICCachedControlProvider (Private)
-
-- (void)checkCache:(NSTimer *)timer {
-	if ( [ICCache isExists:imagePath] ) {
-		[self.cachedControl provider:self setImage:[UIImage cachedImageWithContentOfAbstractPath:imagePath]];
-		[self stopAnimating];
-		cacheTimer = nil;
-		[self.cachedControl setNeedsLayout];
-		[self.cachedControl layoutIfNeeded];		
-	} else {
-		cacheTimer = [NSTimer delayedTimerWithTimeInterval:ICCachedControlCheckDelay target:self selector:@selector(checkCache:)];
-	}
+- (void)request:(ICCacheRequest *)request didCachedData:(NSData *)data {
+    [self.cacheStorage request:request didCachedData:data]; // hmm...
+    [self.cachedControl provider:self setImage:[UIImage imageWithData:data]];
+    [self stopAnimating];
+    [self.cachedControl setNeedsLayout];
+    [self.cachedControl layoutIfNeeded];
+    self.cacheRequest = nil;
 }
 
-- (void) reload {
-	[ICCache addPathToAsyncronizedCollector:imagePath];
-	[self resetActivityIndicator];
-	[self startAnimating];
-	cacheTimer = [NSTimer zeroDelayedTimerWithTarget:self selector:@selector(checkCache:)];	
+- (void)request:(ICCacheRequest *)request didFailedRequestForError:(NSError *)error {
+    
 }
 
 @end
-
 
 #define ICCachedControlProviderMethodSynthesize		@synthesize imagePath, delegate;
 #define ICCachedControlProviderMethodInitWithCoder	- (id)initWithCoder:(NSCoder *)aDecoder {	if ((self = [super initWithCoder:aDecoder]) != nil) {	cacheProvider = [ICCachedControlProvider provider];	[self addSubview:cacheProvider];	}	return self;	}

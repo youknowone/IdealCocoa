@@ -19,33 +19,35 @@
 //	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-typedef enum {
-	//ICCachePolicyAutomatic	= 0, // not implemented yet
-	//ICCachePolicyNever		= 0x10,
-	ICCachePolicyPermanently= 0x20,
-	//ICCachePolicyRuntime	= 0x30,
-	//ICCachePolicyTimer		= 0x10000000,
-}	ICCachePolicy;
+enum {
+    ICCacheOptionMemory     = 1 << 0,
+    ICCacheOptionDisk       = 1 << 1,
+	ICCacheOptionPermanent  = 1 << 2,
+    ICCacheOptionIgnoreFull = 1 << 3,
+};
+typedef NSUInteger ICCacheOptions;
 
-@class ICPreference;
-@interface ICCache: NSObject {
-	ICPreference *cachePreference;
-}
+#import <IdealCocoa/ICCacheStorage.h>
 
-+ (BOOL)isExists:(NSString *)path __ICTESTING;
-+ (void)addPathToAsyncronizedCollector:(NSString *)path __ICTESTING;
+@interface ICCache: NSObject 
 
-+ (NSData *)cachedDataWithContentOfURL:(NSURL *)URL cachePolicy:(ICCachePolicy)policy;
-+ (NSData *)cachedDataWithContentOfURLString:(NSString *)path cachePolicy:(ICCachePolicy)policy;
++ (BOOL)isCachedURL:(NSURL *)URL storage:(ICCacheStorage *)storage;
++ (BOOL)isCachedURL:(NSURL *)URL options:(ICCacheOptions)options;
+
++ (NSData *)cachedDataWithContentOfURL:(NSURL *)URL storage:(ICCacheStorage *)storage;
++ (NSData *)cachedDataWithContentOfURL:(NSURL *)URL options:(ICCacheOptions)options;
+
 + (NSData *)cachedDataWithContentOfAbstractPath:(NSString *)path __ICTESTING;
 
-+ (NSMutableDictionary *)hashDictionary;
+
++ (ICCacheStorage *)defaultStorageForOptions:(ICCacheOptions)options;
 
 @end
 
+
 @interface NSData (ICCache)
 
-+ (NSData *)cachedDataWithContentOfURLString:(NSString *)path cachePolicy:(ICCachePolicy)policy;
++ (NSData *)cachedDataWithContentOfURL:(NSURL *)URL options:(ICCacheOptions)options;
 + (NSData *)cachedDataWithContentOfAbstractPath:(NSString *)path __ICTESTING;
 
 @end
