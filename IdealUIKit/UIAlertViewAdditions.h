@@ -22,7 +22,7 @@
 #import <IdealCocoa/ICUtility.h>
 
 #if IC_DEBUG
-#define UILog(TAG, ...) { if ( TAG ) { __ICLog(__VA_ARGS__, __FILE__, __LINE__); [UIAlertView showLog:[NSString stringWithFormat:__VA_ARGS__] file:__FILE__ line:__LINE__]; } }
+#define UILog(TAG, ...) { if ( TAG ) { NSString *logText = [NSString stringWithFormat:__VA_ARGS__]; __ICLog(logText, __FILE__, __LINE__); [UIAlertView showLog:logText file:__FILE__ line:__LINE__]; } }
 #else
 #define UILog(TAG, ...)
 #endif
