@@ -38,6 +38,7 @@
 - (BOOL)hasURLPrefix;
 - (NSString *)pathProtocol;
 - (NSURL *)URL;
+- (NSURL *)fileURL;
 - (NSURL *)abstractURL;
 
 @end

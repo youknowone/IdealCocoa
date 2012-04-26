@@ -124,6 +124,10 @@
     return [NSURL URLWithString:self];
 }
 
+- (NSURL *)fileURL {
+    return [NSURL fileURLWithPath:self];
+}
+
 - (NSURL *)abstractURL {
     return [NSURL URLWithAbstractPath:self];
 }
