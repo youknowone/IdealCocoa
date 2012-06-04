@@ -20,6 +20,7 @@
 //
 
 #import <IdealCocoa/ICUtility.h>
+#import <IdealCocoa/IdealAdditions.h>
 #import <IdealCocoa/ICCrypto.h>
 #import <IdealCocoa/ICPreference.h>
 #import <IdealCocoa/ICXML.h>

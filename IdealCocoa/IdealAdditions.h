@@ -19,6 +19,7 @@
 //	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
+#import <IdealCocoa/ICUtility.h>
 #import <IdealCocoa/NSArrayAdditions.h>
 #import <IdealCocoa/NSBundleAdditions.h>
 #import <IdealCocoa/NSDataAdditions.h>
