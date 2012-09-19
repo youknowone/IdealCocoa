@@ -98,6 +98,10 @@
 		38730480133732FE004C8E89 /* NSURLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837653313373240007072FD /* NSURLAdditions.m */; };
 		38730481133732FE004C8E89 /* NSURLRequestAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3837653413373240007072FD /* NSURLRequestAdditions.h */; settings = {ATTRIBUTES = (); }; };
 		38730482133732FE004C8E89 /* NSURLRequestAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837653513373240007072FD /* NSURLRequestAdditions.m */; };
+		38A92C731525448C00F83957 /* ICDataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A92C711525448C00F83957 /* ICDataObject.h */; };
+		38A92C741525448C00F83957 /* ICDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A92C721525448C00F83957 /* ICDataObject.m */; };
+		38A92C76152544D300F83957 /* ICDataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A92C711525448C00F83957 /* ICDataObject.h */; };
+		38A92C771525C28C00F83957 /* ICDataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A92C721525448C00F83957 /* ICDataObject.m */; };
 		38B78E6D133745F400658C00 /* IdealCocoa.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837652013373240007072FD /* IdealCocoa.h */; };
 		38B78E6E133745F400658C00 /* ICCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837650D13373240007072FD /* ICCache.h */; };
 		38B78E6F133745F400658C00 /* ICCrypto.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3837650F13373240007072FD /* ICCrypto.h */; };
@@ -365,6 +369,8 @@
 		3873044E133732DE004C8E89 /* IdealUIKitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IdealUIKitTests-Prefix.pch"; sourceTree = "<group>"; };
 		3873044F133732DE004C8E89 /* IdealUIKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdealUIKitTests.h; sourceTree = "<group>"; };
 		38730451133732DE004C8E89 /* IdealUIKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdealUIKitTests.m; sourceTree = "<group>"; };
+		38A92C711525448C00F83957 /* ICDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDataObject.h; sourceTree = "<group>"; };
+		38A92C721525448C00F83957 /* ICDataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDataObject.m; sourceTree = "<group>"; };
 		38B9454A13DFDF6C00882F36 /* NSDateAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateAdditions.h; sourceTree = "<group>"; };
 		38B9454B13DFDF6C00882F36 /* NSDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateAdditions.m; sourceTree = "<group>"; };
 		38C7A9721495181800381910 /* IdealCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IdealCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -534,6 +540,8 @@
 				3837650E13373240007072FD /* ICCache.m */,
 				3837650F13373240007072FD /* ICCrypto.h */,
 				3837651013373240007072FD /* ICCrypto.m */,
+				38A92C711525448C00F83957 /* ICDataObject.h */,
+				38A92C721525448C00F83957 /* ICDataObject.m */,
 				3837651113373240007072FD /* ICHTTPRequest.h */,
 				3837651213373240007072FD /* ICHTTPRequest.m */,
 				3837651313373240007072FD /* ICIconv.h */,
@@ -704,6 +712,7 @@
 				3865F8AD14E509B3008A6BA3 /* ICCacheRequest.h in Headers */,
 				382302BB14E671E700EA6EF2 /* ICCacheStorage.h in Headers */,
 				382302C414E6AB4700EA6EF2 /* ICStorage.h in Headers */,
+				38A92C76152544D300F83957 /* ICDataObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +746,7 @@
 				3865F8AC14E509B3008A6BA3 /* ICCacheRequest.h in Headers */,
 				382302BA14E671E700EA6EF2 /* ICCacheStorage.h in Headers */,
 				382302C314E6AB4700EA6EF2 /* ICStorage.h in Headers */,
+				38A92C731525448C00F83957 /* ICDataObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -944,6 +954,7 @@
 				3865F8B014E509B3008A6BA3 /* ICCacheRequest.m in Sources */,
 				382302BE14E671E700EA6EF2 /* ICCacheStorage.m in Sources */,
 				382302C714E6AB4700EA6EF2 /* ICStorage.m in Sources */,
+				38A92C771525C28C00F83957 /* ICDataObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -985,6 +996,7 @@
 				3865F8AE14E509B3008A6BA3 /* ICCacheRequest.m in Sources */,
 				382302BC14E671E700EA6EF2 /* ICCacheStorage.m in Sources */,
 				382302C514E6AB4700EA6EF2 /* ICStorage.m in Sources */,
+				38A92C741525448C00F83957 /* ICDataObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

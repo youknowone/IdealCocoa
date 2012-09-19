@@ -148,7 +148,7 @@ ICCacheCollector *ICCacheSharedCollector;
     [self->queue addObject:request];
     [self->queueMap setObject:request forKey:request.URL.absoluteString];
     if (!self->_isCollecting) {
-        [self collectingLoop];
+        [self->_thread start];
     }
 }
 

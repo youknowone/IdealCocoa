@@ -1,0 +1,29 @@
+//
+//  ICDataObject.h
+//  IdealCocoa
+//
+//  Created by youknowone on 12. 3. 30..
+//  Copyright (c) 2012 youknowone.org. All rights reserved.
+//
+
+@interface ICTuple : NSObject {
+    id _first, _second;
+}
+@property(nonatomic, retain) id first, second;
+
+- (id)initWithFirst:(id)first second:(id)second;
++ (id)tupleWithFirst:(id)first second:(id)second;
+
+- (void)swap;
+
+@end
+
+@interface ICTriple: NSObject {
+    id _first, _second, _third;
+}
+@property(nonatomic, retain) id first, second, third;
+
+- (id)initWithFirst:(id)first second:(id)second third:(id)third;
++ (id)tripleWithFirst:(id)first second:(id)second third:(id)third;
+
+@end
