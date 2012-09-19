@@ -89,12 +89,12 @@
 }
 
 - (ICSQLWrapper *)limit:(NSUInteger)count {
-	[_SQL appendFormat:@" LIMIT %d", count];
+	[_SQL appendFormat:@" LIMIT %lu", count];
 	return self;
 }
 
 - (ICSQLWrapper *)limit:(NSUInteger)from count:(NSUInteger)count {
-	[_SQL appendFormat:@" LIMIT %d,%d", from, count];
+	[_SQL appendFormat:@" LIMIT %lu,%lu", from, count];
 	return self;
 }
 

@@ -21,7 +21,7 @@
 
 #import "ICUtility.h"
 
-void __ICLog(NSString *log, char *filename, int line) {
+void __ICLog(NSString *log, const char *filename, int line) {
 	NSLog(@"[%@:%d] %@", [[NSString stringWithCString:filename encoding:NSUTF8StringEncoding] lastPathComponent], line, log);
 }
 

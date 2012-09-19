@@ -65,4 +65,4 @@
 
 //	DO NOT CALL THIS DIRECTLY!
 //	See 'ICLog' to use this feature
-ICEXTERN void __ICLog(NSString *log, char *filename, int line);
+ICEXTERN void __ICLog(NSString *log, const char *filename, int line);
