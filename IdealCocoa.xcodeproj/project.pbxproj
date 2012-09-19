@@ -25,11 +25,11 @@
 		380ED29313B05A0E00986433 /* ICTableViewCellCopyable.h in Headers */ = {isa = PBXBuildFile; fileRef = 380ED29113B05A0E00986433 /* ICTableViewCellCopyable.h */; };
 		380ED29413B05A0E00986433 /* ICTableViewCellCopyable.m in Sources */ = {isa = PBXBuildFile; fileRef = 380ED29213B05A0E00986433 /* ICTableViewCellCopyable.m */; };
 		381DD54A1338C23B008F28C6 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 381DD5481338C22A008F28C6 /* libiconv.dylib */; };
-		382302BA14E671E700EA6EF2 /* ICCacheStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 382302B814E671E700EA6EF2 /* ICCacheStorage.h */; };
+		382302BA14E671E700EA6EF2 /* ICCacheStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 382302B814E671E700EA6EF2 /* ICCacheStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		382302BB14E671E700EA6EF2 /* ICCacheStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 382302B814E671E700EA6EF2 /* ICCacheStorage.h */; };
 		382302BC14E671E700EA6EF2 /* ICCacheStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 382302B914E671E700EA6EF2 /* ICCacheStorage.m */; };
 		382302BE14E671E700EA6EF2 /* ICCacheStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 382302B914E671E700EA6EF2 /* ICCacheStorage.m */; };
-		382302C314E6AB4700EA6EF2 /* ICStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 382302C114E6AB4700EA6EF2 /* ICStorage.h */; };
+		382302C314E6AB4700EA6EF2 /* ICStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 382302C114E6AB4700EA6EF2 /* ICStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		382302C414E6AB4700EA6EF2 /* ICStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 382302C114E6AB4700EA6EF2 /* ICStorage.h */; };
 		382302C514E6AB4700EA6EF2 /* ICStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 382302C214E6AB4700EA6EF2 /* ICStorage.m */; };
 		382302C714E6AB4700EA6EF2 /* ICStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 382302C214E6AB4700EA6EF2 /* ICStorage.m */; };
@@ -46,7 +46,7 @@
 		3831DD4013A86D1C004CA77F /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3831DD3E13A86D1C004CA77F /* UIScrollViewAdditions.m */; };
 		3831DD4513A86DC3004CA77F /* UIScrollViewAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3831DD3D13A86D1C004CA77F /* UIScrollViewAdditions.h */; };
 		3865F8A814E504FB008A6BA3 /* IdealCocoaCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3865F8A714E504FB008A6BA3 /* IdealCocoaCacheTests.m */; };
-		3865F8AC14E509B3008A6BA3 /* ICCacheRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3865F8AA14E509B3008A6BA3 /* ICCacheRequest.h */; };
+		3865F8AC14E509B3008A6BA3 /* ICCacheRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3865F8AA14E509B3008A6BA3 /* ICCacheRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3865F8AD14E509B3008A6BA3 /* ICCacheRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3865F8AA14E509B3008A6BA3 /* ICCacheRequest.h */; };
 		3865F8AE14E509B3008A6BA3 /* ICCacheRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3865F8AB14E509B3008A6BA3 /* ICCacheRequest.m */; };
 		3865F8B014E509B3008A6BA3 /* ICCacheRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3865F8AB14E509B3008A6BA3 /* ICCacheRequest.m */; };
@@ -722,12 +722,15 @@
 			files = (
 				38C7A9A114951C3300381910 /* IdealCocoa.h in Headers */,
 				38C7A9A214951C3300381910 /* ICCache.h in Headers */,
+				3865F8AC14E509B3008A6BA3 /* ICCacheRequest.h in Headers */,
+				382302BA14E671E700EA6EF2 /* ICCacheStorage.h in Headers */,
 				38C7A9A414951C3300381910 /* ICCrypto.h in Headers */,
 				38C7A9A614951C3300381910 /* ICHTTPRequest.h in Headers */,
 				38C7A9A814951C3300381910 /* ICIconv.h in Headers */,
 				38C7A9AA14951C3300381910 /* ICPreference.h in Headers */,
 				38C7A9AC14951C3300381910 /* ICSQLWrapper.h in Headers */,
 				38C7A9AE14951C3300381910 /* ICSqlite3.h in Headers */,
+				382302C314E6AB4700EA6EF2 /* ICStorage.h in Headers */,
 				38C7A9B014951C3300381910 /* ICUtility.h in Headers */,
 				38C7A9B214951C3300381910 /* ICXML.h in Headers */,
 				38C7A9B414951C3300381910 /* IdealAdditions.h in Headers */,
@@ -1192,7 +1195,7 @@
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -1215,7 +1218,7 @@
 				INFOPLIST_FILE = "IdealCocoa/IdealCocoa-Info.plist";
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.7;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
