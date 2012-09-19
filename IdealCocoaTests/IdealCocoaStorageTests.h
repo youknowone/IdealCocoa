@@ -2,8 +2,8 @@
 //  IdealCocoaStorageTests.h
 //  IdealCocoa
 //
-//  Created by 윤원 정 on 12. 2. 13..
-//  Copyright (c) 2012년 youknowone.org. All rights reserved.
+//  Created by youknowone on 12. 2. 13..
+//  Copyright (c) 2012 youknowone.org All rights reserved.
 //
 
 //  Logic unit tests contain unit test code that is designed to be linked into an independent test executable.
