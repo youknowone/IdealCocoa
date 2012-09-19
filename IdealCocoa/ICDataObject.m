@@ -11,6 +11,10 @@
 @implementation ICTuple
 @synthesize first=_first, second=_second;
 
++ (id)tuple {
+    return [[[self alloc] init] autorelease];
+}
+
 - (id)initWithFirst:(id)first second:(id)second {
     self = [super init];
     if (self != nil) {
@@ -40,6 +44,10 @@
 
 @implementation ICTriple
 @synthesize first=_first, second=_second, third=_third;
+
++ (id)triple {
+    return [[[self alloc] init] autorelease];
+}
 
 - (id)initWithFirst:(id)first second:(id)second third:(id)third {
     self = [super init];
