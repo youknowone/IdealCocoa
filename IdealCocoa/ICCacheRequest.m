@@ -91,7 +91,6 @@ ICCacheCollector *ICCacheSharedCollector;
 
 - (id)init {
     if ((self = [super init]) != nil) {
-        self->_thread = [[NSThread alloc] initWithTarget:self selector:@selector(collectingLoop) object:nil];
         queue = [[NSMutableArray alloc] init];
     }
     return self;
@@ -106,6 +105,7 @@ ICCacheCollector *ICCacheSharedCollector;
 
 - (void)startCollecting {
     if (!self.isCollecting) {
+        self->_thread = [[NSThread alloc] initWithTarget:self selector:@selector(collectingLoop) object:nil];
         [self->_thread start];
     }
 }
@@ -147,9 +147,7 @@ ICCacheCollector *ICCacheSharedCollector;
 - (void)addRequest:(ICCacheRequest *)request {
     [self->queue addObject:request];
     [self->queueMap setObject:request forKey:request.URL.absoluteString];
-    if (!self->_isCollecting) {
-        [self->_thread start];
-    }
+    [self startCollecting];
 }
 
 - (void)removeRequest:(ICCacheRequest *)request {
