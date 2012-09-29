@@ -19,42 +19,102 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-@interface ICXMLElement : NSObject<NSCopying>
-{
-    NSString *space; // not used yet
-    ICXMLElement *parent;
-    NSString *name;
-    id elements;
-    id attributes;
-    NSMutableDictionary *elementsByName;
-    id _root;
+@interface ICXMLAttributeDictionary: NSDictionary {
+    NSDictionary *impl;
 }
 
-@property(retain) NSString *space, *name;
-@property(retain) NSArray *elements;
-@property(retain) NSDictionary *attributes;
-@property(assign) ICXMLElement *parent;
-@property(readonly) ICXMLElement *root;
-@property(readonly) NSString *text;
-@property(readonly) BOOL hasPureText;
+@end
 
-- (id)initWithName:(NSString *)name attributes:(NSDictionary *)attributes elements:(NSArray *)elements;
-+ (id)elementWithName:(NSString*)name attributes:(NSDictionary *)attributes elements:(NSArray *)elements;
-+ (id)textElementWithString:(NSString*)text;
+@interface ICXMLElementArray : NSMutableArray  {
+    NSMutableArray *impl;
+    
+    NSMutableArray *_childrenNames;
+    NSMutableDictionary *_childrenDictionary;
+}
 
 - (NSArray *)childrenNames;
 - (NSArray *)childrenByName:(NSString *)name;
+- (NSArray *)childrenByNames:(NSString *)name, ...;
 - (id)firstChildByName:(NSString *)name;
+//- (id)firstChildByNames:(NSString *)name, ...;
+
+- (NSArray *)textChildren;
+- (id)firstTextChild;
 
 @end
 
-@interface ICXMLElement (creation)
 
-+ (id)elementWithData:(NSData *)data;
-+ (id)elementWithContentOfURL:(NSURL *)url;
-+ (id)elementWithString:(NSString *)dataString;
+@class ICXMLNode;
+
+@protocol ICXMLElement<NSObject, NSCopying>
+
+@property(readonly) NSString *space, *name;
+@property(readonly) ICXMLElementArray *children;
+@property(readonly) ICXMLElementArray *elements __deprecated;
+@property(readonly) ICXMLAttributeDictionary *attributes;
+- (void)setAttributes:(ICXMLAttributeDictionary *)attributes __deprecated;
+@property(assign) NSObject<ICXMLElement> *parent;
+@property(readonly) NSObject<ICXMLElement> *root;
+@property(readonly) NSString *text;
+@property(readonly) NSString *strippedText;
+@property(readonly) NSString *innerText;
+@property(readonly) NSString *strippedInnerText;
+
+- (NSString *)descriptionWithIndent:(NSString *)indent;
 
 @end
+
+
+//// abstract
+//@interface ICXMLElement: NSObject<ICXMLElement>
+//
+//@end
+
+
+@interface ICXMLNode: NSObject<ICXMLElement> {
+    NSObject<ICXMLElement> *_parent;
+    NSString *_name;
+    ICXMLElementArray *_children;
+    ICXMLAttributeDictionary * _attributes;
+    
+    NSObject<ICXMLElement> *_root;
+}
+
+- (id)initWithName:(NSString *)name attributes:(NSDictionary *)attributes children:(NSArray *)elements;
++ (id)nodeWithName:(NSString*)name attributes:(NSDictionary *)attributes children:(NSArray *)elements;
+
+@end
+
+@interface ICXMLNode (creation)
+
++ (id)nodeWithData:(NSData *)data;
++ (id)nodeWithContentOfURL:(NSURL *)url;
++ (id)nodeWithString:(NSString *)dataString;
+
+@end
+
+
+@interface ICXMLText: NSObject<ICXMLElement> {
+@protected
+    NSObject<ICXMLElement> *_parent;
+    NSString *_value;
+    NSString *_strippedValue;
+}
+
+- (id)initWithString:(NSString *)string parent:(NSObject<ICXMLElement> *)parent;
++ (id)textWithString:(NSString *)string parent:(NSObject<ICXMLElement> *)parent;
+
+@end
+
+
+@interface ICXMLTextBuilder: ICXMLText {
+    NSMutableArray *_resources;
+}
+
+@property(nonatomic, readonly) NSMutableArray *resources;
+
+@end
+
 
 @protocol ICXMLSimpleParserErrorDelegate;
 @interface ICXMLSimpleParser : NSXMLParser
@@ -64,8 +124,8 @@
 {
     id errorDelegate;
   @protected
-    ICXMLElement* rootElement;
-    ICXMLElement* currentElement;
+    NSObject<ICXMLElement> *rootElement;
+    NSObject<ICXMLElement> *currentElement;
 }
 
 - (id)initWithContentsOfAbstractPath:(NSString *)path;
@@ -73,7 +133,7 @@
 + (void)setSharedErrorDelegate:(id<ICXMLSimpleParserErrorDelegate>)delegate;
 + (id<ICXMLSimpleParserErrorDelegate>)sharedErrorDelegate;
 
-@property(readonly) ICXMLElement *document;
+@property(readonly) ICXMLNode *document;
 @property(retain) id<ICXMLSimpleParserErrorDelegate> errorDelegate;
 
 @end
