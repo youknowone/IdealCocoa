@@ -11,7 +11,7 @@
 #import "NSStringAdditions.h"
 #import "NSDataAdditions.h"
 #import "NSPathUtilitiesAddtions.h"
-#import "ICCrypto.h"
+#import "NSACrypto.h"
 #import "ICStorage.h"
 
 @interface ICStorage ()

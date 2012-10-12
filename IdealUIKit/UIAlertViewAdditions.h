@@ -19,8 +19,6 @@
 //	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#import <IdealCocoa/ICUtility.h>
-
 #if IC_DEBUG
 #define UILog(TAG, ...) { if ( TAG ) { NSString *logText = [NSString stringWithFormat:__VA_ARGS__]; __ICLog(logText, __FILE__, __LINE__); [UIAlertView showLog:logText file:__FILE__ line:__LINE__]; } }
 #else

@@ -21,15 +21,6 @@
 
 @interface NSData (IdealCocoa)
 
-- (id)initWithContentsOfAbstractPath:(NSString *)path;
-+ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path;
-
-- (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error;
-+ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error;
-
-- (id)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding;
-+ (NSData *)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding;
-
 - (id)initWithContentsOfURLRequest:(NSURLRequest *)request;
 + (NSData *)dataWithContentsOfURLRequest:(NSURLRequest *)request;
 
@@ -39,5 +30,17 @@
 - (NSString *)hexadecimalString;
 - (id)initWithHexadecimalString:(NSString *)hexadecimal;
 + (NSData *)dataWithHexadecimalString:(NSString *)hexadecimal;
+
+
+// deprecation: use NSString -smartURL
+- (id)initWithContentsOfAbstractPath:(NSString *)path __deprecated;
++ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path __deprecated;
+
+- (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error __deprecated;
++ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error __deprecated;
+
+// deprecation: use -initWithCOntentsOfURLRequest:
+- (id)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;
++ (NSData *)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;
 
 @end

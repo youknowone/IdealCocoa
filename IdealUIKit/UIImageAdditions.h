@@ -16,10 +16,10 @@
 
 @interface UIImage (IphacyCocoaICCache)
 
-+ (UIImage *) cachedImageWithContentOfAbstractPath:(NSString *)path;
++ (UIImage *) cachedImageWithContentOfAbstractPath:(NSString *)path __deprecated;
 + (UIImage *) cachedImageWithContentOfURL:(NSURL *)URL options:(ICCacheOptions)options;
 + (UIImage *) cachedImageWithContentOfURL:(NSURL *)URL storage:(ICCacheStorage *)storage;
-+ (UIImage *) cachedThumbnailImageWithContentOfAbstractPath:(NSString *)path asSize:(CGSize)size;
++ (UIImage *) cachedThumbnailImageWithContentOfAbstractPath:(NSString *)path asSize:(CGSize)size __deprecated;
 
 @end
 

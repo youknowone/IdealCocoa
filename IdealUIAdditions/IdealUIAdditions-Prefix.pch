@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'IdealUIAdditions' target in the 'IdealUIAdditions' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
+
+#import "debug.h"
+#define ICLog dlog

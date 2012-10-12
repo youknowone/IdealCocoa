@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-@interface ICTuple : NSObject {
+@interface NSATuple: NSObject {
     id _first, _second;
 }
 @property(nonatomic, retain) id first, second;
@@ -20,7 +20,7 @@
 
 @end
 
-@interface ICTriple: NSObject {
+@interface NSATriple: NSObject {
     id _first, _second, _third;
 }
 @property(nonatomic, retain) id first, second, third;

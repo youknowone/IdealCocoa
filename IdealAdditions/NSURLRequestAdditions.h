@@ -73,6 +73,29 @@
 @property BOOL HTTPShouldUsePipelining;
 
 - (void)setHTTPPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding;
+
+@end
+
+
+@interface NSAURLRequestHTTPBodyMultiPartFormPostFormatter : NSObject {
+	NSMutableData *_body;
+	NSStringEncoding _encoding;
+}
+
+- (id)initWithEncoding:(NSStringEncoding)encoding;
+- (void)appendBodyDataToFieldName:(NSString *)fieldName text:(NSString *)textData;
+- (void)appendBodyDataToFieldName:(NSString *)fieldName text:(NSString *)textData encoding:(NSStringEncoding)encoding;
+- (void)appendBodyDataToFieldName:(NSString *)fieldName data:(NSData *)data;
+- (void)appendBodyDataToFieldName:(NSString *)fieldName fileName:(NSString *)fileName data:(NSData *)data;
+- (void)appendBodyDataEndian;
+
+- (NSData *)HTTPBody;
+
+@end
+
+@interface NSMutableURLRequest (ICHTTPMultiPartFormPostRequest)
+
 - (void)setHTTPMultiPartFormPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding;
 
 @end
+

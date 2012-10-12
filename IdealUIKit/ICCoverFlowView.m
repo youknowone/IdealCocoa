@@ -319,9 +319,9 @@ static int ICCoverFlowViewCount = 0;
 		// Start animation to nearest
 		offset = startOffset += (startPos - pos) * ICCoverFlowViewScrollSpeedFactor;
 		[self setOffsetFitInBounds];
-		CFTimeInterval time = CACurrentMediaTime();
+		CFTimeInterval ctime = CACurrentMediaTime();
 		double maxSpeed = ICCoverFlowViewMaxScrollSpeed;
-		double speed = (lastPos - pos)/(time - lastTime);
+		double speed = (lastPos - pos)/(ctime - lastTime);
 		if (speed > maxSpeed) speed = maxSpeed;
 		if (speed <-maxSpeed) speed =-maxSpeed;
 		/*
@@ -330,7 +330,7 @@ static int ICCoverFlowViewCount = 0;
 		 *	scroll to boundary should be returned to main
 		 *	short move should not drive decelerating animation
 		 */
-		if ( speed >= 0.25 && fabs(startPos-pos) < DECELERATEMOVETHRESHOLD && time-startTime < DECELERATETIMETHRESHOLD ) {
+		if ( speed >= 0.25 && fabs(startPos-pos) < DECELERATEMOVETHRESHOLD && ctime-startTime < DECELERATETIMETHRESHOLD ) {
 			ICLog(COVERFLOW_DEBUG, @"short move so speed is zero. start: %.2f current: %.2f threshold m/t: %.2f/%.2f", startPos, pos, DECELERATEMOVETHRESHOLD, DECELERATETIMETHRESHOLD);
 			speed = speed>=0.0 ? 0.25 : -0.25;
 		}

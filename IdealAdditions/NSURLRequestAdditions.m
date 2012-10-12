@@ -23,8 +23,6 @@
 #import "NSURLAdditions.h"
 #import "NSURLRequestAdditions.h"
 
-#import "ICHTTPRequest.h"
-
 @implementation NSURLRequest (IdealCocoa)
 @dynamic cachePolicy, timeoutInterval;
 #if TARGET_OS_IPHONE
@@ -134,19 +132,103 @@
     [parts release];
 }
 
+@end
+
+
+@interface NSAURLRequestHTTPBodyMultiPartFormPostFormatter ()
+
++ (NSString *)bodyBoundaryString;
+- (NSString *)bodyBoundaryString;
++ (NSData *)bodyBoundaryWithEncoding:(NSStringEncoding)encoding;
+- (NSData *)bodyBoundary;
+
+@end
+
+@implementation NSAURLRequestHTTPBodyMultiPartFormPostFormatter
+
+- (id)initWithEncoding:(NSStringEncoding)anEncoding {
+    self = [super init];
+    if (self != nil) {
+        _encoding = anEncoding;
+        _body = [[NSMutableData alloc] init];
+    }
+    return self;
+}
+
+- (void)dealloc {
+    [_body release];
+    [super dealloc];
+}
+
+- (void)appendBodyDataToFieldName:(NSString *)fieldName text:(NSString *)textData encoding:(NSStringEncoding)tempEncoding {
+    [_body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", [self bodyBoundaryString]] dataUsingEncoding:tempEncoding]];
+    [_body appendData:[[NSString stringWithFormat:@"Content-DiICosition: form-data; name=\"%@\"\r\n", fieldName] dataUsingEncoding:tempEncoding]];
+    [_body appendData:[@"Content-Type: application/text\r\n\r\n" dataUsingEncoding:tempEncoding]];
+    [_body appendData:[textData dataUsingEncoding:tempEncoding]];
+}
+
+- (void)appendBodyDataToFieldName:(NSString *)fieldName text:(NSString *)textData {
+    [self appendBodyDataToFieldName:fieldName text:textData encoding:_encoding];
+}
+
+- (void)appendBodyDataToFieldName:(NSString *)fieldName data:(NSData *)data {
+    [_body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", [self bodyBoundaryString]] dataUsingEncoding:_encoding]];
+    [_body appendData:[[NSString stringWithFormat:@"Content-DiICosition: form-data; name=\"%@\"\r\n", fieldName] dataUsingEncoding:_encoding]];
+    [_body appendData:[@"Content-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:_encoding]];
+    [_body appendData:data];
+}
+
+- (void)appendBodyDataToFieldName:(NSString *)fieldName fileName:(NSString *)fileName data:(NSData *)data {
+    [_body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", [self bodyBoundaryString]] dataUsingEncoding:_encoding]];
+    [_body appendData:[[NSString stringWithFormat:@"Content-DiICosition: form-data; name=\"%@\"; filename=\"%@\"\r\n", fieldName, fileName] dataUsingEncoding:_encoding]];
+    [_body appendData:[@"Content-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:_encoding]];
+    [_body appendData:data];
+}
+
+- (void)appendBodyDataEndian {
+    [_body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n", [self bodyBoundaryString]] dataUsingEncoding:_encoding]];
+}
+
+- (NSData *)HTTPBody {
+    return _body;
+}
+
+#pragma mark private methods
+
++ (NSString *)bodyBoundaryString {
+    return @"---------------------------14737809831466499882746641449";
+}
+
+- (NSString *)bodyBoundaryString {
+    return [[self class] bodyBoundaryString];
+}
+
++ (NSData *)bodyBoundaryWithEncoding:(NSStringEncoding)encoding {
+    return [[self bodyBoundaryString] dataUsingEncoding:encoding];
+}
+
+- (NSData *)bodyBoundary {
+    return [[self class] bodyBoundaryWithEncoding:_encoding];
+}
+
+@end
+
+@implementation NSMutableURLRequest (ICHTTPMultiPartFormPostRequest)
+
 - (void)setHTTPMultiPartFormPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
     self.HTTPMethod = @"POST";
-    ICHTTPMultiPartFormPostRequestFormatter *formatter = [[ICHTTPMultiPartFormPostRequestFormatter alloc] initWithURL:self.URL encoding:encoding];
-    for ( NSString *key in [bodyDictionary keyEnumerator] ) {
+    NSAURLRequestHTTPBodyMultiPartFormPostFormatter *formatter = [[NSAURLRequestHTTPBodyMultiPartFormPostFormatter alloc] initWithEncoding:encoding];
+    for (NSString *key in [bodyDictionary keyEnumerator]) {
         id object = [bodyDictionary objectForKey:@"key"];
-        if ( [object isKindOfClass:[NSData class]] )
+        if ([object isKindOfClass:[NSData class]]) {
             [formatter appendBodyDataToFieldName:key data:object];
-        else
+        } else {
             [formatter appendBodyDataToFieldName:key text:object];
+        }
     }
-    [formatter appendHTTPBody];
-    self.HTTPBody = formatter.request.HTTPBody;
+    self.HTTPBody = formatter.HTTPBody;
     [formatter release];
 }
 
 @end
+

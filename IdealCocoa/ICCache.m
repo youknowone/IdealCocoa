@@ -26,7 +26,7 @@
 #import "NSURLAdditions.h"
 #import "NSDataAdditions.h"
 #import "NSPathUtilitiesAddtions.h"
-#import "ICCrypto.h"
+#import "NSACrypto.h"
 #import "ICPreference.h"
 #import "ICCache.h"
 #import "ICStorage.h"

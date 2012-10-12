@@ -37,7 +37,7 @@ typedef NSUInteger ICCacheOptions;
 + (NSData *)cachedDataWithContentOfURL:(NSURL *)URL storage:(ICCacheStorage *)storage;
 + (NSData *)cachedDataWithContentOfURL:(NSURL *)URL options:(ICCacheOptions)options;
 
-+ (NSData *)cachedDataWithContentOfAbstractPath:(NSString *)path __ICTESTING;
++ (NSData *)cachedDataWithContentOfAbstractPath:(NSString *)path __deprecated;
 
 
 + (ICCacheStorage *)defaultStorageForOptions:(ICCacheOptions)options;
@@ -48,6 +48,6 @@ typedef NSUInteger ICCacheOptions;
 @interface NSData (ICCache)
 
 + (NSData *)cachedDataWithContentOfURL:(NSURL *)URL options:(ICCacheOptions)options;
-+ (NSData *)cachedDataWithContentOfAbstractPath:(NSString *)path __ICTESTING;
++ (NSData *)cachedDataWithContentOfAbstractPath:(NSString *)path __deprecated;
 
 @end

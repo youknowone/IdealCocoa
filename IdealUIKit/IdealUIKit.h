@@ -20,18 +20,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <IdealAdditions/IdealAdditions.h>
 #import <IdealCocoa/IdealCocoa.h>
-#import <IdealCocoa/IdealAdditions.h>
-#import <IdealUIKit/UIAlertViewAdditions.h>
-#import <IdealUIKit/ICImageCachedControls.h>
-#import <IdealUIKit/UIApplicationAdditions.h>
-#import <IdealUIKit/UIColorAdditions.h>
-#import <IdealUIKit/UIDeviceAdditions.h>
-#import <IdealUIKit/UIImageAdditions.h>
-#import <IdealUIKit/UIControlAdditions.h>
-#import <IdealUIKit/UIViewAdditions.h>
+#import <IdealUIAdditions/IdealUIAdditions.h>
 #import <IdealUIKit/UIEventScrollView.h>
-#import <IdealUIKit/UIScrollViewAdditions.h>
+#import <IdealUIKit/ICImageCachedControls.h>
 #import <IdealUIKit/ICTableViewCellCopyable.h>
 
 //#import <IdealUIKit/ICCoverFlowView.h> // THIS IS NOT UNDER GPLv3.

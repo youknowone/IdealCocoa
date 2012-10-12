@@ -1,5 +1,5 @@
 //
-//  ICCrypto.m
+//  NSACrypto.m
 //  IdealCocoa
 //
 //  Created by youknowone on 10. 11. 1..
@@ -20,7 +20,7 @@
 //
 
 #import <CommonCrypto/CommonDigest.h>
-#import "ICCrypto.h"
+#import "NSACrypto.h"
 
 @implementation NSData (IdealCocoaCrypto)
 

@@ -6,6 +6,7 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
-    //#import <Cocoa/Cocoa.h>
-	#import <IdealCocoa/ICUtility.h>
 #endif
+
+#import "debug.h"
+#define ICLog dlog

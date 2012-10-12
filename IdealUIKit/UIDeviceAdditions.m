@@ -41,7 +41,7 @@ ICDeviceType _deviceType;
 				_deviceType = ICDeviceTypePad;
 			} else {
 				_deviceType = ICDeviceTypeUnknown;
-				ICAssert(NO);
+				dassert(NO);
 			}
 		}
 	}

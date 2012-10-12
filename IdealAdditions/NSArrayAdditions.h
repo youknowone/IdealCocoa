@@ -24,8 +24,8 @@
 - (id)initWithData:(NSData *)data;
 + (id)arrayWithData:(NSData *)data;
 
-- (id)initWithData:(NSData *)data options:(NSPropertyListReadOptions)opt format:(NSPropertyListFormat *)format error:(NSError **)error;// NS_AVAILABLE(10_6, 4_0);
-+ (id)arrayWithData:(NSData *)data options:(NSPropertyListReadOptions)opt format:(NSPropertyListFormat *)format error:(NSError **)error;// NS_AVAILABLE(10_6, 4_0);
+- (id)initWithData:(NSData *)data options:(NSPropertyListReadOptions)opt format:(NSPropertyListFormat *)format error:(NSError **)error NS_AVAILABLE(10_6, 4_0);
++ (id)arrayWithData:(NSData *)data options:(NSPropertyListReadOptions)opt format:(NSPropertyListFormat *)format error:(NSError **)error NS_AVAILABLE(10_6, 4_0);
 - (id)initWithEnumerator:(NSEnumerator *)enumerator;
 + (id)arrayWithEnumerator:(NSEnumerator *)enumerator;
 

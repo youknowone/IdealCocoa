@@ -112,7 +112,7 @@
         return;
     }
     
-    NSURL *URL = path.abstractURL;
+    NSURL *URL = path.smartURL;
     if ([ICCache isCachedURL:URL storage:self.cacheStorage]) {
         self.cacheRequest = nil;
         [self.cachedControl provider:self setImage:[UIImage cachedImageWithContentOfURL:URL storage:self.cacheStorage]];

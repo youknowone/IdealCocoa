@@ -1,8 +1,8 @@
 //
-//  NSAdditions.h
+//  NSTimerAdditions.h
 //  IdealCocoa
 //
-//  Created by youknowone on 10. 11. 1..
+//  Created by youknowone on 10. 10. 5..
 //  Copyright 2010 3rddev.org. All rights reserved.
 //
 //	This program is free software: you can redistribute it and/or modify
@@ -19,16 +19,13 @@
 //	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#import <IdealCocoa/ICUtility.h>
-#import <IdealCocoa/NSArrayAdditions.h>
-#import <IdealCocoa/NSBundleAdditions.h>
-#import <IdealCocoa/NSDataAdditions.h>
-#import <IdealCocoa/NSDateAdditions.h>
-#import <IdealCocoa/NSDictionaryAdditions.h>
-#import <IdealCocoa/NSNumberFormatterAdditions.h>
-#import <IdealCocoa/NSPathUtilitiesAddtions.h>
-//#import <IdealCocoa/NSStringEncodingAdditions.h>
-#import <IdealCocoa/NSStringAdditions.h>
-#import <IdealCocoa/NSTimerAdditions.h>
-#import <IdealCocoa/NSURLAdditions.h>
-#import <IdealCocoa/NSURLRequestAdditions.h>
+@interface NSTimer (IdealCocoa)
+
++ (NSTimer *)zeroDelayedTimerWithTarget:(id)aTarget selector:(SEL)aSelector;
++ (NSTimer *)zeroDelayedTimerWithTarget:(id)aTarget selector:(SEL)aSelector userInfo:(id)userInfo;
++ (NSTimer *)delayedTimerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector;
+
++ (NSTimer *)triggerByTimer:(SEL)proc forTarget:(id)target after:(NSTimeInterval)seconds __deprecated;
++ (NSTimer *)triggerByTimer:(SEL)proc forTarget:(id)target __deprecated;
+
+@end

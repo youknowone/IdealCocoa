@@ -1,5 +1,5 @@
 //
-//  NSBundleAdditions.h
+//  NSAdditions.h
 //  IdealCocoa
 //
 //  Created by youknowone on 10. 11. 1..
@@ -19,12 +19,17 @@
 //	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-ICEXTERN NSString *NSResourceDirectory(void);
-ICEXTERN NSString *NSPathForResourceFile(NSString *filename);
-
-@interface NSBundle (IdealCocoa)
-
-- (NSString *) pathForResourceFile:(NSString *)filename;
-- (NSString *) pathForResource:(NSString *)filename; // legacy
-
-@end
+#import <IdealAdditions/NSArrayAdditions.h>
+#import <IdealAdditions/NSBundleAdditions.h>
+#import <IdealAdditions/NSDataAdditions.h>
+#import <IdealAdditions/NSDateAdditions.h>
+#import <IdealAdditions/NSDictionaryAdditions.h>
+#import <IdealAdditions/NSNumberFormatterAdditions.h>
+#import <IdealAdditions/NSPathUtilitiesAddtions.h>
+//#import <IdealAdditions/NSStringEncodingAdditions.h>
+#import <IdealAdditions/NSStringAdditions.h>
+#import <IdealAdditions/NSTimerAdditions.h>
+#import <IdealAdditions/NSURLAdditions.h>
+#import <IdealAdditions/NSURLRequestAdditions.h>
+#import <IdealAdditions/NSADataObject.h>
+#import <IdealAdditions/NSACrypto.h>

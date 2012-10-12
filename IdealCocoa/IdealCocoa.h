@@ -19,14 +19,8 @@
 //	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#import <IdealCocoa/ICUtility.h>
-#import <IdealCocoa/ICDataObject.h>
-#import <IdealCocoa/IdealAdditions.h>
-#import <IdealCocoa/ICCrypto.h>
+#import <IdealAdditions/IdealAdditions.h>
 #import <IdealCocoa/ICPreference.h>
-#import <IdealCocoa/ICXML.h>
-#import <IdealCocoa/ICHTTPRequest.h>
 #import <IdealCocoa/ICCache.h>
-#import <IdealCocoa/ICSqlite3.h>
-#import <IdealCocoa/ICSQLWrapper.h>
-#import <IdealCocoa/ICIconv.h>
+
+#define __ICTESTING

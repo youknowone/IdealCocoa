@@ -1,14 +1,14 @@
 //
-//  ICDataObject.m
+//  NSADataObject.m
 //  IdealCocoa
 //
 //  Created by youknowone on 12. 3. 30..
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#import "ICDataObject.h"
+#import "NSADataObject.h"
 
-@implementation ICTuple
+@implementation NSATuple
 @synthesize first=_first, second=_second;
 
 + (id)tuple {
@@ -42,7 +42,7 @@
 
 @end
 
-@implementation ICTriple
+@implementation NSATriple
 @synthesize first=_first, second=_second, third=_third;
 
 + (id)triple {

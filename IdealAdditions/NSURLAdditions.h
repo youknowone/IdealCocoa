@@ -39,6 +39,6 @@
 - (NSString *)pathProtocol;
 - (NSURL *)URL;
 - (NSURL *)fileURL;
-- (NSURL *)abstractURL;
+- (NSURL *)smartURL;
 
 @end

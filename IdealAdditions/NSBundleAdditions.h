@@ -1,8 +1,8 @@
 //
-//  ICUtility.m
+//  NSBundleAdditions.h
 //  IdealCocoa
 //
-//  Created by youknowone on 10. 1. 31..
+//  Created by youknowone on 10. 11. 1..
 //  Copyright 2010 3rddev.org. All rights reserved.
 //
 //	This program is free software: you can redistribute it and/or modify
@@ -19,9 +19,12 @@
 //	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#import "ICUtility.h"
+FOUNDATION_EXTERN NSString *NSResourceDirectory(void);
+FOUNDATION_EXTERN NSString *NSPathForResourceFile(NSString *filename);
 
-void __ICLog(NSString *log, const char *filename, int line) {
-	NSLog(@"[%@:%d] %@", [[NSString stringWithCString:filename encoding:NSUTF8StringEncoding] lastPathComponent], line, log);
-}
+@interface NSBundle (IdealCocoa)
 
+- (NSString *) pathForResourceFile:(NSString *)filename;
+- (NSString *) pathForResource:(NSString *)filename; // legacy
+
+@end

@@ -128,7 +128,7 @@
     return [NSURL fileURLWithPath:self];
 }
 
-- (NSURL *)abstractURL {
+- (NSURL *)smartURL {
     return [NSURL URLWithAbstractPath:self];
 }
 

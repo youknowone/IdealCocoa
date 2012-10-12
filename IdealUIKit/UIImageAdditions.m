@@ -6,7 +6,7 @@
 //  Copyright 2010 3rddev.org. All rights reserved.
 //
 
-#import <IdealCocoa/ICCrypto.h>
+#import <IdealAdditions/NSACrypto.h>
 #import "NSPathUtilitiesAddtions.h"
 #import "NSURLAdditions.h"
 #import "UIImageAdditions.h"
@@ -62,7 +62,7 @@
     if (thumbnailData == nil) {
         NSData *sourceData = [cacheStorage dataForKey:path];
         if (sourceData == nil) {
-            sourceData = [NSData dataWithContentsOfURL:path.abstractURL];
+            sourceData = [NSData dataWithContentsOfURL:path.smartURL];
         }
         UIImage *sourceImage = [UIImage imageWithData:sourceData];
 		UIImage *image = [sourceImage imageByResizingToSize:size]; 
