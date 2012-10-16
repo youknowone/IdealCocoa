@@ -68,6 +68,20 @@
 		3868F3C2162885D300C31163 /* NSADataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B6162885D300C31163 /* NSADataObject.m */; };
 		3868F3C3162885D300C31163 /* NSADataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B6162885D300C31163 /* NSADataObject.m */; };
 		3868F3C4162885D300C31163 /* NSADataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B6162885D300C31163 /* NSADataObject.m */; };
+		3868F7B0162D57EB00C31163 /* NSObjectAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7AE162D57EB00C31163 /* NSObjectAdditions.h */; };
+		3868F7B1162D57EB00C31163 /* NSObjectAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7AE162D57EB00C31163 /* NSObjectAdditions.h */; };
+		3868F7B2162D57EB00C31163 /* NSObjectAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7AE162D57EB00C31163 /* NSObjectAdditions.h */; };
+		3868F7B3162D57EB00C31163 /* NSObjectAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7AF162D57EB00C31163 /* NSObjectAdditions.m */; };
+		3868F7B4162D57EB00C31163 /* NSObjectAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7AF162D57EB00C31163 /* NSObjectAdditions.m */; };
+		3868F7B5162D57EB00C31163 /* NSObjectAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7AF162D57EB00C31163 /* NSObjectAdditions.m */; };
+		3868F7B6162D57EB00C31163 /* NSObjectAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7AF162D57EB00C31163 /* NSObjectAdditions.m */; };
+		3868F7B9162D58EE00C31163 /* NSAClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7B7162D58ED00C31163 /* NSAClass.h */; };
+		3868F7BA162D58EE00C31163 /* NSAClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7B7162D58ED00C31163 /* NSAClass.h */; };
+		3868F7BB162D58EE00C31163 /* NSAClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7B7162D58ED00C31163 /* NSAClass.h */; };
+		3868F7BC162D58EE00C31163 /* NSAClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClass.m */; };
+		3868F7BD162D58EE00C31163 /* NSAClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClass.m */; };
+		3868F7BE162D58EE00C31163 /* NSAClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClass.m */; };
+		3868F7BF162D58EE00C31163 /* NSAClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClass.m */; };
 		38730438133732DE004C8E89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
 		38730442133732DE004C8E89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E213373155007072FD /* UIKit.framework */; };
 		38730443133732DE004C8E89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
@@ -278,6 +292,10 @@
 		3868F3B4162885D300C31163 /* NSACrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSACrypto.m; sourceTree = "<group>"; };
 		3868F3B5162885D300C31163 /* NSADataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSADataObject.h; sourceTree = "<group>"; };
 		3868F3B6162885D300C31163 /* NSADataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSADataObject.m; sourceTree = "<group>"; };
+		3868F7AE162D57EB00C31163 /* NSObjectAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectAdditions.h; sourceTree = "<group>"; };
+		3868F7AF162D57EB00C31163 /* NSObjectAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectAdditions.m; sourceTree = "<group>"; };
+		3868F7B7162D58ED00C31163 /* NSAClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAClass.h; sourceTree = "<group>"; };
+		3868F7B8162D58ED00C31163 /* NSAClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAClass.m; sourceTree = "<group>"; };
 		38730437133732DE004C8E89 /* libIdealUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIdealUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		38730441133732DE004C8E89 /* IdealUIKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdealUIKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3873044A133732DE004C8E89 /* IdealUIKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IdealUIKitTests-Info.plist"; sourceTree = "<group>"; };
@@ -522,6 +540,8 @@
 				38660A57161AD9AE00C5CE06 /* NSDictionaryAdditions.m */,
 				38660A58161AD9AE00C5CE06 /* NSNumberFormatterAdditions.h */,
 				38660A59161AD9AE00C5CE06 /* NSNumberFormatterAdditions.m */,
+				3868F7AE162D57EB00C31163 /* NSObjectAdditions.h */,
+				3868F7AF162D57EB00C31163 /* NSObjectAdditions.m */,
 				38660A5A161AD9AE00C5CE06 /* NSPathUtilitiesAddtions.h */,
 				38660A5B161AD9AE00C5CE06 /* NSPathUtilitiesAddtions.m */,
 				38660A5C161AD9AE00C5CE06 /* NSStringAdditions.h */,
@@ -533,6 +553,8 @@
 				38660A62161AD9AE00C5CE06 /* NSURLAdditions.m */,
 				38660A63161AD9AE00C5CE06 /* NSURLRequestAdditions.h */,
 				38660A64161AD9AE00C5CE06 /* NSURLRequestAdditions.m */,
+				3868F7B7162D58ED00C31163 /* NSAClass.h */,
+				3868F7B8162D58ED00C31163 /* NSAClass.m */,
 				3868F3B3162885D300C31163 /* NSACrypto.h */,
 				3868F3B4162885D300C31163 /* NSACrypto.m */,
 				3868F3B5162885D300C31163 /* NSADataObject.h */,
@@ -645,6 +667,8 @@
 				38660A7E161AD9AE00C5CE06 /* NSURLRequestAdditions.h in Headers */,
 				3868F3B7162885D300C31163 /* NSACrypto.h in Headers */,
 				3868F3BE162885D300C31163 /* NSADataObject.h in Headers */,
+				3868F7B0162D57EB00C31163 /* NSObjectAdditions.h in Headers */,
+				3868F7B9162D58EE00C31163 /* NSAClass.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +714,8 @@
 				38C98B4B161ADAD800C4A389 /* NSURLRequestAdditions.h in Headers */,
 				3868F3B9162885D300C31163 /* NSACrypto.h in Headers */,
 				3868F3C0162885D300C31163 /* NSADataObject.h in Headers */,
+				3868F7B2162D57EB00C31163 /* NSObjectAdditions.h in Headers */,
+				3868F7BB162D58EE00C31163 /* NSAClass.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,6 +744,8 @@
 				38C98B33161ADAD700C4A389 /* NSURLRequestAdditions.h in Headers */,
 				3868F3B8162885D300C31163 /* NSACrypto.h in Headers */,
 				3868F3BF162885D300C31163 /* NSADataObject.h in Headers */,
+				3868F7B1162D57EB00C31163 /* NSObjectAdditions.h in Headers */,
+				3868F7BA162D58EE00C31163 /* NSAClass.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -943,6 +971,8 @@
 				38660A7F161AD9AE00C5CE06 /* NSURLRequestAdditions.m in Sources */,
 				3868F3BA162885D300C31163 /* NSACrypto.m in Sources */,
 				3868F3C1162885D300C31163 /* NSADataObject.m in Sources */,
+				3868F7B3162D57EB00C31163 /* NSObjectAdditions.m in Sources */,
+				3868F7BC162D58EE00C31163 /* NSAClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -981,6 +1011,8 @@
 				38C98B4C161ADAD800C4A389 /* NSURLRequestAdditions.m in Sources */,
 				3868F3BD162885D300C31163 /* NSACrypto.m in Sources */,
 				3868F3C4162885D300C31163 /* NSADataObject.m in Sources */,
+				3868F7B6162D57EB00C31163 /* NSObjectAdditions.m in Sources */,
+				3868F7BF162D58EE00C31163 /* NSAClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1017,6 +1049,8 @@
 				38C98B34161ADAD700C4A389 /* NSURLRequestAdditions.m in Sources */,
 				3868F3BB162885D300C31163 /* NSACrypto.m in Sources */,
 				3868F3C2162885D300C31163 /* NSADataObject.m in Sources */,
+				3868F7B4162D57EB00C31163 /* NSObjectAdditions.m in Sources */,
+				3868F7BD162D58EE00C31163 /* NSAClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1045,6 +1079,8 @@
 				38C98B67161AE45A00C4A389 /* UIScrollViewAdditions.m in Sources */,
 				3868F3BC162885D300C31163 /* NSACrypto.m in Sources */,
 				3868F3C3162885D300C31163 /* NSADataObject.m in Sources */,
+				3868F7B5162D57EB00C31163 /* NSObjectAdditions.m in Sources */,
+				3868F7BE162D58EE00C31163 /* NSAClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
