@@ -226,12 +226,10 @@
 /* Begin PBXFileReference section */
 		380ED29113B05A0E00986433 /* ICTableViewCellCopyable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICTableViewCellCopyable.h; sourceTree = "<group>"; };
 		380ED29213B05A0E00986433 /* ICTableViewCellCopyable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICTableViewCellCopyable.m; sourceTree = "<group>"; };
-		381DD53C1338C0E2008F28C6 /* IdealCocoaIconvTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdealCocoaIconvTests.m; sourceTree = "<group>"; };
 		382302B814E671E700EA6EF2 /* ICCacheStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICCacheStorage.h; sourceTree = "<group>"; };
 		382302B914E671E700EA6EF2 /* ICCacheStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICCacheStorage.m; sourceTree = "<group>"; };
 		382302C114E6AB4700EA6EF2 /* ICStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICStorage.h; sourceTree = "<group>"; };
 		382302C214E6AB4700EA6EF2 /* ICStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICStorage.m; sourceTree = "<group>"; };
-		382302CC14E8125900EA6EF2 /* IdealCocoaStorageTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdealCocoaStorageTests.h; sourceTree = "<group>"; };
 		382302CD14E8125900EA6EF2 /* IdealCocoaStorageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdealCocoaStorageTests.m; sourceTree = "<group>"; };
 		382302DA14E869B100EA6EF2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		382302DC14E869C600EA6EF2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -478,8 +476,6 @@
 			children = (
 				383764F113373155007072FD /* IdealCocoaTests.h */,
 				383764F313373155007072FD /* IdealCocoaTests.m */,
-				381DD53C1338C0E2008F28C6 /* IdealCocoaIconvTests.m */,
-				382302CC14E8125900EA6EF2 /* IdealCocoaStorageTests.h */,
 				382302CD14E8125900EA6EF2 /* IdealCocoaStorageTests.m */,
 				3865F8A614E504FB008A6BA3 /* IdealCocoaCacheTests.h */,
 				3865F8A714E504FB008A6BA3 /* IdealCocoaCacheTests.m */,

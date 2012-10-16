@@ -27,6 +27,10 @@
     [super tearDown];
 }
 
+- (void)testClassName {
+    STAssertEquals([[self classObject] name], @"IdealCocoaTests", @"");
+}
+
 - (void)testHexadecimal
 {
     NSData *data = [@"SAMPLE" dataUsingEncoding:NSUTF8StringEncoding];
