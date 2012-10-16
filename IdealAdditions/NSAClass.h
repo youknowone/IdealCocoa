@@ -17,4 +17,6 @@
 - (id)initWithClass:(Class)class;
 + (id)classWithClass:(Class)class;
 
+- (NSString *)name;
+
 @end

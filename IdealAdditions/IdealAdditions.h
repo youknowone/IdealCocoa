@@ -19,6 +19,7 @@
 //	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
+#import <IdealAdditions/NSObjectAdditions.h>
 #import <IdealAdditions/NSArrayAdditions.h>
 #import <IdealAdditions/NSBundleAdditions.h>
 #import <IdealAdditions/NSDataAdditions.h>
@@ -31,5 +32,6 @@
 #import <IdealAdditions/NSTimerAdditions.h>
 #import <IdealAdditions/NSURLAdditions.h>
 #import <IdealAdditions/NSURLRequestAdditions.h>
+#import <IdealAdditions/NSAClass.h>
 #import <IdealAdditions/NSADataObject.h>
 #import <IdealAdditions/NSACrypto.h>
