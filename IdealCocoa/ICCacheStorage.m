@@ -7,7 +7,6 @@
 //
 
 #import "ICCacheStorage.h"
-#import "NSPathUtilitiesAddtions.h"
 
 @implementation ICCacheStorage
 @synthesize dataStorage=_dataStorage;

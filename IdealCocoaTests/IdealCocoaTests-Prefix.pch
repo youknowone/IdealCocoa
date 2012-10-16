@@ -4,6 +4,6 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
+    #import <FoundationExtension/FoundationExtension.h>
     #import <IdealCocoa/IdealCocoa.h>
-    #import <IdealCocoa/IdealAdditions.h>
 #endif

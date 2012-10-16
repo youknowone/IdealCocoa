@@ -6,7 +6,10 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
+    #import <FoundationExtension/FoundationExtension.h>
+    #import <IdealCocoa/IdealCocoa.h>
 	#import <UIKit/UIKit.h>
+    #import <UIKitExtension/UIKitExtension.h>
 #endif
 
 #import "debug.h"

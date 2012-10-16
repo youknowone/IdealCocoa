@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 youknowone.org All rights reserved.
 //
 
-#import <IdealCocoa/IdealAdditions.h>
+#import <FoundationExtension/FoundationExtension.h>
 #import <IdealCocoa/IdealCocoa.h>
 #import "IdealCocoaStorageTests.h"
 

@@ -46,7 +46,7 @@
 
 #import <OpenGLES/EAGL.h>
 #import <OpenGLES/ES1/gl.h>
-#import <IdealUIKit/UIControlAdditions.h>
+
 @class DataCache;
 
 @protocol ICCoverFlowViewDelegate;

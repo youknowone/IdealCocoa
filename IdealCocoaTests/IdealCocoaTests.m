@@ -6,7 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <IdealCocoa/IdealAdditions.h>
+#import <FoundationExtension/FoundationExtension.h>
 #import <IdealCocoa/IdealCocoa.h>
 
 #import "IdealCocoaTests.h"
@@ -25,18 +25,6 @@
     // Tear-down code here.
     
     [super tearDown];
-}
-
-- (void)testClassName {
-    STAssertEquals([[self classObject] name], @"IdealCocoaTests", @"");
-}
-
-- (void)testHexadecimal
-{
-    NSData *data = [@"SAMPLE" dataUsingEncoding:NSUTF8StringEncoding];
-    STAssertTrue([[data hexadecimalString] isEqual:@"53414d504c45"], @"hexadecimal encode");
-    
-    STAssertTrue([@"SAMPLE" isEqual:[NSString stringWithUTF8Data:[NSData dataWithHexadecimalString:@"53414d504c45"]]], @"hexadecimal decode");
 }
 
 @end

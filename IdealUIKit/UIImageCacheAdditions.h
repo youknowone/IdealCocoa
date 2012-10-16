@@ -1,5 +1,5 @@
 //
-//  UIImageAdditions.h
+//  UIImageCacheAdditions.h
 //  IdealCocoa
 //
 //  Created by youknowone on 10. 10. 5..
@@ -7,12 +7,6 @@
 //
 
 #import <IdealCocoa/ICCache.h>
-
-@interface UIImage (IdealCocoa)
-
-- (UIImage *) imageByResizingToSize:(CGSize)size;
-
-@end
 
 @interface UIImage (IphacyCocoaICCache)
 

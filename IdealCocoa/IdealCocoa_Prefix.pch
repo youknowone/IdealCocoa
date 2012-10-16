@@ -6,6 +6,7 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
+    #import <FoundationExtension/FoundationExtension.h>
 #endif
 
 #import "debug.h"

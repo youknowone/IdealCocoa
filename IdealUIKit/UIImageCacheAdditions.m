@@ -1,45 +1,12 @@
 //
-//  UIImageAdditions.m
+//  UIImageCacheAdditions.m
 //  IdealCocoa
 //
 //  Created by youknowone on 10. 10. 5..
 //  Copyright 2010 3rddev.org. All rights reserved.
 //
 
-#import <IdealAdditions/NSACrypto.h>
-#import "NSPathUtilitiesAddtions.h"
-#import "NSURLAdditions.h"
-#import "UIImageAdditions.h"
-
-@implementation UIImage (IdealCocoa) 
-
-- (UIImage *)imageByResizingToSize:(CGSize)size {
-	CGRect thumbRect = CGRectZero;
-	thumbRect.size = size;
-	CGImageRef imageRef = [self CGImage];
-
-	CGContextRef bitmap = CGBitmapContextCreate(
-												NULL,
-												(size_t)thumbRect.size.width,		// width
-												(size_t)thumbRect.size.height,		// height
-												CGImageGetBitsPerComponent(imageRef),
-												CGImageGetBytesPerRow(imageRef),	// rowbytes
-												CGImageGetColorSpace(imageRef),
-												CGImageGetBitmapInfo(imageRef)
-												);
-	
-	CGContextDrawImage(bitmap, thumbRect, imageRef);
-	
-	CGImageRef	ref = CGBitmapContextCreateImage(bitmap);
-	UIImage *result = [UIImage imageWithCGImage:ref];
-	
-	CGContextRelease(bitmap);	// ok if NULL
-	CGImageRelease(ref);
-	
-	return result;
-}
-
-@end
+#import "UIImageCacheAdditions.h"
 
 @implementation UIImage (IdealCocoaICCache)
 
