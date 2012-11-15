@@ -331,12 +331,12 @@ static int ICCoverFlowViewCount = 0;
 		 *	short move should not drive decelerating animation
 		 */
 		if ( speed >= 0.25 && fabs(startPos-pos) < DECELERATEMOVETHRESHOLD && ctime-startTime < DECELERATETIMETHRESHOLD ) {
-			ICLog(COVERFLOW_DEBUG, @"short move so speed is zero. start: %.2f current: %.2f threshold m/t: %.2f/%.2f", startPos, pos, DECELERATEMOVETHRESHOLD, DECELERATETIMETHRESHOLD);
+			dlog(COVERFLOW_DEBUG, @"short move so speed is zero. start: %.2f current: %.2f threshold m/t: %.2f/%.2f", startPos, pos, DECELERATEMOVETHRESHOLD, DECELERATETIMETHRESHOLD);
 			speed = speed>=0.0 ? 0.25 : -0.25;
 		}
 		/* end of change */
 		speed *= ICCoverFlowViewScrollSpeedFactor * 0.7f;
-		ICLog(COVERFLOW_DEBUG, @"speed: %lf", speed);
+		dlog(COVERFLOW_DEBUG, @"speed: %lf", speed);
 		GLfloat delta = (GLfloat)(speed * speed / (ICCoverFlowViewScrollFriction * 2));
 		if (speed < 0) delta = -delta;
 		GLfloat newOffset = floorf(startOffset + delta + 0.5f);
@@ -458,7 +458,7 @@ static int ICCoverFlowViewCount = 0;
     glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_HEIGHT_OES, &backingHeight);
 	
     if (glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES) != GL_FRAMEBUFFER_COMPLETE_OES) {
-		ICLog(COVERFLOW_DEBUG, @"failed to make complete framebuffer object %x", glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES));
+		dlog(COVERFLOW_DEBUG, @"failed to make complete framebuffer object %x", glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES));
         return NO;
     }
     
@@ -744,7 +744,7 @@ const GLshort GTextures[] = {
 	if ( [self setOffsetFitInBounds] ) {
 		startOffset = offset;
 		[self endAnimation];
-		ICLog(COVERFLOW_DEBUG, @"animation meet boundary and reserve from: %lf", startOffset);
+		dlog(COVERFLOW_DEBUG, @"animation meet boundary and reserve from: %lf", startOffset);
 		[self startAnimationToOffset:floorf(offset) asCodeDriven:coverFlowFlags.isCodeDrivenAction];
 		return;
 	}
@@ -796,15 +796,15 @@ const GLshort GTextures[] = {
 	if ( !coverFlowFlags.isCodeDrivenAction && coverFlowFlags.delegateWillBeginDecelerating )
 		[delegate coverFlowViewWillBeginDecelerating:self];
 	
-	ICLog(COVERFLOW_DEBUG, @"nearest: %lf", newOffset);
+	dlog(COVERFLOW_DEBUG, @"nearest: %lf", newOffset);
 	startSpeed = sqrt(fabs(newOffset - startOffset) * ICCoverFlowViewScrollFriction * 2);
 	if (newOffset < startOffset) startSpeed = -startSpeed;
 	
 	runDelta = fabs(startSpeed / ICCoverFlowViewScrollFriction);
 	lastTime = CACurrentMediaTime();
 	
-	ICLog(COVERFLOW_DEBUG, @"startSpeed: %lf",startSpeed);
-	ICLog(COVERFLOW_DEBUG, @"runDelta: %lf",runDelta);
+	dlog(COVERFLOW_DEBUG, @"startSpeed: %lf",startSpeed);
+	dlog(COVERFLOW_DEBUG, @"runDelta: %lf",runDelta);
 	timer = [NSTimer scheduledTimerWithTimeInterval:0.03
 											 target:self
 										   selector:@selector(driveAnimation)

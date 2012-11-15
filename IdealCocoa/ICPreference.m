@@ -20,7 +20,7 @@
 		if ( nil == attributes ) {
 			attributes = [[NSMutableDictionary alloc] init];
 		}
-		ICLog(PREF_DEBUG, @"preference data: %@", attributes);
+		dlog(PREF_DEBUG, @"preference data: %@", attributes);
 		if ( nil == attributes ) return nil;
 	}
 	return self;

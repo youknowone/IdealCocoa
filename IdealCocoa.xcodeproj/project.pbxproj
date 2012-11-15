@@ -25,25 +25,6 @@
 		3865F8AD14E509B3008A6BA3 /* ICCacheRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3865F8AA14E509B3008A6BA3 /* ICCacheRequest.h */; };
 		3865F8AE14E509B3008A6BA3 /* ICCacheRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3865F8AB14E509B3008A6BA3 /* ICCacheRequest.m */; };
 		3865F8B014E509B3008A6BA3 /* ICCacheRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3865F8AB14E509B3008A6BA3 /* ICCacheRequest.m */; };
-		3868F86C162DA8FD00C31163 /* UIAlertViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F858162DA8FD00C31163 /* UIAlertViewAdditions.h */; };
-		3868F86D162DA8FD00C31163 /* UIAlertViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F859162DA8FD00C31163 /* UIAlertViewAdditions.m */; };
-		3868F86E162DA8FD00C31163 /* UIApplicationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F85A162DA8FD00C31163 /* UIApplicationAdditions.h */; };
-		3868F86F162DA8FD00C31163 /* UIApplicationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F85B162DA8FD00C31163 /* UIApplicationAdditions.m */; };
-		3868F870162DA8FD00C31163 /* UIColorAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F85C162DA8FD00C31163 /* UIColorAdditions.h */; };
-		3868F871162DA8FD00C31163 /* UIColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F85D162DA8FD00C31163 /* UIColorAdditions.m */; };
-		3868F872162DA8FD00C31163 /* UIControlAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F85E162DA8FD00C31163 /* UIControlAdditions.h */; };
-		3868F873162DA8FD00C31163 /* UIControlAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F85F162DA8FD00C31163 /* UIControlAdditions.m */; };
-		3868F874162DA8FD00C31163 /* UIDeviceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F860162DA8FD00C31163 /* UIDeviceAdditions.h */; };
-		3868F875162DA8FD00C31163 /* UIDeviceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F861162DA8FD00C31163 /* UIDeviceAdditions.m */; };
-		3868F876162DA8FD00C31163 /* UIImageAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F862162DA8FD00C31163 /* UIImageAdditions.h */; };
-		3868F877162DA8FD00C31163 /* UIImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F863162DA8FD00C31163 /* UIImageAdditions.m */; };
-		3868F879162DA8FD00C31163 /* UIKitExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F865162DA8FD00C31163 /* UIKitExtension.h */; };
-		3868F87A162DA8FD00C31163 /* UIScrollViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F866162DA8FD00C31163 /* UIScrollViewAdditions.h */; };
-		3868F87B162DA8FD00C31163 /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F867162DA8FD00C31163 /* UIScrollViewAdditions.m */; };
-		3868F87C162DA8FD00C31163 /* UIViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F868162DA8FD00C31163 /* UIViewAdditions.h */; };
-		3868F87D162DA8FD00C31163 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F869162DA8FD00C31163 /* UIViewAdditions.m */; };
-		3868F87E162DA8FD00C31163 /* UIWebViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F86A162DA8FD00C31163 /* UIWebViewAdditions.h */; };
-		3868F87F162DA8FD00C31163 /* UIWebViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F86B162DA8FD00C31163 /* UIWebViewAdditions.m */; };
 		3868F882162DAA0C00C31163 /* UIImageCacheAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F880162DAA0C00C31163 /* UIImageCacheAdditions.h */; };
 		3868F883162DAA0C00C31163 /* UIImageCacheAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F881162DAA0C00C31163 /* UIImageCacheAdditions.m */; };
 		38730438133732DE004C8E89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
@@ -157,6 +138,25 @@
 		388DE1D7165547CB00139B31 /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 388DE178165547CA00139B31 /* NSURLRequestCreations.h */; };
 		388DE1D8165547CB00139B31 /* NSURLRequestCreations.m in Sources */ = {isa = PBXBuildFile; fileRef = 388DE179165547CA00139B31 /* NSURLRequestCreations.m */; };
 		388DE1D9165547CB00139B31 /* NSURLRequestCreations.m in Sources */ = {isa = PBXBuildFile; fileRef = 388DE179165547CA00139B31 /* NSURLRequestCreations.m */; };
+		388DE2011655490400139B31 /* NSAttributedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 388DE1E71655490400139B31 /* NSAttributedString.h */; };
+		388DE2021655490400139B31 /* NSAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 388DE1E81655490400139B31 /* NSAttributedString.m */; };
+		388DE2031655490400139B31 /* UIAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 388DE1EF1655490400139B31 /* UIAlertView.h */; };
+		388DE2041655490400139B31 /* UIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 388DE1F01655490400139B31 /* UIAlertView.m */; };
+		388DE2051655490400139B31 /* UIApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 388DE1F11655490400139B31 /* UIApplication.h */; };
+		388DE2061655490400139B31 /* UIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 388DE1F21655490400139B31 /* UIApplication.m */; };
+		388DE2071655490400139B31 /* UIColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 388DE1F31655490400139B31 /* UIColor.h */; };
+		388DE2081655490400139B31 /* UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 388DE1F41655490400139B31 /* UIColor.m */; };
+		388DE2091655490400139B31 /* UIControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 388DE1F51655490400139B31 /* UIControl.h */; };
+		388DE20A1655490400139B31 /* UIControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 388DE1F61655490400139B31 /* UIControl.m */; };
+		388DE20B1655490400139B31 /* UIDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 388DE1F71655490400139B31 /* UIDevice.h */; };
+		388DE20C1655490400139B31 /* UIDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 388DE1F81655490400139B31 /* UIDevice.m */; };
+		388DE20D1655490400139B31 /* UIImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 388DE1F91655490400139B31 /* UIImage.h */; };
+		388DE20E1655490400139B31 /* UIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 388DE1FA1655490400139B31 /* UIImage.m */; };
+		388DE2101655490400139B31 /* UIKitExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 388DE1FC1655490400139B31 /* UIKitExtension.h */; };
+		388DE2111655490400139B31 /* UIScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 388DE1FD1655490400139B31 /* UIScrollView.h */; };
+		388DE2121655490400139B31 /* UIScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 388DE1FE1655490400139B31 /* UIScrollView.m */; };
+		388DE2131655490400139B31 /* UIWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 388DE1FF1655490400139B31 /* UIWebView.h */; };
+		388DE2141655490400139B31 /* UIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 388DE2001655490400139B31 /* UIWebView.m */; };
 		38C7A98A1495181800381910 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9891495181800381910 /* SenTestingKit.framework */; };
 		38C7A98E1495181800381910 /* IdealCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9721495181800381910 /* IdealCocoa.framework */; };
 		38C7A9941495181900381910 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38C7A9921495181900381910 /* InfoPlist.strings */; };
@@ -227,25 +227,6 @@
 		38660A24161AD86000C5CE06 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3868F3B11628801600C31163 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3868F3B21628801600C31163 /* debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
-		3868F858162DA8FD00C31163 /* UIAlertViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertViewAdditions.h; sourceTree = "<group>"; };
-		3868F859162DA8FD00C31163 /* UIAlertViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertViewAdditions.m; sourceTree = "<group>"; };
-		3868F85A162DA8FD00C31163 /* UIApplicationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIApplicationAdditions.h; sourceTree = "<group>"; };
-		3868F85B162DA8FD00C31163 /* UIApplicationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplicationAdditions.m; sourceTree = "<group>"; };
-		3868F85C162DA8FD00C31163 /* UIColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorAdditions.h; sourceTree = "<group>"; };
-		3868F85D162DA8FD00C31163 /* UIColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorAdditions.m; sourceTree = "<group>"; };
-		3868F85E162DA8FD00C31163 /* UIControlAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIControlAdditions.h; sourceTree = "<group>"; };
-		3868F85F162DA8FD00C31163 /* UIControlAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIControlAdditions.m; sourceTree = "<group>"; };
-		3868F860162DA8FD00C31163 /* UIDeviceAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeviceAdditions.h; sourceTree = "<group>"; };
-		3868F861162DA8FD00C31163 /* UIDeviceAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDeviceAdditions.m; sourceTree = "<group>"; };
-		3868F862162DA8FD00C31163 /* UIImageAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageAdditions.h; sourceTree = "<group>"; };
-		3868F863162DA8FD00C31163 /* UIImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageAdditions.m; sourceTree = "<group>"; };
-		3868F865162DA8FD00C31163 /* UIKitExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIKitExtension.h; sourceTree = "<group>"; };
-		3868F866162DA8FD00C31163 /* UIScrollViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewAdditions.h; sourceTree = "<group>"; };
-		3868F867162DA8FD00C31163 /* UIScrollViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewAdditions.m; sourceTree = "<group>"; };
-		3868F868162DA8FD00C31163 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
-		3868F869162DA8FD00C31163 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
-		3868F86A162DA8FD00C31163 /* UIWebViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewAdditions.h; sourceTree = "<group>"; };
-		3868F86B162DA8FD00C31163 /* UIWebViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewAdditions.m; sourceTree = "<group>"; };
 		3868F880162DAA0C00C31163 /* UIImageCacheAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageCacheAdditions.h; sourceTree = "<group>"; };
 		3868F881162DAA0C00C31163 /* UIImageCacheAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageCacheAdditions.m; sourceTree = "<group>"; };
 		3868F884162DAB5A00C31163 /* IdealCocoaStorageTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdealCocoaStorageTests.h; sourceTree = "<group>"; };
@@ -303,6 +284,25 @@
 		388DE177165547CA00139B31 /* NSURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLRequest.m; sourceTree = "<group>"; };
 		388DE178165547CA00139B31 /* NSURLRequestCreations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLRequestCreations.h; sourceTree = "<group>"; };
 		388DE179165547CA00139B31 /* NSURLRequestCreations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLRequestCreations.m; sourceTree = "<group>"; };
+		388DE1E71655490400139B31 /* NSAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSAttributedString.h; path = "FoundationExtension-repo/UIKitExtension/NSAttributedString.h"; sourceTree = SOURCE_ROOT; };
+		388DE1E81655490400139B31 /* NSAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSAttributedString.m; path = "FoundationExtension-repo/UIKitExtension/NSAttributedString.m"; sourceTree = SOURCE_ROOT; };
+		388DE1EF1655490400139B31 /* UIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAlertView.h; path = "FoundationExtension-repo/UIKitExtension/UIAlertView.h"; sourceTree = SOURCE_ROOT; };
+		388DE1F01655490400139B31 /* UIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIAlertView.m; path = "FoundationExtension-repo/UIKitExtension/UIAlertView.m"; sourceTree = SOURCE_ROOT; };
+		388DE1F11655490400139B31 /* UIApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIApplication.h; path = "FoundationExtension-repo/UIKitExtension/UIApplication.h"; sourceTree = SOURCE_ROOT; };
+		388DE1F21655490400139B31 /* UIApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIApplication.m; path = "FoundationExtension-repo/UIKitExtension/UIApplication.m"; sourceTree = SOURCE_ROOT; };
+		388DE1F31655490400139B31 /* UIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIColor.h; path = "FoundationExtension-repo/UIKitExtension/UIColor.h"; sourceTree = SOURCE_ROOT; };
+		388DE1F41655490400139B31 /* UIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIColor.m; path = "FoundationExtension-repo/UIKitExtension/UIColor.m"; sourceTree = SOURCE_ROOT; };
+		388DE1F51655490400139B31 /* UIControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIControl.h; path = "FoundationExtension-repo/UIKitExtension/UIControl.h"; sourceTree = SOURCE_ROOT; };
+		388DE1F61655490400139B31 /* UIControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIControl.m; path = "FoundationExtension-repo/UIKitExtension/UIControl.m"; sourceTree = SOURCE_ROOT; };
+		388DE1F71655490400139B31 /* UIDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDevice.h; path = "FoundationExtension-repo/UIKitExtension/UIDevice.h"; sourceTree = SOURCE_ROOT; };
+		388DE1F81655490400139B31 /* UIDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDevice.m; path = "FoundationExtension-repo/UIKitExtension/UIDevice.m"; sourceTree = SOURCE_ROOT; };
+		388DE1F91655490400139B31 /* UIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIImage.h; path = "FoundationExtension-repo/UIKitExtension/UIImage.h"; sourceTree = SOURCE_ROOT; };
+		388DE1FA1655490400139B31 /* UIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIImage.m; path = "FoundationExtension-repo/UIKitExtension/UIImage.m"; sourceTree = SOURCE_ROOT; };
+		388DE1FC1655490400139B31 /* UIKitExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIKitExtension.h; path = "FoundationExtension-repo/UIKitExtension/UIKitExtension.h"; sourceTree = SOURCE_ROOT; };
+		388DE1FD1655490400139B31 /* UIScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIScrollView.h; path = "FoundationExtension-repo/UIKitExtension/UIScrollView.h"; sourceTree = SOURCE_ROOT; };
+		388DE1FE1655490400139B31 /* UIScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIScrollView.m; path = "FoundationExtension-repo/UIKitExtension/UIScrollView.m"; sourceTree = SOURCE_ROOT; };
+		388DE1FF1655490400139B31 /* UIWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIWebView.h; path = "FoundationExtension-repo/UIKitExtension/UIWebView.h"; sourceTree = SOURCE_ROOT; };
+		388DE2001655490400139B31 /* UIWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIWebView.m; path = "FoundationExtension-repo/UIKitExtension/UIWebView.m"; sourceTree = SOURCE_ROOT; };
 		38C7A9721495181800381910 /* IdealCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IdealCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C7A9761495181800381910 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		38C7A9771495181800381910 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -367,8 +367,8 @@
 			children = (
 				3868F3B01628801600C31163 /* cdebug */,
 				3868F7F2162DA8D800C31163 /* FoundationExtension */,
-				383764D913373154007072FD /* IdealCocoa */,
 				3868F857162DA8FD00C31163 /* UIKitExtension */,
+				383764D913373154007072FD /* IdealCocoa */,
 				3837655F1337324D007072FD /* IdealUIKit */,
 				383764D613373154007072FD /* Frameworks */,
 				383764D513373154007072FD /* Products */,
@@ -553,25 +553,25 @@
 		3868F857162DA8FD00C31163 /* UIKitExtension */ = {
 			isa = PBXGroup;
 			children = (
-				3868F858162DA8FD00C31163 /* UIAlertViewAdditions.h */,
-				3868F859162DA8FD00C31163 /* UIAlertViewAdditions.m */,
-				3868F85A162DA8FD00C31163 /* UIApplicationAdditions.h */,
-				3868F85B162DA8FD00C31163 /* UIApplicationAdditions.m */,
-				3868F85C162DA8FD00C31163 /* UIColorAdditions.h */,
-				3868F85D162DA8FD00C31163 /* UIColorAdditions.m */,
-				3868F85E162DA8FD00C31163 /* UIControlAdditions.h */,
-				3868F85F162DA8FD00C31163 /* UIControlAdditions.m */,
-				3868F860162DA8FD00C31163 /* UIDeviceAdditions.h */,
-				3868F861162DA8FD00C31163 /* UIDeviceAdditions.m */,
-				3868F862162DA8FD00C31163 /* UIImageAdditions.h */,
-				3868F863162DA8FD00C31163 /* UIImageAdditions.m */,
-				3868F865162DA8FD00C31163 /* UIKitExtension.h */,
-				3868F866162DA8FD00C31163 /* UIScrollViewAdditions.h */,
-				3868F867162DA8FD00C31163 /* UIScrollViewAdditions.m */,
-				3868F868162DA8FD00C31163 /* UIViewAdditions.h */,
-				3868F869162DA8FD00C31163 /* UIViewAdditions.m */,
-				3868F86A162DA8FD00C31163 /* UIWebViewAdditions.h */,
-				3868F86B162DA8FD00C31163 /* UIWebViewAdditions.m */,
+				388DE1E71655490400139B31 /* NSAttributedString.h */,
+				388DE1E81655490400139B31 /* NSAttributedString.m */,
+				388DE1EF1655490400139B31 /* UIAlertView.h */,
+				388DE1F01655490400139B31 /* UIAlertView.m */,
+				388DE1F11655490400139B31 /* UIApplication.h */,
+				388DE1F21655490400139B31 /* UIApplication.m */,
+				388DE1F31655490400139B31 /* UIColor.h */,
+				388DE1F41655490400139B31 /* UIColor.m */,
+				388DE1F51655490400139B31 /* UIControl.h */,
+				388DE1F61655490400139B31 /* UIControl.m */,
+				388DE1F71655490400139B31 /* UIDevice.h */,
+				388DE1F81655490400139B31 /* UIDevice.m */,
+				388DE1F91655490400139B31 /* UIImage.h */,
+				388DE1FA1655490400139B31 /* UIImage.m */,
+				388DE1FC1655490400139B31 /* UIKitExtension.h */,
+				388DE1FD1655490400139B31 /* UIScrollView.h */,
+				388DE1FE1655490400139B31 /* UIScrollView.m */,
+				388DE1FF1655490400139B31 /* UIWebView.h */,
+				388DE2001655490400139B31 /* UIWebView.m */,
 			);
 			name = UIKitExtension;
 			path = FoundationExtension/UIKitExtension;
@@ -628,16 +628,6 @@
 				3865F8AD14E509B3008A6BA3 /* ICCacheRequest.h in Headers */,
 				382302BB14E671E700EA6EF2 /* ICCacheStorage.h in Headers */,
 				382302C414E6AB4700EA6EF2 /* ICStorage.h in Headers */,
-				3868F86C162DA8FD00C31163 /* UIAlertViewAdditions.h in Headers */,
-				3868F86E162DA8FD00C31163 /* UIApplicationAdditions.h in Headers */,
-				3868F870162DA8FD00C31163 /* UIColorAdditions.h in Headers */,
-				3868F872162DA8FD00C31163 /* UIControlAdditions.h in Headers */,
-				3868F874162DA8FD00C31163 /* UIDeviceAdditions.h in Headers */,
-				3868F876162DA8FD00C31163 /* UIImageAdditions.h in Headers */,
-				3868F879162DA8FD00C31163 /* UIKitExtension.h in Headers */,
-				3868F87A162DA8FD00C31163 /* UIScrollViewAdditions.h in Headers */,
-				3868F87C162DA8FD00C31163 /* UIViewAdditions.h in Headers */,
-				3868F87E162DA8FD00C31163 /* UIWebViewAdditions.h in Headers */,
 				3868F882162DAA0C00C31163 /* UIImageCacheAdditions.h in Headers */,
 				388DE17B165547CA00139B31 /* FoundationExtension.h in Headers */,
 				388DE17D165547CA00139B31 /* NSAArray.h in Headers */,
@@ -664,6 +654,16 @@
 				388DE1CF165547CB00139B31 /* NSURL.h in Headers */,
 				388DE1D3165547CB00139B31 /* NSURLRequest.h in Headers */,
 				388DE1D7165547CB00139B31 /* NSURLRequestCreations.h in Headers */,
+				388DE2011655490400139B31 /* NSAttributedString.h in Headers */,
+				388DE2031655490400139B31 /* UIAlertView.h in Headers */,
+				388DE2051655490400139B31 /* UIApplication.h in Headers */,
+				388DE2071655490400139B31 /* UIColor.h in Headers */,
+				388DE2091655490400139B31 /* UIControl.h in Headers */,
+				388DE20B1655490400139B31 /* UIDevice.h in Headers */,
+				388DE20D1655490400139B31 /* UIImage.h in Headers */,
+				388DE2101655490400139B31 /* UIKitExtension.h in Headers */,
+				388DE2111655490400139B31 /* UIScrollView.h in Headers */,
+				388DE2131655490400139B31 /* UIWebView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,7 +787,7 @@
 		383764CB13373154007072FD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = youknowone.org;
 			};
 			buildConfigurationList = 383764CE13373154007072FD /* Build configuration list for PBXProject "IdealCocoa" */;
@@ -879,15 +879,6 @@
 				3865F8B014E509B3008A6BA3 /* ICCacheRequest.m in Sources */,
 				382302BE14E671E700EA6EF2 /* ICCacheStorage.m in Sources */,
 				382302C714E6AB4700EA6EF2 /* ICStorage.m in Sources */,
-				3868F86D162DA8FD00C31163 /* UIAlertViewAdditions.m in Sources */,
-				3868F86F162DA8FD00C31163 /* UIApplicationAdditions.m in Sources */,
-				3868F871162DA8FD00C31163 /* UIColorAdditions.m in Sources */,
-				3868F873162DA8FD00C31163 /* UIControlAdditions.m in Sources */,
-				3868F875162DA8FD00C31163 /* UIDeviceAdditions.m in Sources */,
-				3868F877162DA8FD00C31163 /* UIImageAdditions.m in Sources */,
-				3868F87B162DA8FD00C31163 /* UIScrollViewAdditions.m in Sources */,
-				3868F87D162DA8FD00C31163 /* UIViewAdditions.m in Sources */,
-				3868F87F162DA8FD00C31163 /* UIWebViewAdditions.m in Sources */,
 				3868F883162DAA0C00C31163 /* UIImageCacheAdditions.m in Sources */,
 				388DE17F165547CA00139B31 /* NSAArray.m in Sources */,
 				388DE183165547CA00139B31 /* NSAClass.m in Sources */,
@@ -912,6 +903,15 @@
 				388DE1D1165547CB00139B31 /* NSURL.m in Sources */,
 				388DE1D5165547CB00139B31 /* NSURLRequest.m in Sources */,
 				388DE1D9165547CB00139B31 /* NSURLRequestCreations.m in Sources */,
+				388DE2021655490400139B31 /* NSAttributedString.m in Sources */,
+				388DE2041655490400139B31 /* UIAlertView.m in Sources */,
+				388DE2061655490400139B31 /* UIApplication.m in Sources */,
+				388DE2081655490400139B31 /* UIColor.m in Sources */,
+				388DE20A1655490400139B31 /* UIControl.m in Sources */,
+				388DE20C1655490400139B31 /* UIDevice.m in Sources */,
+				388DE20E1655490400139B31 /* UIImage.m in Sources */,
+				388DE2121655490400139B31 /* UIScrollView.m in Sources */,
+				388DE2141655490400139B31 /* UIWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1104,6 +1104,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1122,7 +1123,7 @@
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -1132,6 +1133,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1145,7 +1147,7 @@
 				INFOPLIST_FILE = "IdealCocoa/IdealCocoa-Info.plist";
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -1155,6 +1157,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1182,6 +1185,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";

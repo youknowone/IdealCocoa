@@ -10,4 +10,4 @@
 #endif
 
 #import "debug.h"
-#define ICLog dlog
+#define dlog dlog

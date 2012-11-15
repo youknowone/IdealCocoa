@@ -324,7 +324,7 @@
 
 + (void)initialize {
     if (self == [ICDiskStorage class]) {
-        ICLog(TRUE, @"config directory for ICDiskStorage: %@", NSUserConfigurationDirectory());
+        dlog(TRUE, @"config directory for ICDiskStorage: %@", NSUserConfigurationDirectory());
     }
 }
 

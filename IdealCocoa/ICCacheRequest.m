@@ -123,6 +123,7 @@ ICCacheCollector *ICCacheSharedCollector;
     while (!self->_stopFlag && queue.count > 0) {
         // dequeue one
         ICCacheRequest *request = [queue objectAtIndex:0];
+        [[request retain] autorelease];
         [self removeRequest:request];
         
         // try to get

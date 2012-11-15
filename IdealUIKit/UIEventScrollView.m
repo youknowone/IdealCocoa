@@ -25,7 +25,7 @@
 	if ( implementedZoomEnabled )
 		assert(NO);
 	
-	ICLog(ICSCROLL_DEBUG, @"touches begin");
+	dlog(ICSCROLL_DEBUG, @"touches begin");
 	eventViewFlags.moved = NO;
 	[eventHandler sendActionsForControlEvents:UIControlEventTouchDown withEvent:event];
 	[super touchesEnded: touches withEvent: event];
@@ -35,7 +35,7 @@
 	if ( implementedZoomEnabled && [[event allTouches] count] == 2 ) {
 		assert(NO);
 	}	
-	ICLog(ICSCROLL_DEBUG, @"touches move");
+	dlog(ICSCROLL_DEBUG, @"touches move");
 	eventViewFlags.moved = YES;
 	[eventHandler sendActionsForControlEvents:UIControlEventTouchDragEnter withEvent:event];
 	[super touchesEnded:touches withEvent:event];
@@ -43,7 +43,7 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	distance = 0.0f;
-	ICLog(ICSCROLL_DEBUG, @"touches end");
+	dlog(ICSCROLL_DEBUG, @"touches end");
 	if ( eventViewFlags.moved ) {
 		[eventHandler sendActionsForControlEvents:UIControlEventTouchDragExit withEvent:event];
 		[eventHandler sendActionsForControlEvents:UIControlEventTouchDragInside withEvent:event];
@@ -59,7 +59,7 @@
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-	ICLog(ICSCROLL_DEBUG, @"touches cancel");
+	dlog(ICSCROLL_DEBUG, @"touches cancel");
 	if ( eventViewFlags.moved ) {
 		[eventHandler sendActionsForControlEvents:UIControlEventTouchDragExit];
 	}
@@ -90,7 +90,7 @@
 		oldscale = self.zoomScale;
 	}
 
-	ICLog(ICSCROLL_DEBUG, @"touches begin");
+	dlog(ICSCROLL_DEBUG, @"touches begin");
 	eventViewFlags.moved = NO;
 	[eventHandler sendActionsForControlEvents:UIControlEventTouchDown withEvent:event];
 	[super touchesEnded: touches withEvent: event];
@@ -107,10 +107,10 @@
 		UITouch *t2 = [allTouches objectAtIndex:1];
 		CGFloat newdistance = (CGFloat)sqrt(pow([t1 locationInView:self].x, 2.0) + pow([t2 locationInView:self].y, 2.0));
 		float newScale = oldscale*(newdistance/distance);
-		ICLog(ICSCROLL_DEBUG, @"oldscale, newscale, dist, newdist, newscale: %f, %f, %f, %f, %f", oldscale, newScale, distance, newdistance, newScale);
+		dlog(ICSCROLL_DEBUG, @"oldscale, newscale, dist, newdist, newscale: %f, %f, %f, %f, %f", oldscale, newScale, distance, newdistance, newScale);
 		[self setZoomScale:newScale animated:NO];
 	}	
-	ICLog(ICSCROLL_DEBUG, @"touches move");
+	dlog(ICSCROLL_DEBUG, @"touches move");
 	eventViewFlags.moved = YES;
 	[eventHandler sendActionsForControlEvents:UIControlEventTouchDragEnter withEvent:event];
 	[super touchesEnded:touches withEvent:event];
@@ -118,7 +118,7 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	distance = 0.0f;
-	ICLog(ICSCROLL_DEBUG, @"touches end");
+	dlog(ICSCROLL_DEBUG, @"touches end");
 	if ( eventViewFlags.moved ) {
 		[eventHandler sendActionsForControlEvents:UIControlEventTouchDragExit withEvent:event];
 		[eventHandler sendActionsForControlEvents:UIControlEventTouchDragInside withEvent:event];
@@ -134,7 +134,7 @@
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-	ICLog(ICSCROLL_DEBUG, @"touches cancel");
+	dlog(ICSCROLL_DEBUG, @"touches cancel");
 	if ( eventViewFlags.moved ) {
 		[eventHandler sendActionsForControlEvents:UIControlEventTouchDragExit];
 	}
@@ -165,7 +165,7 @@
 			oldscale = self.zoomScale;
 		}
 	
-	ICLog(ICSCROLL_DEBUG, @"touches begin");
+	dlog(ICSCROLL_DEBUG, @"touches begin");
 	eventViewFlags.moved = NO;
 	[eventHandler sendActionsForControlEvents:UIControlEventTouchDown withEvent:event];
 	[super touchesEnded: touches withEvent: event];
@@ -182,10 +182,10 @@
 		UITouch *t2 = [allTouches objectAtIndex:1];
 		CGFloat newdistance = (CGFloat)sqrt(pow([t1 locationInView:self].x, 2.0) + pow([t2 locationInView:self].y, 2.0));
 		float newScale = oldscale*(newdistance/distance);
-		ICLog(ICSCROLL_DEBUG, @"oldscale, newscale, dist, newdist, newscale: %f, %f, %f, %f, %f", oldscale, newScale, distance, newdistance, newScale);
+		dlog(ICSCROLL_DEBUG, @"oldscale, newscale, dist, newdist, newscale: %f, %f, %f, %f, %f", oldscale, newScale, distance, newdistance, newScale);
 		[self setZoomScale:newScale animated:NO];
 	}	
-	ICLog(ICSCROLL_DEBUG, @"touches move");
+	dlog(ICSCROLL_DEBUG, @"touches move");
 	eventViewFlags.moved = YES;
 	[eventHandler sendActionsForControlEvents:UIControlEventTouchDragEnter withEvent:event];
 	[super touchesEnded: touches withEvent: event];
@@ -193,7 +193,7 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	distance = 0.0f;
-	ICLog(ICSCROLL_DEBUG, @"touches end");
+	dlog(ICSCROLL_DEBUG, @"touches end");
 	if ( eventViewFlags.moved ) {
 		[eventHandler sendActionsForControlEvents:UIControlEventTouchDragExit withEvent:event];
 		[eventHandler sendActionsForControlEvents:UIControlEventTouchDragInside withEvent:event];
@@ -209,7 +209,7 @@
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-	ICLog(ICSCROLL_DEBUG, @"touches cancel");
+	dlog(ICSCROLL_DEBUG, @"touches cancel");
 	if ( eventViewFlags.moved ) {
 		[eventHandler sendActionsForControlEvents:UIControlEventTouchDragExit];
 	}

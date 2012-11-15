@@ -38,12 +38,12 @@
 }
 
 + (NSData *)cachedDataWithContentOfAbstractPath:(NSString *)path {
-    ICLog(CACHE_DEBUG, @"abstract data load: %@", path);
+    dlog(CACHE_DEBUG, @"abstract data load: %@", path);
     if ( [path hasURLPrefix] ) {
-        ICLog(CACHE_DEBUG, @"remote data");
+        dlog(CACHE_DEBUG, @"remote data");
         return [self cachedDataWithContentOfURL:[NSURL URLWithString:path] options:ICCacheOptionDisk|ICCacheOptionPermanent];
     } else {
-        ICLog(CACHE_DEBUG, @"local data");
+        dlog(CACHE_DEBUG, @"local data");
         return [NSData dataWithContentsOfAbstractPath:path];
     }
 }

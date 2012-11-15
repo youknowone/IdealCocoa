@@ -13,4 +13,3 @@
 #endif
 
 #import "debug.h"
-#define ICLog dlog

@@ -5,9 +5,9 @@
 //  Legacy bridge for ObjectXML
 
 #define ICXMLAttributeDictionary OXAttributeDictionary
-#define ICXMLElementArray OXElementArray
-#define ICXMLNode OXNode
-#define ICXMLElement OXElement
-#define ICXMLText OXText
-#define ICXMLSimpleParser OXSimpleParser
-#define ICXMLSimpleParserErrorDelegate OXSimpleParserErrorDelegate
+#define OXElementArray OXElementArray
+#define OXNode OXNode
+#define OXElement OXElement
+#define OXText OXText
+#define OXXMLSimpleParser OXSimpleParser
+#define OXXMLSimpleParserErrorDelegate OXSimpleParserErrorDelegate
