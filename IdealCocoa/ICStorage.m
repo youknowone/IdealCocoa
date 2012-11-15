@@ -341,7 +341,7 @@
 }
 
 - (NSString *)filenameForKey:(NSString *)key {
-    return key.digestStringBySHA1;
+    return [[key digestBySHA1UsingEncoding:NSUTF8StringEncoding] hexadecimalString];
 }
 
 - (NSString *)filepathForFile:(NSString *)filename {
