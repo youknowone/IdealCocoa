@@ -9,5 +9,4 @@
     #import <FoundationExtension/FoundationExtension.h>
 #endif
 
-#import "debug.h"
-#define dlog dlog
+#include "debug.h"
