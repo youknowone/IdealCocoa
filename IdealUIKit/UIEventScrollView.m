@@ -6,6 +6,8 @@
 //  Copyright 2010 3rddev.org. All rights reserved.
 //
 
+#include "debug.h"
+
 #import "UIEventScrollView.h"
 
 #define ICSCROLL_DEBUG FALSE

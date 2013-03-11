@@ -8,6 +8,9 @@
 
 #define PREF_DEBUG FALSE
 
+#include "debug.h"
+
+#import <FoundationExtension/FoundationExtension.h>
 #import "ICPreference.h"
 
 @implementation ICPreference

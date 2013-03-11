@@ -7,7 +7,9 @@
 //
 
 #include <sys/stat.h>
+#include "debug.h"
 
+#import <FoundationExtension/FoundationExtension.h>
 #import "ICStorage.h"
 
 @interface ICStorage ()

@@ -6,6 +6,8 @@
 //  Copyright 2010 3rddev.org. All rights reserved.
 //
 
+#import <FoundationExtension/FoundationExtension.h>
+
 #import "UIImageCacheAdditions.h"
 #import "ICImageCachedControls.h"
 #import "ICCacheRequest.h"

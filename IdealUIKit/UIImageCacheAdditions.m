@@ -6,6 +6,7 @@
 //  Copyright 2010 3rddev.org. All rights reserved.
 //
 
+#import <UIKitExtension/UIKitExtension.h>
 #import "UIImageCacheAdditions.h"
 
 @implementation UIImage (IdealCocoaICCache)

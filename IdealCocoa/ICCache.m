@@ -9,6 +9,9 @@
 #define CACHE_DEBUG FALSE
 
 #include <unistd.h>
+#include "debug.h"
+
+#import <FoundationExtension/FoundationExtension.h>
 
 #import "ICPreference.h"
 #import "ICCache.h"

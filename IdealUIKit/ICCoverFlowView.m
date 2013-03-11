@@ -8,6 +8,8 @@
 //	Rewrite library from:
 //
 
+#include "debug.h"
+
 #define COVERFLOW_DEBUG FALSE
 
 /*	FlowCoverView.m
