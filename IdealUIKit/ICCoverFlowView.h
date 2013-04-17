@@ -60,7 +60,7 @@
  *	CoverFlow thingy from Apple.
  */
 
-@interface ICCoverFlowView : UIView<UIControlTouchEvents>
+@interface ICCoverFlowView : UIView
 {
 	// Current state support
 	GLfloat offset;

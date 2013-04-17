@@ -16,7 +16,7 @@
 		unsigned int moved:1;		\
 	} eventViewFlags
 
-@interface UIEventView : UIView<UIControlTouchEvents> { 
+@interface UIEventView : UIView { 
 	IBOutlet UIControl *eventHandler;
 	UIEventViewVariables;
 }
@@ -25,7 +25,7 @@
 
 @end
 
-@interface UIEventScrollView : UIScrollView<UIControlTouchEvents> {
+@interface UIEventScrollView : UIScrollView {
 	IBOutlet UIControl *eventHandler;
 	UIEventViewVariables;
 }
@@ -35,7 +35,7 @@
 
 @end
 
-@interface UIEventTextView : UITextView<UIControlTouchEvents> {
+@interface UIEventTextView : UITextView {
 	IBOutlet UIControl *eventHandler; 
 	UIEventViewVariables;
 }
